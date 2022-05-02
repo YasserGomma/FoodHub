@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/welcome"
+    android:orientation="vertical"
+    tools:context=".welcome_screen">
+
+    <Button
+        android:id="@+id/btn_welcome_skip"
+        android:layout_width="55dp"
+        android:layout_height="32dp"
+        android:layout_marginLeft="300dp"
+        android:layout_marginTop="25dp"
+        android:background="@drawable/btn_bg_1"
+        android:fontFamily="@font/sofiaproreguler"
+        android:gravity="center"
+        android:text="Skip"
+        android:textColor="#FE724C"
+        android:textSize="14dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="140dp"
+        android:layout_marginRight="34dp"
+        android:orientation="vertical"
+
+        >
+
+        <TextView
+            android:layout_width="311dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:fontFamily="@font/sofiaprobold"
+            android:gravity="top"
+            android:text="Welcome to"
+            android:textColor="@color/black"
+            android:textSize="55dp" />
+
+        <TextView
+            android:layout_width="311dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/sofiaprobold"
+            android:text="FoodHub"
+            android:textColor="#FE724C"
+            android:textSize="50dp"
+            android:translationY="-15dp" />
+
+        <TextView
+            android:layout_width="311dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/sofiaproreguler"
+            android:lineSpacingExtra="9dp"
+            android:text="Your favourite foods delivered \nfast at your door"
+            android:textColor="#30384F"
+            android:textSize="19dp"
+            android:translationY="-15dp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="480dp"
+        android:background="@drawable/welcome_lineargradient">
+
+        <View
+            android:layout_width="84dp"
+            android:layout_height="1dp"
+            android:layout_marginLeft="40dp"
+            android:layout_marginTop="10dp"
+            android:background="#80FFFFFF"
+
+
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="25dp"
+            android:fontFamily="@font/sofiapromedium"
+            android:text="sign in with"
+            android:textColor="#FFFFFF"
+            android:textSize="14dp" />
+
+        <View
+            android:layout_width="89dp"
+            android:layout_height="1dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="60dp"
+            android:background="#80FFFFFF" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="150dp"
+        android:layout_marginLeft="45dp"
+        >
+
+        <Button
+            android:id="@+id/btn_login_facebook"
+            android:layout_width="140dp"
+            android:layout_height="54dp"
+            android:layout_marginRight="15dp"
+            android:background="@drawable/btn_bg_1"
+            android:drawableLeft="@drawable/facebook"
+            android:fontFamily="@font/sofiapromedium"
+            android:gravity="center"
+            android:padding="12dp"
+            android:text="Facebook"
+            android:textColor="#000000"
+            android:textSize="13dp" />
+
+        <Button
+            android:id="@+id/btn_login_google"
+            android:layout_width="140dp"
+            android:layout_height="54dp"
+            android:background="@drawable/btn_bg_1"
+            android:drawableLeft="@drawable/google"
+            android:fontFamily="@font/sofiaproreguler"
+            android:gravity="center"
+            android:padding="12dp"
+            android:text="Google"
+            android:textColor="#000000"
+            android:textSize="13dp" />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/start_with"
+        android:layout_width="293dp"
+        android:layout_height="54dp"
+        android:layout_marginLeft="45dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="80dp"
+        android:background="@drawable/btn_bg_2"
+        android:fontFamily="@font/sofiapromedium"
+        android:padding="12dp"
+        android:text="Start with email or phone"
+        android:textAllCaps="false"
+        android:textColor="#FEFEFE"
+        android:textSize="17dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="80dp"
+        android:layout_marginBottom="40dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/sofiapromedium"
+            android:text="Already have an account?"
+            android:textColor="#FFFFFF"
+            android:textSize="14dp" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="6dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/sofiapromedium"
+                android:text="Sign in"
+                android:textColor="#FFFFFF"
+                android:textSize="14dp" />
+
+            <View
+                android:layout_width="44dp"
+                android:layout_height="1dp"
+                android:layout_marginRight="60dp"
+                android:background="#80FFFFFF" />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+</RelativeLayout>
