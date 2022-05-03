@@ -3,14 +3,21 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/android/ODC/app/src/main/res/drawable-v24/onboarding_indicator_inactive.xml" value="0.1" />
+        <entry key="..\:/android/ODC/app/src/main/res/drawable/btn_bg.xml" value="0.193" />
         <entry key="..\:/android/ODC/app/src/main/res/drawable/btn_bg_1.xml" value="0.159" />
         <entry key="..\:/android/ODC/app/src/main/res/drawable/btn_bg_2.xml" value="0.1665" />
+        <entry key="..\:/android/ODC/app/src/main/res/drawable/onboarding_indicator_active.xml" value="0.1" />
         <entry key="..\:/android/ODC/app/src/main/res/drawable/welcome_lineargradient.xml" value="0.1" />
         <entry key="..\:/android/ODC/app/src/main/res/font/font.xml" value="0.27589743589743587" />
         <entry key="..\:/android/ODC/app/src/main/res/layout/activity_main.xml" value="0.25" />
+        <entry key="..\:/android/ODC/app/src/main/res/layout/activity_on_bording_screen.xml" value="0.264" />
         <entry key="..\:/android/ODC/app/src/main/res/layout/activity_splash.xml" value="0.2418478260869565" />
         <entry key="..\:/android/ODC/app/src/main/res/layout/activity_welcome.xml" value="0.264" />
-        <entry key="..\:/android/ODC/app/src/main/res/layout/activity_welcome_screen.xml" value="0.2" />
+        <entry key="..\:/android/ODC/app/src/main/res/layout/activity_welcome_screen.xml" value="0.2847222222222222" />
+        <entry key="..\:/android/ODC/app/src/main/res/layout/fragment_onbording.xml" value="0.1" />
+        <entry key="..\:/android/ODC/app/src/main/res/layout/fragment_view_pager.xml" value="0.4" />
+        <entry key="..\:/android/ODC/app/src/main/res/layout/item_container_onboarding.xml" value="0.1" />
       </map>
     </option>
   </component>

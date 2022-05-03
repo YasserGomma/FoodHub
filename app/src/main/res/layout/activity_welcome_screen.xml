@@ -6,9 +6,9 @@
     android:layout_height="match_parent"
     android:background="@drawable/welcome"
     android:orientation="vertical"
-    tools:context=".welcome_screen">
+    tools:context=".WelcomeScreen">
 
-    <Button
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btn_welcome_skip"
         android:layout_width="55dp"
         android:layout_height="32dp"
@@ -105,10 +105,11 @@
         android:layout_marginLeft="45dp"
         >
 
-        <Button
+        <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/btn_login_facebook"
             android:layout_width="140dp"
             android:layout_height="54dp"
+            app:backgroundTint="@color/white"
             android:layout_marginRight="15dp"
             android:background="@drawable/btn_bg_1"
             android:drawableLeft="@drawable/facebook"
@@ -119,9 +120,10 @@
             android:textColor="#000000"
             android:textSize="13dp" />
 
-        <Button
+        <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/btn_login_google"
             android:layout_width="140dp"
+            app:backgroundTint="@color/white"
             android:layout_height="54dp"
             android:background="@drawable/btn_bg_1"
             android:drawableLeft="@drawable/google"
@@ -134,16 +136,16 @@
 
     </LinearLayout>
 
-    <Button
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/start_with"
         android:layout_width="293dp"
         android:layout_height="54dp"
-        android:layout_marginLeft="45dp"
         android:layout_alignParentBottom="true"
+        android:layout_marginLeft="45dp"
         android:layout_marginBottom="80dp"
         android:background="@drawable/btn_bg_2"
         android:fontFamily="@font/sofiapromedium"
-        android:padding="12dp"
+        android:padding="10dp"
         android:text="Start with email or phone"
         android:textAllCaps="false"
         android:textColor="#FEFEFE"
