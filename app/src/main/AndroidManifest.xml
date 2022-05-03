@@ -11,10 +11,10 @@
         android:theme="@style/Theme.FoodHub">
 
         <activity
-            android:name=".WelcomeScreen"
+            android:name=".views.pages.a_intro.WelcomeScreen"
             android:exported="false"></activity>
         <activity
-            android:name=".onBordingScreen"
+            android:name=".views.pages.a_intro.onBordingScreen"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

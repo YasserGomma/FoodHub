@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="@drawable/welcome"
     android:orientation="vertical"
-    tools:context=".WelcomeScreen">
+    tools:context=".views.pages.a_intro.WelcomeScreen">
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btn_welcome_skip"
@@ -18,7 +18,7 @@
         android:fontFamily="@font/sofiaproreguler"
         android:gravity="center"
         android:text="Skip"
-        android:textColor="#FE724C"
+        android:textColor="@color/primary_color"
         android:textSize="14dp" />
 
     <LinearLayout
@@ -46,7 +46,7 @@
             android:layout_height="wrap_content"
             android:fontFamily="@font/sofiaprobold"
             android:text="FoodHub"
-            android:textColor="#FE724C"
+            android:textColor="@color/primary_color"
             android:textSize="50dp"
             android:translationY="-15dp" />
 

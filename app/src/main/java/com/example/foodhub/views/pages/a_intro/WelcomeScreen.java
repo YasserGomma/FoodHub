@@ -1,6 +1,9 @@
-package com.example.foodhub;
+package com.example.foodhub.views.pages.a_intro;
 
 import android.os.Bundle;
+
+import com.example.foodhub.R;
+import com.example.foodhub.views.helpers.BaseActivity;
 
 public class WelcomeScreen extends BaseActivity {
 

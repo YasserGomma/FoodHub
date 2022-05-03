@@ -1,7 +1,10 @@
-package com.example.foodhub;
+package com.example.foodhub.views.pages.a_intro;
 
 import android.os.Bundle;
 import android.os.Handler;
+
+import com.example.foodhub.R;
+import com.example.foodhub.views.helpers.BaseActivity;
 
 public class Splash extends BaseActivity {
 

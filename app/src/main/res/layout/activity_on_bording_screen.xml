@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".onBordingScreen">
+    tools:context=".views.pages.a_intro.onBordingScreen">
     <com.google.android.material.button.MaterialButton
         android:layout_width="67dp"
         android:layout_height="67dp"
@@ -13,7 +13,6 @@
         app:iconTint="@color/white"
         app:iconGravity="textStart"
         android:translationY="-50dp"
-        android:textColor="@color/white"
         app:iconPadding="1dp"
         android:gravity="center"
         android:background="@drawable/btn_bg"

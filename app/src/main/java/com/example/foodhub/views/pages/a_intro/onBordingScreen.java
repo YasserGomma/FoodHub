@@ -1,4 +1,4 @@
-package com.example.foodhub;
+package com.example.foodhub.views.pages.a_intro;
 
 import android.os.Bundle;
 import android.view.View;
@@ -9,6 +9,10 @@ import android.widget.LinearLayout;
 import androidx.core.content.ContextCompat;
 import androidx.viewpager2.widget.ViewPager2;
 
+import com.example.foodhub.OnboardingAdapter;
+import com.example.foodhub.OnboardingItem;
+import com.example.foodhub.R;
+import com.example.foodhub.views.helpers.BaseActivity;
 import com.google.android.material.button.MaterialButton;
 
 import java.util.ArrayList;
@@ -46,7 +50,7 @@ public class onBordingScreen extends BaseActivity {
                 }
                 else
                 {
-                    goFromActivityToActivity(onBordingScreen.this,WelcomeScreen.class);
+                    goFromActivityToActivity(onBordingScreen.this, WelcomeScreen.class);
                 }
             }
         });

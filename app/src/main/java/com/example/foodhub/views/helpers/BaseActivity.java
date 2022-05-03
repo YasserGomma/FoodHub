@@ -1,4 +1,4 @@
-package com.example.foodhub;
+package com.example.foodhub.views.helpers;
 
 import android.content.Context;
 import android.content.Intent;
