@@ -12,7 +12,7 @@ import androidx.viewpager2.widget.ViewPager2;
 import com.example.foodhub.OnboardingAdapter;
 import com.example.foodhub.OnboardingItem;
 import com.example.foodhub.R;
-import com.example.foodhub.views.helpers.BaseActivity;
+import com.example.foodhub.views.pages.parents.BaseActivity;
 import com.google.android.material.button.MaterialButton;
 
 import java.util.ArrayList;
@@ -41,6 +41,8 @@ public class onBordingScreen extends BaseActivity {
                 setCurrentOnboardingIndicator(position);
             }
         });
+
+
         btnOnboardingAction.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -50,11 +52,16 @@ public class onBordingScreen extends BaseActivity {
                 }
                 else
                 {
-                    goFromActivityToActivity(onBordingScreen.this, WelcomeScreen.class);
+                    go_screen(onBordingScreen.this, WelcomeScreen.class);
                 }
             }
         });
     }
+
+
+    /**
+     *Set content of onboarding screen (image,title,description).
+     */
     void setupOnboardingItems()
     {
         List<OnboardingItem> onboardingItemList = new ArrayList<>();
@@ -71,7 +78,7 @@ public class onBordingScreen extends BaseActivity {
         OnboardingItem itemPlayOnline3 = new OnboardingItem();
         itemPlayOnline3.setTitle("Pickup delivery at\nyour door");
         itemPlayOnline3.setDescription("Our app can send you everywhere, \neven space. For only $2.99 per month");
-        itemPlayOnline3.setImage(R.drawable.onboarding_image_1);
+        itemPlayOnline3.setImage(R.drawable.onboarding_image_3);
 
         onboardingItemList.add(itemPlayOnline1);
         onboardingItemList.add(itemPlayOnline2);
@@ -80,6 +87,10 @@ public class onBordingScreen extends BaseActivity {
         onboardingAdapter=new OnboardingAdapter(onboardingItemList);
 
     }
+
+    /**
+     *build the indicators of onboarding screen.
+     */
     private void setupOnboardingIndicators(){
         ImageView []indicators=new ImageView[onboardingAdapter.getItemCount()];
         LinearLayout.LayoutParams layoutParams =new LinearLayout.LayoutParams(
@@ -97,6 +108,11 @@ public class onBordingScreen extends BaseActivity {
             layoutOnboardingIndicators.addView(indicators[i]);
         }
     }
+
+    /**
+     *Set the current active indicator.
+     */
+
     private void setCurrentOnboardingIndicator(int index){
         int childCount = layoutOnboardingIndicators.getChildCount();
         for (int i=0;i<childCount;i++)

@@ -1,10 +1,10 @@
 package com.example.foodhub.views.pages.a_intro;
 
 import android.os.Bundle;
-import android.os.Handler;
 
 import com.example.foodhub.R;
-import com.example.foodhub.views.helpers.BaseActivity;
+import com.example.foodhub.interfaces.CallBack;
+import com.example.foodhub.views.pages.parents.BaseActivity;
 
 public class Splash extends BaseActivity {
 
@@ -12,12 +12,12 @@ public class Splash extends BaseActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash);
-        Handler handler= new Handler();
-        handler.postDelayed(new Runnable() {
+        delay(2000, new CallBack() {
             @Override
-            public void run() {
-                goFromActivityToActivity(Splash.this, WelcomeScreen.class);
+            public void onFinished() {
+                go_screen(Splash.this,onBordingScreen.class);
             }
-        },2000);
+        });
+
     }
 }

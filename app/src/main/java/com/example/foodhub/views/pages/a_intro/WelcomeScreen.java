@@ -3,7 +3,7 @@ package com.example.foodhub.views.pages.a_intro;
 import android.os.Bundle;
 
 import com.example.foodhub.R;
-import com.example.foodhub.views.helpers.BaseActivity;
+import com.example.foodhub.views.pages.parents.BaseActivity;
 
 public class WelcomeScreen extends BaseActivity {
 
