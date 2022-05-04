@@ -5,7 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".views.pages.a_intro.Splash"
-    android:background="@color/primary_color">
+    android:background="@color/primary_color"
+    >
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="170dp"
