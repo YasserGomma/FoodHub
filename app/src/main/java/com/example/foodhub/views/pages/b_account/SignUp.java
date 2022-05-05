@@ -11,7 +11,7 @@ public class SignUp extends BaseActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sign_up);
-        changeBorderOnFocus(R.id.su_full_name,R.id.su_email,R.id.su_password);
+        changeBorderOnFocus(R.id.et_signup_full_name,R.id.et_signup_email,R.id.et_signup_password);
 
 
     }

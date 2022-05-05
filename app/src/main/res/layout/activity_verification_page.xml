@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    tools:context=".views.pages.b_account.VerificationPage">
+    <include layout="@layout/back_header" />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="26dp"
+        android:layout_marginBottom="550dp"
+        android:fontFamily="@font/sofiapro_semibold"
+        android:gravity="top"
+        android:text="Vefification Code"
+        android:textColor="@color/black"
+        android:textSize="37dp"
+        android:translationY="-3.64dp" />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:fontFamily="@font/sofiaproreguler"
+        android:gravity="top"
+        android:text="Please type the verification code sent to prelookstudio@gmail.com"
+        android:textColor="@color/hint_color"
+        android:textSize="16dp"
+        android:layout_marginBottom="500dp"
+        android:layout_marginLeft="26dp"
+        android:translationY="-3.64dp" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="26dp"
+        android:layout_marginBottom="400dp"
+        android:orientation="horizontal">
+
+
+        <EditText
+            android:id="@+id/et_verificationpage_verification_1"
+            android:layout_width="65dp"
+            android:layout_height="65dp"
+            android:background="@drawable/et_bg"
+            android:fontFamily="@font/sofiapromedium"
+            android:text="5"
+            android:textColor="@color/Et_color"
+            android:textSize="28dp"
+            android:gravity="center"
+            android:digits="0123456789"
+            android:inputType="numberSigned"
+            android:layout_marginRight="22dp"
+            />
+        <EditText
+            android:id="@+id/et_verificationpage_verification_2"
+            android:layout_width="65dp"
+            android:layout_height="65dp"
+            android:background="@drawable/et_bg"
+            android:fontFamily="@font/sofiapromedium"
+            android:text="3"
+            android:textColor="@color/Et_color"
+            android:textSize="28dp"
+            android:gravity="center"
+            android:digits="0123456789"
+            android:inputType="numberSigned"
+            android:layout_marginRight="22dp"
+
+
+            />
+        <EditText
+            android:id="@+id/et_verificationpage_verification_3"
+            android:layout_width="65dp"
+            android:layout_height="65dp"
+            android:background="@drawable/et_bg"
+            android:fontFamily="@font/sofiapromedium"
+            android:text=""
+            android:textColor="@color/Et_color"
+            android:textSize="28dp"
+            android:digits="0123456789"
+            android:inputType="numberSigned"
+            android:layout_marginRight="22dp"
+            android:gravity="center"
+            />
+        <EditText
+            android:id="@+id/et_verificationpage_verification_4"
+            android:layout_width="65dp"
+            android:layout_height="65dp"
+            android:background="@drawable/et_bg"
+            android:fontFamily="@font/sofiapromedium"
+            android:text=""
+            android:textColor="@color/Et_color"
+            android:textSize="28dp"
+            android:digits="0123456789"
+            android:inputType="numberSigned"
+            android:gravity="center"
+            />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="26dp"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:layout_marginBottom="350dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:fontFamily="@font/sofiapromedium"
+            android:text="I don’t recevie a code! "
+            android:textColor="@color/hint_color"
+            android:textSize="14dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:fontFamily="@font/sofiapromedium"
+            android:text="Please resend"
+            android:textColor="@color/primary_color"
+            android:textSize="14dp" />
+    </LinearLayout>
+
+
+</RelativeLayout>

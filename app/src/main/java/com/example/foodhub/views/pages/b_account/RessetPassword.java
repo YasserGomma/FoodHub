@@ -5,13 +5,12 @@ import android.os.Bundle;
 import com.example.foodhub.R;
 import com.example.foodhub.views.pages.parents.BaseActivity;
 
-public class Login extends BaseActivity {
+public class RessetPassword extends BaseActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_login);
-        changeBorderOnFocus(R.id.et_login_email,R.id.et_login_password);
-
+        setContentView(R.layout.activity_resset_password);
+        changeBorderOnFocus(R.id.et_resetpassword_email);
     }
 }

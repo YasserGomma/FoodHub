@@ -41,7 +41,7 @@
             android:translationY="-3.64dp" />
 
         <EditText
-            android:id="@+id/su_full_name"
+            android:id="@+id/et_signup_full_name"
             android:layout_width="325dp"
             android:layout_height="65dp"
             android:background="@drawable/et_bg"
@@ -75,7 +75,7 @@
             android:translationY="-3.64dp" />
 
         <EditText
-            android:id="@+id/su_email"
+            android:id="@+id/et_signup_email"
             android:layout_width="325dp"
             android:layout_height="65dp"
             android:background="@drawable/et_bg"
@@ -108,7 +108,7 @@
             android:translationY="-3.64dp" />
 
         <EditText
-            android:id="@+id/su_password"
+            android:id="@+id/et_signup_password"
             android:layout_width="325dp"
             android:layout_height="65dp"
             android:background="@drawable/et_bg"
@@ -124,7 +124,7 @@
     </LinearLayout>
 
     <Button
-        android:id="@+id/signup"
+        android:id="@+id/btn_signup_signup"
         android:layout_width="248dp"
         android:layout_height="60dp"
         android:layout_alignParentBottom="true"

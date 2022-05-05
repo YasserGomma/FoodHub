@@ -106,7 +106,7 @@
         >
 
         <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/btn_login_facebook"
+            android:id="@+id/btn_welcome_facebook"
             android:layout_width="140dp"
             android:layout_height="54dp"
             app:backgroundTint="@color/white"
@@ -121,7 +121,7 @@
             android:textSize="13dp" />
 
         <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/btn_login_google"
+            android:id="@+id/btn_welcome_google"
             android:layout_width="140dp"
             app:backgroundTint="@color/white"
             android:layout_height="54dp"
@@ -137,7 +137,7 @@
     </LinearLayout>
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/start_with"
+        android:id="@+id/btn_welcome_start_with"
         android:layout_width="293dp"
         android:layout_height="54dp"
         android:layout_alignParentBottom="true"

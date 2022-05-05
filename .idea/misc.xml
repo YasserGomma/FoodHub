@@ -17,10 +17,15 @@
         <entry key="..\:/android/ODC/app/src/main/res/layout/activity_login.xml" value="0.21621621621621623" />
         <entry key="..\:/android/ODC/app/src/main/res/layout/activity_main.xml" value="0.25" />
         <entry key="..\:/android/ODC/app/src/main/res/layout/activity_on_bording_screen.xml" value="0.264" />
+        <entry key="..\:/android/ODC/app/src/main/res/layout/activity_phone_registration.xml" value="0.21467391304347827" />
+        <entry key="..\:/android/ODC/app/src/main/res/layout/activity_resset_password.xml" value="0.21467391304347827" />
         <entry key="..\:/android/ODC/app/src/main/res/layout/activity_sign_up.xml" value="0.176" />
         <entry key="..\:/android/ODC/app/src/main/res/layout/activity_splash.xml" value="0.2418478260869565" />
+        <entry key="..\:/android/ODC/app/src/main/res/layout/activity_vefification_page.xml" value="0.21621621621621623" />
+        <entry key="..\:/android/ODC/app/src/main/res/layout/activity_verification_page.xml" value="0.264" />
         <entry key="..\:/android/ODC/app/src/main/res/layout/activity_welcome.xml" value="0.264" />
         <entry key="..\:/android/ODC/app/src/main/res/layout/activity_welcome_screen.xml" value="0.2847222222222222" />
+        <entry key="..\:/android/ODC/app/src/main/res/layout/back_header.xml" value="0.10554089709762533" />
         <entry key="..\:/android/ODC/app/src/main/res/layout/fragment_onbording.xml" value="0.1" />
         <entry key="..\:/android/ODC/app/src/main/res/layout/fragment_view_pager.xml" value="0.4" />
         <entry key="..\:/android/ODC/app/src/main/res/layout/header.xml" value="0.21621621621621623" />

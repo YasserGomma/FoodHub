@@ -42,7 +42,7 @@
             android:translationY="-3.64dp" />
 
         <EditText
-            android:id="@+id/si_email"
+            android:id="@+id/et_login_email"
             android:layout_width="325dp"
             android:layout_height="65dp"
             android:background="@drawable/et_bg"
@@ -75,7 +75,7 @@
             android:translationY="-3.64dp" />
 
         <EditText
-            android:id="@+id/si_password"
+            android:id="@+id/et_login_password"
             android:layout_width="325dp"
             android:layout_height="65dp"
             android:background="@drawable/et_bg"
@@ -102,7 +102,7 @@
         android:textSize="14dp" />
 
     <Button
-        android:id="@+id/lofin"
+        android:id="@+id/btn_login_login"
         android:layout_width="248dp"
         android:layout_height="60dp"
         android:layout_alignParentBottom="true"
@@ -184,7 +184,7 @@
         >
 
         <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/btn_login_facebook"
+            android:id="@+id/btn_welcome_facebook"
             android:layout_width="140dp"
             android:layout_height="54dp"
             app:backgroundTint="@color/white"
@@ -199,7 +199,7 @@
             android:textSize="13dp" />
 
         <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/btn_login_google"
+            android:id="@+id/btn_welcome_google"
             android:layout_width="140dp"
             app:backgroundTint="@color/white"
             android:layout_height="54dp"
