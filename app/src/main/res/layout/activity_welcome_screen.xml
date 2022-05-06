@@ -173,6 +173,7 @@
             android:orientation="vertical">
 
             <TextView
+                android:id="@+id/tv_welcome_sign_in"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/sofiapro_medium"
@@ -182,7 +183,7 @@
 
             <View
                 android:layout_width="44dp"
-                android:layout_height="1dp"
+                android:layout_height="2dp"
                 android:layout_marginRight="60dp"
                 android:background="#80FFFFFF" />
 

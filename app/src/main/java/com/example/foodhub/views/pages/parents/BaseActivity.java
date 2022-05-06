@@ -60,4 +60,15 @@ public class BaseActivity extends AppCompatActivity {
         }
     }
 
+    /**
+     * get Edit text text
+     */
+    public String getEtText(int id)
+    {
+        EditText et=findViewById(id);
+        return et.getText().toString();
+    }
+
+
+
 }

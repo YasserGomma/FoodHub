@@ -15,7 +15,7 @@ public class Splash extends BaseActivity {
         delay(2000, new CallBack() {
             @Override
             public void onFinished() {
-                go_screen(Splash.this,onBordingScreen.class);
+                go_screen(Splash.this,WelcomeScreen.class);
             }
         });
 

@@ -91,6 +91,7 @@
     </LinearLayout>
 
     <TextView
+        android:id="@+id/btn_login_reset_password"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
@@ -133,6 +134,7 @@
             android:textSize="14dp" />
 
         <TextView
+            android:id="@+id/tv_signin_signup"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"

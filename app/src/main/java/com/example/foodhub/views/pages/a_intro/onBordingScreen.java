@@ -13,6 +13,7 @@ import com.example.foodhub.R;
 import com.example.foodhub.data.models.OnboardingItem;
 import com.example.foodhub.data.source.local.OnboardingData;
 import com.example.foodhub.views.adapters.OnboardingAdapter;
+import com.example.foodhub.views.pages.b_account.SignUp;
 import com.example.foodhub.views.pages.parents.BaseActivity;
 import com.google.android.material.button.MaterialButton;
 
@@ -52,7 +53,7 @@ public class onBordingScreen extends BaseActivity {
                 }
                 else
                 {
-                    go_screen(onBordingScreen.this, WelcomeScreen.class);
+                    go_screen(onBordingScreen.this, SignUp.class);
                 }
             }
         });

@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.FoodHub">
         <activity
+            android:name=".views.pages.c_home.Home"
+            android:exported="false" />
+        <activity
             android:name=".views.pages.b_account.RessetPassword"
             android:exported="false" />
         <activity
@@ -19,6 +22,9 @@
             android:name=".views.pages.b_account.Login"
             android:exported="false" />
         <activity
+            android:name=".views.pages.b_account.SignUp"
+            android:exported="false" />
+        <activity
             android:name=".views.pages.a_intro.WelcomeScreen"
             android:exported="false" />
         <activity
@@ -26,6 +32,9 @@
             android:exported="false" />
         <activity
             android:name=".views.pages.a_intro.onBordingScreen"
+            android:exported="false" />
+        <activity
+            android:name=".views.pages.a_intro.Splash"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
