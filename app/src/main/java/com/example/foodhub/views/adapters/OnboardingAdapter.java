@@ -1,4 +1,4 @@
-package com.example.foodhub;
+package com.example.foodhub.views.adapters;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -8,6 +8,9 @@ import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
+
+import com.example.foodhub.data.models.OnboardingItem;
+import com.example.foodhub.R;
 
 import java.util.List;
 

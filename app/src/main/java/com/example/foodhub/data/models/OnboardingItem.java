@@ -1,4 +1,4 @@
-package com.example.foodhub;
+package com.example.foodhub.data.models;
 
 public class OnboardingItem {
 

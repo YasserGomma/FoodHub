@@ -26,7 +26,7 @@
         android:textColor="#131A38"
         android:textSize="30dp"
         android:lineSpacingExtra="10dp"
-        android:fontFamily="@font/sofiaproreguler"
+        android:fontFamily="@font/sofiapro_reguler"
         />
     <TextView
         android:id="@+id/textDescription"
@@ -37,7 +37,7 @@
         android:textSize="14dp"
         android:layout_marginTop="15dp"
         android:lineSpacingExtra="8dp"
-        android:fontFamily="@font/sofiaproreguler"
+        android:fontFamily="@font/sofiapro_reguler"
         />
 
 

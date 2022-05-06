@@ -27,7 +27,7 @@
         android:layout_alignParentBottom="true"
         android:layout_marginLeft="26dp"
         android:layout_marginBottom="500dp"
-        android:fontFamily="@font/sofiaproreguler"
+        android:fontFamily="@font/sofiapro_reguler"
         android:gravity="top"
         android:text="Enter your phone number to verify \nyour account"
         android:textColor="@color/hint_color"
@@ -65,7 +65,7 @@
             android:layout_gravity="center"
             android:autofillHints="Enter phone number"
             android:inputType="phone|numberDecimal"
-            android:fontFamily="@font/sofiaproreguler"
+            android:fontFamily="@font/sofiapro_reguler"
             android:padding="20dp"
             android:text="0114-454-7646"
             android:textColor="@color/Et_color"
@@ -82,7 +82,7 @@
         android:layout_marginBottom="300dp"
         android:background="@drawable/btn_bg_3"
         android:elevation="30dp"
-        android:fontFamily="@font/sofiaproreguler"
+        android:fontFamily="@font/sofiapro_reguler"
         android:text="Send"
         android:textSize="15dp" />
 
