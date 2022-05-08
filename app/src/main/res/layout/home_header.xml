@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/back_header"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_alignParentTop="true"
+    >
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_home_header_menu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/menu"
+        android:layout_marginTop="20dp"
+        android:clickable="true"
+        android:layout_alignParentLeft="true"
+
+        />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="30dp"
+        android:gravity="center"
+        android:layout_centerInParent="true"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:gravity="center"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16dp"
+                android:fontFamily="@font/sofiapro_medium"
+                android:text="Deliver  to"
+                android:textColor="@color/black"
+                />
+            <Spinner
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="5dp"
+                android:scrollbarSize="100dp"
+                />
+        </LinearLayout>
+        <TextView
+            android:id="@+id/tv_home_header_address"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/primary_color"
+            android:text=" 4102 Pretty View Lane"
+            android:textSize="16dp"
+            android:fontFamily="@font/sofiapro_medium"
+            android:maxLines="1"
+
+            />
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/iv_home_header_photo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/person" />
+
+</RelativeLayout>

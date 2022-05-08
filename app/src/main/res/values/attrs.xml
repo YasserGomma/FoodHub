@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="InputField">
+        <attr name="if_label" format="string"/>
+        <attr name="if_hint" format="string"/>
+    </declare-styleable>
+    <declare-styleable name="TwoTexts">
+        <attr name="tt_text_1" format="string"/>
+        <attr name="tt_text_2" format="string"/>
+        <attr name="tt_text_1_color" format="reference|color"/>
+        <attr name="tt_text_2_color" format="reference|color"/>
+    </declare-styleable>
+    <declare-styleable name="TwoBigTexts">
+        <attr name="tbt_text_1" format="string"/>
+        <attr name="tbt_text_2" format="string"/>
+        <attr name="tbt_text_1_color" format="reference|color"/>
+        <attr name="tbt_text_2_color" format="reference|color"/>
+    </declare-styleable>
+
+</resources>

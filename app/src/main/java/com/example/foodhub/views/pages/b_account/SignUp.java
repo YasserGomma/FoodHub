@@ -1,9 +1,6 @@
 package com.example.foodhub.views.pages.b_account;
 
 import android.os.Bundle;
-import android.view.View;
-import android.widget.Button;
-import android.widget.TextView;
 
 import com.example.foodhub.R;
 import com.example.foodhub.views.pages.parents.BaseActivity;
@@ -14,23 +11,6 @@ public class SignUp extends BaseActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sign_up);
-        changeBorderOnFocus(R.id.et_signup_full_name,R.id.et_signup_email,R.id.et_signup_password);
-
-        Button btn_signup_signup=findViewById(R.id.btn_signup_signup);
-        btn_signup_signup.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                go_screen(SignUp.this,VerificationPage.class);
-            }
-        });
-
-        TextView tv_signup_login=findViewById(R.id.tv_signup_login);
-        tv_signup_login.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                go_screen(SignUp.this,Login.class);
-            }
-        });
 
     }
 }

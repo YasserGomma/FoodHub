@@ -103,9 +103,9 @@ public class onBordingScreen extends BaseActivity {
             if(i==index)
             {
                 imageView.setImageDrawable(ContextCompat.getDrawable(
-                    getApplicationContext(),
-                    R.drawable.onboarding_indicator_active
-            ));
+                        getApplicationContext(),
+                        R.drawable.onboarding_indicator_active
+                ));
             }else{
                 imageView.setImageDrawable(ContextCompat.getDrawable(
                         getApplicationContext(),

@@ -6,124 +6,74 @@
     android:layout_height="match_parent"
     android:background="@drawable/background"
     tools:context=".views.pages.b_account.VerificationPage">
-    <include layout="@layout/back_header" />
-    <TextView
+    <!-- Page Header-->
+    <include
+        android:id="@+id/header"
+        layout="@layout/back_header"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_marginLeft="26dp"
-        android:layout_marginBottom="550dp"
-        android:fontFamily="@font/sofiapro_semibold"
-        android:gravity="top"
-        android:text="Vefification Code"
-        android:textColor="@color/black"
-        android:textSize="37dp"
-        android:translationY="-3.64dp" />
-    <TextView
+        android:layout_height="80dp"
+        android:layout_alignParentTop="true" />
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:fontFamily="@font/sofiapro_reguler"
-        android:gravity="top"
-        android:text="Please type the verification code sent to prelookstudio@gmail.com"
-        android:textColor="@color/hint_color"
-        android:textSize="16dp"
-        android:layout_marginBottom="500dp"
-        android:layout_marginLeft="26dp"
-        android:translationY="-3.64dp" />
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_marginLeft="26dp"
-        android:layout_marginBottom="400dp"
-        android:orientation="horizontal">
-
-
-        <EditText
-            android:id="@+id/et_verificationpage_verification_1"
-            android:layout_width="65dp"
-            android:layout_height="65dp"
-            android:background="@drawable/et_bg"
-            android:fontFamily="@font/sofiapro_medium"
-            android:textColor="@color/Et_color"
-            android:textSize="28dp"
-            android:gravity="center"
-            android:digits="0123456789"
-            android:inputType="numberSigned"
-            android:layout_marginRight="22dp"
-            />
-        <EditText
-            android:id="@+id/et_verificationpage_verification_2"
-            android:layout_width="65dp"
-            android:layout_height="65dp"
-            android:background="@drawable/et_bg"
-            android:fontFamily="@font/sofiapro_medium"
-            android:textColor="@color/Et_color"
-            android:textSize="28dp"
-            android:gravity="center"
-            android:digits="0123456789"
-            android:inputType="numberSigned"
-            android:layout_marginRight="22dp"
-
-
-            />
-        <EditText
-            android:id="@+id/et_verificationpage_verification_3"
-            android:layout_width="65dp"
-            android:layout_height="65dp"
-            android:background="@drawable/et_bg"
-            android:fontFamily="@font/sofiapro_medium"
-            android:text=""
-            android:textColor="@color/Et_color"
-            android:textSize="28dp"
-            android:digits="0123456789"
-            android:inputType="numberSigned"
-            android:layout_marginRight="22dp"
-            android:gravity="center"
-            />
-        <EditText
-            android:id="@+id/et_verificationpage_verification_4"
-            android:layout_width="65dp"
-            android:layout_height="65dp"
-            android:background="@drawable/et_bg"
-            android:fontFamily="@font/sofiapro_medium"
-            android:text=""
-            android:textColor="@color/Et_color"
-            android:textSize="28dp"
-            android:digits="0123456789"
-            android:inputType="numberSigned"
-            android:gravity="center"
-            />
-    </LinearLayout>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_marginLeft="26dp"
-        android:layout_centerInParent="true"
-        android:gravity="center"
-        android:layout_marginBottom="350dp"
-        android:orientation="horizontal">
-
-        <TextView
-            android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/header"
+        android:layout_marginTop="80dp">
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
-            android:fontFamily="@font/sofiapro_medium"
-            android:text="I don’t recevie a code! "
-            android:textColor="@color/hint_color"
-            android:textSize="14dp" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
-            android:fontFamily="@font/sofiapro_medium"
-            android:text="Please resend"
-            android:textColor="@color/primary_color"
-            android:textSize="14dp" />
-    </LinearLayout>
-
-
+            android:layout_marginHorizontal="20dp"
+            android:orientation="vertical">
+            <!-- Page Title-->
+            <com.example.foodhub.views.widgets.PageTitleText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Vefification Code" />
+            <!-- Page Description-->
+            <com.example.foodhub.views.widgets.DescriptionPageText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Please type the verification code sent to prelookstudio@gmail.com" />
+            <!-- Verification Field-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="40dp"
+                android:gravity="center">
+                <com.example.foodhub.views.widgets.MainEditText
+                    android:id="@+id/et_verificationpage_verification_1"
+                    android:layout_width="70dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="20dp"
+                    android:gravity="center" />
+                <com.example.foodhub.views.widgets.MainEditText
+                    android:id="@+id/et_verificationpage_verification_2"
+                    android:layout_width="70dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center" />
+                <com.example.foodhub.views.widgets.MainEditText
+                    android:id="@+id/et_verificationpage_verification_3"
+                    android:layout_width="70dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="20dp"
+                    android:gravity="center" />
+                <com.example.foodhub.views.widgets.MainEditText
+                    android:id="@+id/et_verificationpage_verification_4"
+                    android:layout_width="70dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center" />
+            </LinearLayout>
+            <!-- Resend Text-->
+            <com.example.foodhub.views.components.TwoTexts
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:gravity="center"
+                app:tt_text_1="I don’t recevie a code!"
+                app:tt_text_1_color="@color/hint_color"
+                app:tt_text_2="Please resend"
+                app:tt_text_2_color="@color/primary_color" />
+        </LinearLayout>
+    </ScrollView>
 </RelativeLayout>

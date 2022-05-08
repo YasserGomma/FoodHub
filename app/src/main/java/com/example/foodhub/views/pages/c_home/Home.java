@@ -2,15 +2,17 @@ package com.example.foodhub.views.pages.c_home;
 
 import android.os.Bundle;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import com.example.foodhub.R;
+import com.example.foodhub.views.pages.parents.BaseActivity;
 
-public class Home extends AppCompatActivity {
+public class Home extends BaseActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
+        replaceFragmen(new HomFragment(),R.id.fram_home_fragment);
+
+
     }
 }

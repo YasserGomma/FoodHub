@@ -3,7 +3,7 @@ package com.example.foodhub.views.pages.b_account;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
-import android.util.Log;
+import android.view.View;
 import android.widget.EditText;
 
 import com.example.foodhub.R;
@@ -17,7 +17,6 @@ public class VerificationPage extends BaseActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_verification_page);
-        changeBorderOnFocus(R.id.et_verificationpage_verification_1, R.id.et_verificationpage_verification_2, R.id.et_verificationpage_verification_3, R.id.et_verificationpage_verification_4);
 
         et_verificationpage_verification_1 = findViewById(R.id.et_verificationpage_verification_1);
         et_verificationpage_verification_2 = findViewById(R.id.et_verificationpage_verification_2);
@@ -103,12 +102,18 @@ public class VerificationPage extends BaseActivity {
                         code += getEtText(R.id.et_verificationpage_verification_2);
                         code += getEtText(R.id.et_verificationpage_verification_3);
                         code += getEtText(R.id.et_verificationpage_verification_4);
-                        Log.e("edit",code);
                         if (code.equals("1111")) {
                             go_screen(VerificationPage.this, PhoneRegistration.class);
                         }
                     }
                 }
+            }
+        });
+        findViewById(R.id.btn_back_header).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                finish();
+                VerificationPage.super.onBackPressed();
             }
         });
 

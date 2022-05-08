@@ -2,4 +2,7 @@
     <string name="app_name">Food Hub</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="primary_color">#FE724C</string>
+    <string name="edit_text_border_color">#D0D2D1"</string>
+
 </resources>

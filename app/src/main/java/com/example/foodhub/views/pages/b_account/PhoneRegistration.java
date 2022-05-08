@@ -25,6 +25,7 @@ public class PhoneRegistration extends BaseActivity {
         findViewById(R.id.btn_back_header).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                finish();
                 PhoneRegistration.super.onBackPressed();
             }
         });

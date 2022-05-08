@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white"
+    android:layout_marginLeft="26dp"
+    tools:context=".views.pages.c_home.HomFragment">
+
+    <TextView
+        android:id="@+id/tv_fragment_home_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/sofiapro_bold"
+        android:text="What would you like to order"
+        android:textColor="@color/black"
+        android:textSize="30dp" />
+
+    <LinearLayout
+        android:id="@+id/layout_fragment_home_l1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_below="@id/tv_fragment_home_title">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/et_bg_2"
+            android:drawableStart="@drawable/search"
+            android:drawablePadding="10dp"
+            android:maxLines="1"
+            android:hint="Find for food or restaurant .."
+            android:textSize="15sp"
+            android:padding="10dp"
+            android:layout_weight="1"
+
+            />
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnfragment_home_filter"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:background="@drawable/filter"
+            android:layout_marginLeft="18dp"
+            android:layout_weight="2"
+            android:layout_marginRight="20dp"
+
+            />
+
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_fragment_home_r1"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_below="@id/layout_fragment_home_l1"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal" />
+    <LinearLayout
+        android:id="@+id/layout_fragment_home_l2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rv_fragment_home_r1"
+        android:layout_marginVertical="20dp"
+        android:orientation="horizontal"
+
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/sofiapro_reguler"
+            android:text="Featured restaurants"
+            android:textColor="@color/black"
+            android:textSize="18sp" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/sofiapro_reguler"
+            android:text="View all >   "
+            android:layout_gravity="right|center"
+            android:gravity="right"
+            android:textColor="@color/primary_color"
+            android:textSize="13sp" />
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_fragment_home_r2"
+        android:layout_width="match_parent"
+        android:layout_height="225dp"
+        android:layout_below="@id/layout_fragment_home_l2"
+        android:orientation="horizontal" />
+    <TextView
+        android:id="@+id/tv_fragment_home_pi"
+        android:layout_below="@id/rv_fragment_home_r2"
+        android:layout_marginVertical="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/sofiapro_reguler"
+        android:text="Popular Items"
+        android:textColor="@color/black"
+        android:textSize="18sp" />
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_fragment_home_r3"
+        android:layout_below="@id/tv_fragment_home_pi"
+        android:layout_width="match_parent"
+        android:layout_height="216dp"
+        android:orientation="horizontal"
+        />
+
+</RelativeLayout>

@@ -1,86 +1,103 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/footer"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    >
+    android:layout_height="70dp">
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="60dp"
-        android:layout_alignParentBottom="true"
-        android:orientation="horizontal"
-        android:padding="5dp">
+        android:padding="10dp"
+        android:layout_height="match_parent"
+        android:weightSum="3"
+        android:orientation="horizontal">
 
         <ImageView
             android:id="@+id/iv_footer_icon_1"
-            android:layout_width="26dp"
-            android:layout_height="26dp"
-            android:layout_marginLeft="23dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_marginTop="17dp"
+            android:layout_weight="1"
             android:src="@drawable/footer_icon_1" />
 
         <ImageView
             android:id="@+id/iv_footer_icon_2"
-            android:layout_width="26dp"
-            android:layout_height="26dp"
-            android:layout_marginLeft="47dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_marginTop="17dp"
+            android:layout_weight="1"
             android:src="@drawable/footer_icon_2"
 
             />
 
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="10dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_footer_orders"
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:layout_gravity="right"
+                android:background="@drawable/tv_footer_bg"
+                android:fontFamily="@font/sofiapro_light"
+                android:gravity="center"
+                android:text="0"
+                android:textColor="@color/white"
+                android:textSize="10dp" />
+
+            <ImageView
+                android:id="@+id/iv_footer_icon_3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/footer_icon_3"
+
+                />
+
+
+        </LinearLayout>
+
         <ImageView
-            android:id="@+id/iv_footer_icon_3"
-            android:layout_width="26dp"
-            android:layout_height="26dp"
-            android:layout_marginLeft="38dp"
-            android:layout_marginTop="17dp"
-            android:src="@drawable/footer_icon_3"
-
-            />
-
-        <TextView
-            android:id="@+id/tv_footer_orders"
-            android:layout_width="16dp"
-            android:layout_height="16dp"
-            android:background="@drawable/tv_footer_bg"
-            android:text="0"
-            android:textSize="10dp"
-            android:textColor="@color/white"
-            android:fontFamily="@font/sofiapro_light"
-            android:gravity="center"/>
-
-        <ImageView
+            android:layout_weight="1"
             android:id="@+id/iv_footer_icon_4"
-            android:layout_width="26dp"
-            android:layout_height="26dp"
-            android:layout_marginLeft="40dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_marginTop="17dp"
             android:src="@drawable/footer_icon_4"
 
-            />
-
-        <ImageView
-            android:id="@+id/iv_footer_icon_5"
-            android:layout_width="26dp"
-            android:layout_height="26dp"
-            android:layout_marginLeft="47dp"
-            android:layout_marginTop="17dp"
-            android:src="@drawable/footer_icon_5"
 
             />
-        <TextView
-            android:id="@+id/tv_footer_notifications"
-            android:layout_width="16dp"
-            android:layout_height="16dp"
-            android:background="@drawable/tv_footer_bg"
-            android:text="0"
-            android:textSize="10dp"
-            android:textColor="@color/white"
-            android:fontFamily="@font/sofiapro_light"
-            android:gravity="center"/>
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="15dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_footer_notifications"
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:layout_gravity="right"
+                android:background="@drawable/tv_footer_bg"
+                android:fontFamily="@font/sofiapro_light"
+                android:gravity="center"
+                android:text="0"
+                android:textColor="@color/white"
+                android:textSize="10dp" />
+
+            <ImageView
+                android:id="@+id/iv_footer_icon_5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/footer_icon_5"
+
+                />
+
+
+        </LinearLayout>
     </LinearLayout>
 
 

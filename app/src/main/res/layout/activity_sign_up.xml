@@ -7,166 +7,71 @@
     android:background="@drawable/background"
     tools:context=".views.pages.b_account.SignUp"
     android:orientation="vertical">
-
-    <TextView
+    <!-- Page Header-->
+    <include
+        android:id="@+id/header"
+        layout="@layout/back_header"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_marginLeft="26dp"
-        android:layout_marginBottom="624dp"
-        android:fontFamily="@font/sofiapro_semibold"
-        android:gravity="top"
-        android:text="Sign Up"
-        android:textColor="@color/black"
-        android:textSize="37dp"
-        android:translationY="-3.64dp" />
-
-    <LinearLayout
+        android:layout_height="80dp"
+        android:layout_alignParentTop="true" />
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_marginLeft="26dp"
-        android:layout_marginBottom="500dp"
-        android:orientation="vertical">
-
-        <TextView
+        android:layout_height="match_parent"
+        android:layout_marginTop="30dp"
+        android:layout_below="@+id/header">
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
-            android:fontFamily="@font/sofiapro_reguler"
-            android:gravity="top"
-            android:text="Full name"
-            android:textColor="@color/hint_color"
-            android:textSize="16dp"
-            android:translationY="-3.64dp" />
-
-        <EditText
-            android:id="@+id/et_signup_full_name"
-            android:layout_width="325dp"
-            android:layout_height="65dp"
-            android:background="@drawable/et_bg"
-            android:fontFamily="@font/sofiapro_medium"
-            android:padding="20dp"
-            android:text="Arlene Mccoy"
-            android:textColor="@color/Et_color"
-            android:textSize="17dp"
-
-            />
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_marginLeft="26dp"
-        android:layout_marginBottom="380dp"
-        android:orientation="vertical">
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
-            android:fontFamily="@font/sofiapro_reguler"
-            android:gravity="top"
-            android:text="Email"
-            android:textColor="@color/hint_color"
-            android:textSize="16dp"
-            android:translationY="-3.64dp" />
-
-        <EditText
-            android:id="@+id/et_signup_email"
-            android:layout_width="325dp"
-            android:layout_height="65dp"
-            android:background="@drawable/et_bg"
-            android:fontFamily="@font/sofiapro_medium"
-            android:padding="20dp"
-            android:text="prelookstudio@gmail.com"
-            android:textColor="@color/Et_color"
-            android:textSize="17dp"
-
-            />
-
-    </LinearLayout>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_marginLeft="26dp"
-        android:layout_marginBottom="260dp"
-        android:orientation="vertical">
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
-            android:fontFamily="@font/sofiapro_reguler"
-            android:gravity="top"
-            android:text="Password"
-            android:textColor="@color/hint_color"
-            android:textSize="16dp"
-            android:translationY="-3.64dp" />
-
-        <EditText
-            android:id="@+id/et_signup_password"
-            android:layout_width="325dp"
-            android:layout_height="65dp"
-            android:background="@drawable/et_bg"
-            android:fontFamily="@font/sofiapro_medium"
-            android:padding="20dp"
-            android:text="prelookstudio"
-            android:textColor="@color/Et_color"
-            android:textSize="17dp"
-            android:inputType="textPassword"
-            android:drawableRight="@drawable/eye"
-
-            />
-    </LinearLayout>
-
-    <Button
-        android:id="@+id/btn_signup_signup"
-        android:layout_width="248dp"
-        android:layout_height="60dp"
-        android:layout_alignParentBottom="true"
-        android:layout_centerInParent="true"
-        android:layout_marginBottom="170dp"
-        android:background="@drawable/btn_bg_3"
-        android:elevation="30dp"
-        android:fontFamily="@font/sofiapro_reguler"
-        android:text="sign up"
-        android:textSize="15dp" />
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_marginLeft="26dp"
-        android:layout_centerInParent="true"
-        android:gravity="center"
-        android:layout_marginBottom="120dp"
-        android:orientation="horizontal">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
-            android:fontFamily="@font/sofiapro_medium"
-            android:text="Already have an account? "
-            android:textColor="@color/hint_color"
-            android:textSize="14dp" />
-
-        <TextView
-            android:id="@+id/tv_signup_login"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
-            android:fontFamily="@font/sofiapro_medium"
-            android:text="Login"
-            android:textColor="@color/primary_color"
-            android:textSize="14dp" />
-
-
-    </LinearLayout>
-
+            android:layout_marginHorizontal="20dp"
+            android:orientation="vertical">
+            <!-- Page Title-->
+            <com.example.foodhub.views.widgets.PageTitleText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sign Up"
+                />
+           <!-- Full Name-->
+            <com.example.foodhub.views.components.InputField
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:if_label="Full name"
+                app:if_hint="Enter your name"
+                />
+            <!-- Email-->
+            <com.example.foodhub.views.components.InputField
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:if_label="Email"
+                app:if_hint="Enter your email"
+                />
+            <!-- Password-->
+            <com.example.foodhub.views.components.InputField
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:if_label="Password"
+                app:if_hint="Enter your password"
+                />
+            <!-- Sign up  Button-->
+            <com.example.foodhub.views.widgets.MainButton
+                android:id="@+id/btn_login_login"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="60dp"
+                android:layout_marginTop="20dp"
+                android:padding="10dp"
+                android:text="Sign Up" />
+            <!-- Sign in text -->
+            <com.example.foodhub.views.components.TwoTexts
+                android:layout_width="match_parent"
+                android:layout_marginTop="20dp"
+                app:tt_text_1="Already have an account?"
+                app:tt_text_2="Login"
+                app:tt_text_1_color="@color/hint_color"
+                app:tt_text_2_color="@color/primary_color"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                />
+        </LinearLayout>
+    </ScrollView>
 
 </RelativeLayout>
