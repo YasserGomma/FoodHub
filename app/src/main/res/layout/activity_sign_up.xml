@@ -53,7 +53,7 @@
                 />
             <!-- Sign up  Button-->
             <com.example.foodhub.views.widgets.MainButton
-                android:id="@+id/btn_login_login"
+                android:id="@+id/btn_signup_signup"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="60dp"
