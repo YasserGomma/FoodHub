@@ -16,7 +16,7 @@ import java.util.List;
 
 public class OnboardingAdapter extends RecyclerView.Adapter<OnboardingAdapter.OnboardingViewHolder> {
 
-    private List<OnboardingItem> onboardingItemList;
+    private final List<OnboardingItem> onboardingItemList;
 
     public OnboardingAdapter(List<OnboardingItem> onboardingItemList) {
         this.onboardingItemList = onboardingItemList;
@@ -39,9 +39,9 @@ public class OnboardingAdapter extends RecyclerView.Adapter<OnboardingAdapter.On
     }
 
     class OnboardingViewHolder extends RecyclerView.ViewHolder{
-        private TextView textTitle;
-        private TextView textDescription;
-        private ImageView imageOnboarding;
+        private final TextView textTitle;
+        private final TextView textDescription;
+        private final ImageView imageOnboarding;
 
 
          OnboardingViewHolder(@NonNull View itemView) {

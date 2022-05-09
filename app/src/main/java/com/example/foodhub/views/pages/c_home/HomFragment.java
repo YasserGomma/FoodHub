@@ -61,6 +61,12 @@ public class HomFragment extends Fragment {
         foodItems.add(new FoodItem("Pizza", R.drawable.item));
         foodItems.add(new FoodItem("Pizza", R.drawable.item));
         foodItems.add(new FoodItem("Pizza", R.drawable.item));
+        foodItems.add(new FoodItem("Pizza", R.drawable.item));
+        foodItems.add(new FoodItem("Pizza", R.drawable.item));
+        foodItems.add(new FoodItem("Pizza", R.drawable.item));
+        foodItems.add(new FoodItem("Pizza", R.drawable.item));
+        foodItems.add(new FoodItem("Pizza", R.drawable.item));
+        foodItems.add(new FoodItem("Pizza", R.drawable.item));
         //layoit
         LinearLayoutManager layoutManager
                 = new LinearLayoutManager(requireContext(), LinearLayoutManager.HORIZONTAL, false);
@@ -106,10 +112,12 @@ public class HomFragment extends Fragment {
         recyclerView3.setLayoutManager(layoutManager3);
         ArrayList<PopularItem> popularItems = new ArrayList<>();
 
-        popularItems.add(new PopularItem("Salmon Salad","Baked salmon fish",R.drawable.pop_1,5.5f,4.5f,20));
-        popularItems.add(new PopularItem("Salmon Salad","Baked salmon fish",R.drawable.pop_2,8.5f,4.5f,20));
-        popularItems.add(new PopularItem("Salmon Salad","Baked salmon fish",R.drawable.pop_1,5.5f,4.5f,20));
-        popularItems.add(new PopularItem("Salmon Salad","Baked salmon fish",R.drawable.pop_2,8.5f,4.5f,20));
+        popularItems.add(new PopularItem("Salmon Salad", "Baked salmon fish", R.drawable.pop_1, 5.5f, 4.5f, 20));
+        popularItems.add(new PopularItem("Salmon Salad", "Baked salmon fish", R.drawable.pop_2, 8.5f, 4.5f, 20));
+        popularItems.add(new PopularItem("Salmon Salad", "Baked salmon fish", R.drawable.pop_1, 5.5f, 4.5f, 20));
+        popularItems.add(new PopularItem("Salmon Salad", "Baked salmon fish", R.drawable.pop_2, 8.5f, 4.5f, 20));
+        popularItems.add(new PopularItem("Salmon Salad", "Baked salmon fish", R.drawable.pop_1, 5.5f, 4.5f, 20));
+        popularItems.add(new PopularItem("Salmon Salad", "Baked salmon fish", R.drawable.pop_2, 8.5f, 4.5f, 20));
 
         // 3. create an adapter
         PopularItemAdapter popularItemAdapter = new PopularItemAdapter(popularItems);
