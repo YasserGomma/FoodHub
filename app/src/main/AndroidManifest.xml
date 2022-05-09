@@ -37,10 +37,10 @@
             android:name=".views.pages.b_account.SignUp"
             android:exported="false" />
         <activity
-            android:name=".views.pages.c_home.Home"
+            android:name=".views.pages.a_intro.WelcomeScreen"
             android:exported="false" />
         <activity
-            android:name=".views.pages.a_intro.WelcomeScreen"
+            android:name=".views.pages.c_home.Home"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

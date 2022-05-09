@@ -16,5 +16,8 @@
         <attr name="tbt_text_1_color" format="reference|color"/>
         <attr name="tbt_text_2_color" format="reference|color"/>
     </declare-styleable>
+    <declare-styleable name="MainEditText">
+        <attr name="text_size" format="integer"/>
 
+    </declare-styleable>
 </resources>
