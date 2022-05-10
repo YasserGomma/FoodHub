@@ -1,6 +1,7 @@
 package com.example.foodhub.views.widgets;
 
 import android.content.Context;
+import android.content.res.TypedArray;
 import android.graphics.drawable.Drawable;
 import android.graphics.drawable.GradientDrawable;
 import android.util.AttributeSet;
@@ -15,12 +16,15 @@ public class MainButton extends AppCompatButton {
     public MainButton(Context context, AttributeSet attrs) {
         super(context, attrs);
         this.context = context;
+        TypedArray array = context.obtainStyledAttributes(attrs, R.styleable.MainButton);
+        int bg = array.getColor(R.styleable.MainButton_bg_color,getResources().getColor(R.color.primary_color));
+        int txt_color = array.getColor(R.styleable.MainButton_text_color,getResources().getColor(R.color.white));
         setAllCaps(false);
-        setTextColor(context.getColor(R.color.white));
+        setTextColor(txt_color);
         setGravity(Gravity.CENTER);
         setTextSize(TypedValue.COMPLEX_UNIT_DIP, 15);
         setTypeface(getResources().getFont(R.font.sofiapro_reguler));
-        setBackground(getDrawable(context.getColor(R.color.primary_color),28));
+        setBackground(getDrawable(bg,28));
     }
 
     public Drawable getDrawable(int color,int radius) {

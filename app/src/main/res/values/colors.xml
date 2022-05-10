@@ -10,5 +10,6 @@
     <color name="primary_color">#FE724C</color>
     <color name="hint_color">#9796A1</color>
     <color name="Et_color">#111719</color>
+    <color name="Et_bg_color">#f9f9f9</color>
 
 </resources>

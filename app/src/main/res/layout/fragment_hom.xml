@@ -12,11 +12,14 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     >
+    <include layout="@layout/home_header" android:id="@+id/header" />
+
     <TextView
         android:id="@+id/tv_fragment_home_title"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:fontFamily="@font/sofiapro_bold"
+        android:layout_below="@id/header"
         android:text="What would you like to order"
         android:textColor="@color/black"
         android:textSize="30dp" />

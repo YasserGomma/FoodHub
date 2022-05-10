@@ -53,6 +53,7 @@ public class MainEditText extends AppCompatEditText {
         shape.setShape(GradientDrawable.RECTANGLE);
         shape.setCornerRadius(SizeUtilities.Dp2Px(context, radius));
         shape.setStroke(SizeUtilities.Dp2Px(context, strokeRadius), strokeColor);
+        shape.setColor(context.getColor(R.color.Et_bg_color));
         return shape;
 
     }

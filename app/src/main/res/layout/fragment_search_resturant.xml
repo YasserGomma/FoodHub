@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginLeft="20dp"
+    tools:context=".views.pages.c_home.SearchResturantFragment">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+            >
+
+            <include
+                android:id="@+id/header"
+                layout="@layout/home_search_header" />
+
+            <LinearLayout
+                android:layout_below="@id/header"
+                android:id="@+id/layout_fragment_search_l1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+
+                >
+
+                <com.example.foodhub.views.widgets.MainEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="52dp"
+                    android:drawableStart="@drawable/search"
+                    android:drawablePadding="10dp"
+                    android:maxLines="1"
+                    android:layout_weight="1"
+                    app:text_size="15"
+                    android:hint="Find for food or restaurant .."
+                    />
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btnfragment_home_filter"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:background="@drawable/filter"
+                    android:layout_marginLeft="18dp"
+                    android:layout_weight="2"
+                    android:layout_marginRight="20dp"
+
+                    />
+
+            </LinearLayout>
+            <!--Include toggle buttons-->
+            <include
+                android:id="@+id/toggle"
+                layout="@layout/include_toggle_search"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:layout_below="@id/layout_fragment_search_l1"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="20dp" />
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/toggle"
+                android:layout_marginTop="20dp"
+                android:id="@+id/rv_fragment_search_r1"
+                />
+        </RelativeLayout>
+    </ScrollView>
+
+
+</FrameLayout>

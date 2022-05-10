@@ -11,7 +11,7 @@ public class Home extends BaseActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
-        replaceFragmen(new HomFragment(),R.id.fram_home_fragment);
+        replaceFragmen(new SearchResturantFragment(),R.id.fram_home_fragment);
 
 
     }
