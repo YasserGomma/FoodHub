@@ -19,7 +19,7 @@ public class MainButton extends AppCompatButton {
         TypedArray array = context.obtainStyledAttributes(attrs, R.styleable.MainButton);
         int bg = array.getColor(R.styleable.MainButton_bg_color,getResources().getColor(R.color.primary_color));
         int txt_color = array.getColor(R.styleable.MainButton_text_color,getResources().getColor(R.color.white));
-        setAllCaps(false);
+        setAllCaps(true);
         setTextColor(txt_color);
         setGravity(Gravity.CENTER);
         setTextSize(TypedValue.COMPLEX_UNIT_DIP, 15);

@@ -4,14 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".views.pages.a_intro.Splash"
     android:background="@color/primary_color"
-    >
+    tools:context=".views.pages.a_intro.Splash">
+
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="170dp"
+        android:layout_centerInParent="true"
         android:layout_marginHorizontal="120dp"
-        android:src="@drawable/logo"
-        android:layout_centerInParent="true"/>
+        android:src="@drawable/logo" />
 
 </RelativeLayout>

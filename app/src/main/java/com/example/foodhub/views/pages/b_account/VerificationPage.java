@@ -1,17 +1,22 @@
 package com.example.foodhub.views.pages.b_account;
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.TextView;
 
 import com.example.foodhub.R;
+import com.example.foodhub.views.components.TwoTexts;
 import com.example.foodhub.views.pages.parents.BaseActivity;
 
 public class VerificationPage extends BaseActivity {
-    private String code="";
+    private String code = "";
     EditText et_verificationpage_verification_1, et_verificationpage_verification_2, et_verificationpage_verification_3, et_verificationpage_verification_4;
+    TextView mail;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,6 +28,8 @@ public class VerificationPage extends BaseActivity {
         et_verificationpage_verification_3 = findViewById(R.id.et_verificationpage_verification_3);
         et_verificationpage_verification_4 = findViewById(R.id.et_verificationpage_verification_4);
 
+        mail=findViewById(R.id.tv_verificationpage_email);
+        mail.setText("Please type the verification code sent to "+SignUp.mail);
 
         et_verificationpage_verification_1.addTextChangedListener(new TextWatcher() {
             @Override
@@ -109,11 +116,27 @@ public class VerificationPage extends BaseActivity {
                 }
             }
         });
-        findViewById(R.id.btn_back_header).setOnClickListener(new View.OnClickListener() {
+        findViewById(R.id.btn_back_header_back).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 finish();
                 VerificationPage.super.onBackPressed();
+            }
+        });
+        TwoTexts t=findViewById(R.id.tv_verificationpage_resend);
+        TextView tv=t.findViewById(R.id.two_texts_clickable_text);
+        tv.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                new AlertDialog.Builder(VerificationPage.this)
+                        .setTitle("Code sent")
+                        .setMessage("Check your mail box again")
+                        .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog, int which) {
+                            }
+                        })
+                        .setIcon(android.R.drawable.ic_dialog_alert)
+                        .show();
             }
         });
 

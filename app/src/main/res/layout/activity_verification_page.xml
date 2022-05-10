@@ -9,15 +9,17 @@
     <!-- Page Header-->
     <include
         android:id="@+id/header"
-        layout="@layout/back_header"
+        layout="@layout/header_back"
         android:layout_width="match_parent"
         android:layout_height="80dp"
         android:layout_alignParentTop="true" />
+
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_below="@+id/header"
         android:layout_marginTop="80dp">
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -27,45 +29,52 @@
             <com.example.foodhub.views.widgets.PageTitleText
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Vefification Code" />
+                android:text="Verification Code" />
             <!-- Page Description-->
             <com.example.foodhub.views.widgets.DescriptionPageText
+                android:id="@+id/tv_verificationpage_email"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 android:text="Please type the verification code sent to prelookstudio@gmail.com" />
             <!-- Verification Field-->
             <LinearLayout
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_marginTop="40dp"
+                android:paddingHorizontal="10dp"
                 android:gravity="center">
+
                 <com.example.foodhub.views.widgets.MainEditText
                     android:id="@+id/et_verificationpage_verification_1"
-                    android:layout_width="70dp"
+                    android:layout_width="60dp"
                     android:layout_height="wrap_content"
                     android:layout_marginEnd="20dp"
                     android:gravity="center" />
+
                 <com.example.foodhub.views.widgets.MainEditText
                     android:id="@+id/et_verificationpage_verification_2"
-                    android:layout_width="70dp"
+                    android:layout_width="60dp"
                     android:layout_height="wrap_content"
                     android:gravity="center" />
+
                 <com.example.foodhub.views.widgets.MainEditText
                     android:id="@+id/et_verificationpage_verification_3"
-                    android:layout_width="70dp"
+                    android:layout_width="60dp"
                     android:layout_height="wrap_content"
                     android:layout_marginHorizontal="20dp"
                     android:gravity="center" />
+
                 <com.example.foodhub.views.widgets.MainEditText
                     android:id="@+id/et_verificationpage_verification_4"
-                    android:layout_width="70dp"
+                    android:layout_width="60dp"
                     android:layout_height="wrap_content"
                     android:gravity="center" />
             </LinearLayout>
             <!-- Resend Text-->
             <com.example.foodhub.views.components.TwoTexts
+                android:id="@+id/tv_verificationpage_resend"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="30dp"

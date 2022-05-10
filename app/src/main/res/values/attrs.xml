@@ -3,6 +3,7 @@
     <declare-styleable name="InputField">
         <attr name="if_label" format="string"/>
         <attr name="if_hint" format="string"/>
+        <attr name="if_password" format="integer"/>
     </declare-styleable>
     <declare-styleable name="TwoTexts">
         <attr name="tt_text_1" format="string"/>

@@ -5,20 +5,22 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/background"
-    tools:context=".views.pages.b_account.SignUp"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    tools:context=".views.pages.b_account.SignUp">
     <!-- Page Header-->
     <include
         android:id="@+id/header"
-        layout="@layout/back_header"
+        layout="@layout/header_back"
         android:layout_width="match_parent"
         android:layout_height="80dp"
         android:layout_alignParentTop="true" />
+
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="30dp"
-        android:layout_below="@+id/header">
+        android:layout_below="@+id/header"
+        android:layout_marginTop="30dp">
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -28,29 +30,29 @@
             <com.example.foodhub.views.widgets.PageTitleText
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Sign Up"
-                />
-           <!-- Full Name-->
+                android:text="Sign Up" />
+            <!-- Full Name-->
             <com.example.foodhub.views.components.InputField
+                android:id="@+id/signup_fullname"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                app:if_label="Full name"
                 app:if_hint="Enter your name"
-                />
+                app:if_label="Full name" />
             <!-- Email-->
             <com.example.foodhub.views.components.InputField
+                android:id="@+id/signup_email"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                app:if_label="Email"
                 app:if_hint="Enter your email"
-                />
+                app:if_label="Email" />
             <!-- Password-->
             <com.example.foodhub.views.components.InputField
+                android:id="@+id/signup_password"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                app:if_label="Password"
                 app:if_hint="Enter your password"
-                />
+                app:if_password="1"
+                app:if_label="Password" />
             <!-- Sign up  Button-->
             <com.example.foodhub.views.widgets.MainButton
                 android:id="@+id/btn_signup_signup"
@@ -62,15 +64,15 @@
                 android:text="Sign Up" />
             <!-- Sign in text -->
             <com.example.foodhub.views.components.TwoTexts
+                android:id="@+id/signup_login"
                 android:layout_width="match_parent"
-                android:layout_marginTop="20dp"
-                app:tt_text_1="Already have an account?"
-                app:tt_text_2="Login"
-                app:tt_text_1_color="@color/hint_color"
-                app:tt_text_2_color="@color/primary_color"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
                 android:gravity="center"
-                />
+                app:tt_text_1="Already have an account?"
+                app:tt_text_1_color="@color/hint_color"
+                app:tt_text_2="Login"
+                app:tt_text_2_color="@color/primary_color" />
         </LinearLayout>
     </ScrollView>
 

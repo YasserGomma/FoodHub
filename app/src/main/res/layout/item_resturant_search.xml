@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/search_restaurant_card"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="20dp"
+        android:clipToPadding="false"
+        android:elevation=".5dp"
+        app:cardCornerRadius="15dp"
+        app:cardPreventCornerOverlap="false">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="vertical"
+            android:padding="5dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cv_restaurant_search_profilepic"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:backgroundTint="@color/white"
+                    android:elevation=".5dp"
+                    app:cardCornerRadius="12dp"
+                    app:cardPreventCornerOverlap="false">
+
+                    <ImageView
+                        android:id="@+id/iv_restaurant_search_background"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="12dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/pizza" />
+
+                    <TextView
+                        android:id="@+id/tv_footer_orders"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right"
+                        android:layout_marginTop="2dp"
+                        android:layout_marginRight="3dp"
+                        android:background="@drawable/tv_footer_bg"
+                        android:fontFamily="@font/sofiapro_light"
+                        android:gravity="center"
+                        android:text="4.5"
+                        android:textColor="@color/white"
+                        android:textSize="10dp" />
+                </androidx.cardview.widget.CardView>
+
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:src="@drawable/heart" />
+            </RelativeLayout>
+            <!--Image Background-->
+
+            <!--Name -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="7dp">
+
+                <TextView
+                    android:id="@+id/tv_restaurant_search_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/sofiapro_semibold"
+                    android:text="Pizza Hut"
+                    android:textColor="@color/black"
+                    android:textSize="15dp" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="2dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/verfied" />
+
+            </LinearLayout>
+            <!--Extra info -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="10dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="2dp"
+                    android:src="@drawable/delivery" />
+
+                <TextView
+                    android:id="@+id/tv_restaurant_search_delivery_price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginHorizontal="5dp"
+                    android:fontFamily="@font/sofiapro_reguler"
+                    android:gravity="center"
+                    android:text="free"
+                    android:textColor="#5B5B5E"
+                    android:textSize="12dp" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="10dp"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="2dp"
+                    android:src="@drawable/clock" />
+
+                <TextView
+                    android:id="@+id/tv_restaurant_search_delivery_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginHorizontal="5dp"
+                    android:fontFamily="@font/sofiapro_reguler"
+                    android:gravity="center"
+                    android:text="10-15 mins"
+                    android:textColor="#5B5B5E"
+                    android:textSize="12dp" />
+
+
+            </LinearLayout>
+            <!--Foods types -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="10dp">
+
+                <TextView
+                    android:id="@+id/tv_restaurant_search_pop1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="5dp"
+                    android:background="@drawable/tv_bg"
+                    android:fontFamily="@font/sofiapro_reguler"
+                    android:padding="5dp"
+                    android:text="Pizza"
+                    android:textAllCaps="true"
+                    android:textColor="#515154"
+                    android:textSize="12dp" />
+
+                <TextView
+                    android:id="@+id/tv_restaurant_search_pop2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
+                    android:background="@drawable/tv_bg"
+                    android:fontFamily="@font/sofiapro_reguler"
+                    android:padding="5dp"
+                    android:text="Fast food"
+                    android:textAllCaps="true"
+                    android:textColor="#515154"
+                    android:textSize="12dp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/tv_restaurant_search_invisable"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="-5dp"
+        android:layout_marginBottom="20dp"
+        android:fontFamily="@font/sofiapro_semibold"
+        android:textColor="@color/black"
+        android:textSize="32dp" />
+
+</RelativeLayout>

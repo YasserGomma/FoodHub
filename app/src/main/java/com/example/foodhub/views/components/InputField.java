@@ -5,6 +5,8 @@ import android.content.res.TypedArray;
 import android.graphics.Color;
 import android.graphics.drawable.Drawable;
 import android.graphics.drawable.GradientDrawable;
+import android.text.InputType;
+import android.text.method.LinkMovementMethod;
 import android.util.AttributeSet;
 import android.util.TypedValue;
 import android.view.View;
@@ -25,10 +27,12 @@ public class InputField extends LinearLayout {
         TypedArray array = context.obtainStyledAttributes(attrs, R.styleable.InputField);
         String label = array.getString(R.styleable.InputField_if_label);
         String hint = array.getString(R.styleable.InputField_if_hint);
-        buildComponent(label, hint);
+        int pass = array.getInt(R.styleable.InputField_if_password,0);
+
+        buildComponent(label, hint,pass);
     }
 
-    void buildComponent(String label, String hint) {
+    void buildComponent(String label, String hint,int pass) {
 
 
         TextView tv = new TextView(context);
@@ -51,7 +55,7 @@ public class InputField extends LinearLayout {
         et.setTextColor(context.getColor(R.color.black));
         LinearLayout.LayoutParams params = new LayoutParams(LayoutParams.MATCH_PARENT, SizeUtilities.Dp2Px(context, 60));
         et.setLayoutParams(params);
-        paddingSize = SizeUtilities.Dp2Px(context, 20);
+        paddingSize = SizeUtilities.Dp2Px(context, 10);
         et.setPadding(paddingSize, paddingSize, paddingSize, paddingSize);
         et.setMaxLines(1);
         et.setHint(hint);
@@ -66,7 +70,11 @@ public class InputField extends LinearLayout {
                 }
             }
         });
-
+        et.setId(R.id.input_field_edit_text);
+        et.setMaxLines(1);
+        et.setMovementMethod(LinkMovementMethod.getInstance());
+        if(pass==1)
+            et.setInputType(InputType.TYPE_CLASS_TEXT | InputType.TYPE_TEXT_VARIATION_PASSWORD);
         InputField.this.addView(tv);
         InputField.this.addView(et);
     }

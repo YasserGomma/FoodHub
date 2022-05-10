@@ -2,95 +2,99 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_welcome_screen"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/welcome"
     android:orientation="vertical"
-    android:id="@+id/activity_welcome_screen"
     tools:context=".views.pages.a_intro.WelcomeScreen">
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="30dp"
+        android:orientation="vertical">
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:orientation="vertical">
+            <!-- Sign up  Button-->
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_welcome_skip"
+                android:layout_width="55dp"
+                android:layout_height="35dp"
+                android:layout_gravity="right"
+                android:background="@drawable/btn_bg_1"
+                android:fontFamily="@font/sofiapro_reguler"
+                android:text="Skip"
+                android:textColor="@color/primary_color"
+                android:textSize="14dp" />
+            <!-- Welcome Texts-->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="90dp"
+                android:fontFamily="@font/sofiapro_bold"
+                android:text="Welcome to"
+                android:textColor="@color/black"
+                android:textSize="50dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="-10dp"
+                android:fontFamily="@font/sofiapro_bold"
+                android:text="FoodHub"
+                android:textColor="@color/primary_color"
+                android:textSize="50dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/sofiapro_reguler"
+                android:lineSpacingExtra="9dp"
+                android:text="Your favourite foods delivered \nfast at your door."
+                android:textColor="#30384F"
+                android:textSize="18dp" />
+        </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginTop="30dp"
+            android:layout_marginTop="130dp"
+            android:background="@drawable/welcome_lineargradient"
             android:orientation="vertical">
-            <LinearLayout
+            <!-- Social Buttons-->
+            <include layout="@layout/include_social_buttons" />
+            <!-- Sign up  Button-->
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_welcome_start"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="-10dp"
+                android:layout_marginHorizontal="20dp"
+                android:background="@drawable/btn_bg_2"
+                android:fontFamily="@font/sofiapro_reguler"
+                android:text="Start with email or phone"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="14dp" />
+            <!-- Sign in text -->
+            <com.example.foodhub.views.components.TwoTexts
+                android:id="@+id/two"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginHorizontal="30dp"
-                android:orientation="vertical">
-                <!-- Sign up  Button-->
-                <androidx.appcompat.widget.AppCompatButton
-                    android:layout_width="55dp"
-                    android:layout_height="35dp"
-                    android:layout_gravity="right"
-                    android:background="@drawable/btn_bg_1"
-                    android:fontFamily="@font/sofiapro_reguler"
-                    android:text="Skip"
-                    android:textColor="@color/primary_color"
-                    android:textSize="14dp" />
-                <!-- Welcome Texts-->
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="90dp"
-                    android:fontFamily="@font/sofiapro_bold"
-                    android:text="Welcome to"
-                    android:textColor="@color/black"
-                    android:textSize="50dp" />
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="-10dp"
-                    android:fontFamily="@font/sofiapro_bold"
-                    android:text="FoodHub"
-                    android:textColor="@color/primary_color"
-                    android:textSize="50dp" />
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
-                    android:fontFamily="@font/sofiapro_reguler"
-                    android:lineSpacingExtra="9dp"
-                    android:text="Your favourite foods delivered \nfast at your door."
-                    android:textColor="#30384F"
-                    android:textSize="18dp" />
-            </LinearLayout>
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginTop="130dp"
-                android:background="@drawable/welcome_lineargradient"
-                android:orientation="vertical">
-                <!-- Social Buttons-->
-                <include layout="@layout/include_social_buttons" />
-                <!-- Sign up  Button-->
-                <androidx.appcompat.widget.AppCompatButton
-                    android:layout_width="match_parent"
-                    android:layout_height="55dp"
-                    android:layout_gravity="center"
-                    android:layout_marginHorizontal="20dp"
-                    android:background="@drawable/btn_bg_2"
-                    android:fontFamily="@font/sofiapro_reguler"
-                    android:text="Start with email or phone"
-                    android:textAllCaps="false"
-                    android:textColor="@color/white"
-                    android:textSize="14dp" />
-                <!-- Sign in text -->
-                <com.example.foodhub.views.components.TwoTexts
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="20dp"
-                    android:gravity="center"
-                    app:tt_text_1="Already have an account?"
-                    app:tt_text_1_color="@color/white"
-                    app:tt_text_2="Sign in"
-                    app:tt_text_2_color="@color/white" />
-            </LinearLayout>
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                app:tt_text_1="Already have an account?"
+                app:tt_text_1_color="@color/white"
+                app:tt_text_2="Sign in"
+                app:tt_text_2_color="@color/white" />
         </LinearLayout>
+    </LinearLayout>
 
 </RelativeLayout>

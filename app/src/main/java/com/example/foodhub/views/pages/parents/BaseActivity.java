@@ -4,6 +4,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.Handler;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -43,11 +44,12 @@ public class BaseActivity extends AppCompatActivity {
             }
         }, duration);
     }
+
     /**
      * Change the color of the edit text border if it is focused.
      */
     public void changeBorderOnFocus(int... ids) {
-        for(int id:ids) {
+        for (int id : ids) {
             EditText view = findViewById(id);
             view.setOnFocusChangeListener(new View.OnFocusChangeListener() {
                 @Override
@@ -66,13 +68,12 @@ public class BaseActivity extends AppCompatActivity {
     /**
      * get Edit text text
      */
-    public String getEtText(int id)
-    {
-        EditText et=findViewById(id);
+    public String getEtText(int id) {
+        EditText et = findViewById(id);
         return et.getText().toString();
     }
 
-    public void replaceFragmen(Fragment fragment,int frameId) {
+    public  void replaceFragmen(Fragment fragment, int frameId) {
         String backStateName = fragment.getClass().getName();
         FragmentManager manager = getSupportFragmentManager();
         boolean fragmentPopped = manager.popBackStackImmediate(backStateName, 0);
@@ -84,5 +85,16 @@ public class BaseActivity extends AppCompatActivity {
             ft.commit();
         }
     }
+
+    public void go_next(View v) {
+
+        if (v instanceof Button)
+            v.performClick();
+        else if (v instanceof EditText)
+            v.requestFocus();
+
+
+    }
+
 
 }

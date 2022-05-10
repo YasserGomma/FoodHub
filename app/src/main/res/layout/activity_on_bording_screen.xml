@@ -5,26 +5,26 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".views.pages.a_intro.onBordingScreen">
+
     <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnOnboardingAction"
         android:layout_width="67dp"
         android:layout_height="67dp"
-        android:id="@+id/btnOnboardingAction"
-        app:icon="@drawable/next_arrow"
-        app:iconTint="@color/white"
-        app:iconGravity="textStart"
-        android:translationY="-50dp"
-        app:iconPadding="1dp"
-        android:gravity="center"
         android:background="@drawable/btn_bg"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:gravity="center"
         android:translationX="150dp"
+        android:translationY="-50dp"
+        app:icon="@drawable/next_arrow"
+        app:iconGravity="textStart"
+        app:iconPadding="1dp"
+        app:iconTint="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
         tools:ignore="MissingConstraints" />
 
     <androidx.viewpager2.widget.ViewPager2
         android:id="@+id/onboardingViewPager"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-    />
+        android:layout_height="match_parent" />
 
     <LinearLayout
         android:id="@+id/layoutOnboardingIndicators"
@@ -32,9 +32,9 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="100dp"
         android:orientation="horizontal"
-        android:translationY="-180dp"
-        android:translationX="150dp"
         android:padding="15dp"
+        android:translationX="150dp"
+        android:translationY="-180dp"
         app:layout_constraintBottom_toTopOf="@id/btnOnboardingAction"
         tools:ignore="MissingConstraints" />
 </androidx.constraintlayout.widget.ConstraintLayout>

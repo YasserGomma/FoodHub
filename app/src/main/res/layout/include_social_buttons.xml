@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    android:layout_height="wrap_content">
+
     <LinearLayout
         android:id="@+id/include_social_buttons_linear_layout_main"
         android:layout_width="match_parent"
@@ -12,21 +13,19 @@
         android:orientation="vertical">
 
 
-
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginHorizontal="25dp"
+            android:layout_marginHorizontal="10dp"
             android:layout_marginTop="20dp"
-            android:layout_marginBottom="10dp">
+            >
 
             <View
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
                 android:layout_marginTop="10dp"
                 android:layout_weight="1"
-                android:background="#80B3B3B3"
-                />
+                android:background="#80B3B3B3" />
 
             <TextView
                 android:layout_width="match_parent"
@@ -60,10 +59,9 @@
                 android:layout_weight="1"
                 android:background="@drawable/btn_bg_1"
                 android:drawableStart="@drawable/facebook"
-                android:drawablePadding="10dp"
                 android:fontFamily="@font/sofiapro_medium"
                 android:gravity="center"
-                android:padding="7dp"
+                android:padding="10dp"
                 android:text="Facebook"
                 android:textColor="#000000"
                 android:textSize="13sp"
@@ -83,10 +81,9 @@
                 android:layout_weight="1"
                 android:background="@drawable/btn_bg_1"
                 android:drawableStart="@drawable/google"
-                android:drawablePadding="10dp"
                 android:fontFamily="@font/sofiapro_reguler"
                 android:gravity="center"
-                android:padding="7dp"
+                android:padding="10dp"
                 android:text="Google"
                 android:textColor="#000000"
                 android:textSize="13sp"

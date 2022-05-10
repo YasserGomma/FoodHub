@@ -4,15 +4,18 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:background="#f7f7f8"
+    android:background="@color/white"
     android:layout_marginLeft="26dp"
-    tools:context=".views.pages.c_home.HomFragment">
+    tools:context=".views.pages.c_home.HomeFragment">
 
 <RelativeLayout
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     >
-    <include layout="@layout/home_header" android:id="@+id/header" />
+
+    <include
+        android:id="@+id/header"
+        layout="@layout/header_home" />
 
     <TextView
         android:id="@+id/tv_fragment_home_title"
@@ -56,7 +59,7 @@
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rv_fragment_home_r1"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/layout_fragment_home_l1"
         android:layout_marginTop="20dp"
@@ -79,6 +82,7 @@
             android:textColor="@color/black"
             android:textSize="18sp" />
         <TextView
+            android:id="@+id/tv_fragment_home_view"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:fontFamily="@font/sofiapro_reguler"
@@ -91,7 +95,7 @@
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rv_fragment_home_r2"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/layout_fragment_home_l2"
         android:orientation="horizontal" />
@@ -108,12 +112,12 @@
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rv_fragment_home_r3"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/tv_fragment_home_pi"
-        android:orientation="horizontal"
+        android:layout_marginBottom="20dp"
         android:clipToPadding="false"
-        android:layout_marginBottom="20dp"/>
+        android:orientation="horizontal" />
 </RelativeLayout>
 
 </ScrollView>

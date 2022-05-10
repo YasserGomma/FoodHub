@@ -6,10 +6,10 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:padding="5dp"
         android:layout_height="match_parent"
-        android:weightSum="3"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:padding="5dp"
+        android:weightSum="3">
 
         <ImageView
             android:id="@+id/iv_footer_icon_1"
@@ -59,11 +59,11 @@
         </LinearLayout>
 
         <ImageView
-            android:layout_weight="1"
             android:id="@+id/iv_footer_icon_4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="17dp"
+            android:layout_weight="1"
             android:src="@drawable/footer_icon_4"
 
 

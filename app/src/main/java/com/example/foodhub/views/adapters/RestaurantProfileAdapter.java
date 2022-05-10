@@ -9,20 +9,20 @@ import android.widget.TextView;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.foodhub.R;
-import com.example.foodhub.data.models.RestaurantItem;
+import com.example.foodhub.data.models.RestaurantProfileItem;
 
 import java.util.ArrayList;
 
-public class RestaurantAdapter extends RecyclerView.Adapter<RestaurantAdapter.RestauranttemViewHolder> {
-    ArrayList<RestaurantItem> resturants = new ArrayList<>();
+public class RestaurantProfileAdapter extends RecyclerView.Adapter<RestaurantProfileAdapter.RestauranttemViewHolder> {
+    ArrayList<RestaurantProfileItem> resturants = new ArrayList<>();
 
-    public RestaurantAdapter(ArrayList<RestaurantItem> foods) {
+    public RestaurantProfileAdapter(ArrayList<RestaurantProfileItem> foods) {
         this.resturants = foods;
     }
 
     @Override
     public RestauranttemViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.resturant_profile_item, null, false);
+        View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_resturant_profile, null, false);
         RestauranttemViewHolder resturantItemViewHolder = new RestauranttemViewHolder(v);
         return resturantItemViewHolder;
     }
@@ -31,7 +31,7 @@ public class RestaurantAdapter extends RecyclerView.Adapter<RestaurantAdapter.Re
     @Override
     public void onBindViewHolder(RestauranttemViewHolder holder, int position) {
 
-        RestaurantItem item = resturants.get(position);
+        RestaurantProfileItem item = resturants.get(position);
         holder.background.setImageResource(item.getImage());
         holder.name.setText(item.getName());
         holder.rate.setText(item.getRate()+"");

@@ -9,18 +9,24 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginRight="30dp"
+        app:cardPreventCornerOverlap="false"
+        android:layout_marginVertical="5dp"
+
         android:clipToPadding="false"
+        android:elevation=".5dp"
         app:cardCornerRadius="25dp">
 
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+
             android:orientation="vertical">
             <!--Image Background-->
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="10dp"
+                app:cardPreventCornerOverlap="false"
                 app:cardCornerRadius="25dp">
 
                 <ImageView
@@ -151,45 +157,45 @@
                 android:layout_marginLeft="20dp"
                 android:layout_marginTop="15dp"
                 android:layout_marginBottom="20dp">
+
                 <TextView
                     android:id="@+id/tv_restaurant_pop1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginEnd="10dp"
+                    android:background="@drawable/tv_bg"
                     android:fontFamily="@font/sofiapro_reguler"
-                    android:textSize="14dp"
+                    android:padding="5dp"
+                    android:text="Burger "
                     android:textAllCaps="true"
                     android:textColor="#515154"
-                    android:text="Burger "
-                    android:background="@drawable/tv_bg"
-                    android:padding="5dp"
-                    android:layout_marginEnd="10dp"
-                    />
+                    android:textSize="14dp" />
+
                 <TextView
                     android:id="@+id/tv_restaurant_pop2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginEnd="10dp"
+                    android:background="@drawable/tv_bg"
                     android:fontFamily="@font/sofiapro_reguler"
-                    android:textSize="14dp"
+                    android:padding="5dp"
+                    android:text="Chicken"
                     android:textAllCaps="true"
                     android:textColor="#515154"
-                    android:text="Chicken"
-                    android:background="@drawable/tv_bg"
-                    android:padding="5dp"
-                    android:layout_marginEnd="10dp"
-                    />
+                    android:textSize="14dp" />
+
                 <TextView
                     android:id="@+id/tv_restaurant_pop3"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginEnd="10dp"
+                    android:background="@drawable/tv_bg"
                     android:fontFamily="@font/sofiapro_reguler"
-                    android:textSize="14dp"
+                    android:padding="5dp"
+                    android:text="Fast Food"
                     android:textAllCaps="true"
                     android:textColor="#515154"
-                    android:text="Fast Food"
-                    android:background="@drawable/tv_bg"
-                    android:padding="5dp"
-                    android:layout_marginEnd="10dp"
-                    />
+                    android:textSize="14dp" />
             </LinearLayout>
 
         </LinearLayout>

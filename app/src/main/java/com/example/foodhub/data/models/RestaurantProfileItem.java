@@ -2,7 +2,7 @@ package com.example.foodhub.data.models;
 
 import java.util.ArrayList;
 
-public class RestaurantItem {
+public class RestaurantProfileItem {
     int image;
     float rate;
     int numberOfPeople;
@@ -68,7 +68,7 @@ public class RestaurantItem {
         this.deliverytime = deliverytime;
     }
 
-    public RestaurantItem(int image, float rate, int numberOfPeople, int deliveryPrice, ArrayList<String> popularItems, String name, String  deliverytime) {
+    public RestaurantProfileItem(int image, float rate, int numberOfPeople, int deliveryPrice, ArrayList<String> popularItems, String name, String  deliverytime) {
         this.image = image;
         this.rate = rate;
         this.numberOfPeople = numberOfPeople;

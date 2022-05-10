@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="two_texts_clickable_text" type="id"/>
+    <item name="input_field_edit_text" type="id"/>
+
+</resources>

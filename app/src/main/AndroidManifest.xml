@@ -22,7 +22,7 @@
             android:name=".views.pages.b_account.VerificationPage"
             android:exported="false" />
         <activity
-            android:name=".views.pages.a_intro.Splash"
+            android:name=".views.pages.c_home.Home"
             android:exported="false" />
         <activity
             android:name=".views.pages.b_account.Login"
@@ -40,7 +40,7 @@
             android:name=".views.pages.a_intro.WelcomeScreen"
             android:exported="false" />
         <activity
-            android:name=".views.pages.c_home.Home"
+            android:name=".views.pages.a_intro.Splash"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

@@ -5,23 +5,19 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white"
-    android:clipToPadding="false"
     android:clipToOutline="false"
+    android:clipToPadding="false"
     tools:context=".views.pages.c_home.Home">
 
     <FrameLayout
         android:id="@+id/fram_home_fragment"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_above="@+id/footer"
-        android:layout_below="@id/header">
-
-    </FrameLayout>
-
+        android:layout_above="@+id/footer"></FrameLayout>
 
     <include
         android:id="@+id/footer"
-        layout="@layout/footer"
+        layout="@layout/footer_home"
         android:layout_width="match_parent"
         android:layout_height="60dp"
         android:layout_alignParentBottom="true" />

@@ -44,6 +44,7 @@ public class TwoTexts extends LinearLayout {
         tv2.setTextSize(TypedValue.COMPLEX_UNIT_DIP, 14);
         tv2.setTextColor(context.getColor(c2));
         tv2.setLayoutParams(new LayoutParams(LayoutParams.WRAP_CONTENT, LayoutParams.WRAP_CONTENT));
+        tv2.setId(R.id.two_texts_clickable_text);
         TwoTexts.this.addView(tv);
         TwoTexts.this.addView(tv2);
     }

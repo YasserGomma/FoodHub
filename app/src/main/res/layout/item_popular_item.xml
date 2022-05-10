@@ -10,7 +10,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginRight="20dp"
+        app:cardPreventCornerOverlap="false"
         android:layout_marginBottom="20dp"
+        android:elevation=".5dp"
         android:clipToPadding="false"
         app:cardCornerRadius="15dp">
 
@@ -25,7 +27,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="10dp"
+                app:cardPreventCornerOverlap="false"
                 app:cardCornerRadius="15dp">
+
 
                 <ImageView
                     android:id="@+id/iv_popular_background"
@@ -112,8 +116,8 @@
             android:layout_marginTop="135dp"
             android:background="@drawable/btn_bg_1"
             android:paddingHorizontal="10dp"
-            android:paddingVertical="2dp">
-
+            android:paddingVertical="2dp"
+            android:orientation="horizontal">
 
 
             <TextView
@@ -124,20 +128,21 @@
                 android:text="5.50"
                 android:textColor="@color/black"
                 android:textSize="12dp" />
+
             <ImageView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:src="@drawable/star"
                 android:layout_gravity="center"
-                />
+                android:src="@drawable/star" />
+
             <TextView
                 android:id="@+id/tv_restaurant_num_people"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="bottom"
+                android:layout_marginLeft="5dp"
                 android:fontFamily="@font/sofiapro_reguler"
                 android:text="$"
-                android:layout_marginLeft="5dp"
                 android:textColor="@color/hint_color"
                 android:textSize="9dp" />
 
@@ -146,15 +151,15 @@
 
 
     </androidx.cardview.widget.CardView>
+
     <TextView
+        android:id="@+id/tv_popular_invisable"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/tv_popular_invisable"
-        android:fontFamily="@font/sofiapro_semibold"
-        android:textSize="32dp"
-        android:textColor="@color/black"
-        android:layout_marginBottom="20dp"
         android:layout_marginTop="-5dp"
-        />
+        android:layout_marginBottom="20dp"
+        android:fontFamily="@font/sofiapro_semibold"
+        android:textColor="@color/black"
+        android:textSize="32dp" />
 
 </RelativeLayout>
