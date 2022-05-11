@@ -4,5 +4,6 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="primary_color">#FE724C</string>
     <string name="edit_text_border_color">#D0D2D1"</string>
+    <string name="food_description"> Brown the beef better. Lean ground beef – I like to use 85% lean angus. Garlic – use fresh chopped. Spices – chili powder, cumin, onion powder</string>
 
 </resources>

@@ -2,5 +2,14 @@
 <resources>
     <item name="two_texts_clickable_text" type="id"/>
     <item name="input_field_edit_text" type="id"/>
+    <item name="review_field_review" type="id"/>
+    <item name="review_field_people" type="id"/>
+    <item name="illustrative_text" type="id"/>
+    <item name="adds_price" type="id"/>
+    <item name="adds_name" type="id"/>
+    <item name="adds_pic" type="id"/>
+    <item name="adds_btn" type="id"/>
+
+
 
 </resources>

@@ -12,6 +12,11 @@ import com.example.foodhub.R;
 public class IllustrativeText extends AppCompatTextView {
     Context context;
 
+    public IllustrativeText(Context context) {
+        super(context);
+        this.context = context;
+    }
+
     public IllustrativeText(Context context, AttributeSet attrs) {
         super(context, attrs);
         this.context = context;
@@ -19,7 +24,7 @@ public class IllustrativeText extends AppCompatTextView {
         setLayoutParams(params);
         setTypeface(getResources().getFont(R.font.sofiapro_medium));
         setTextSize(TypedValue.COMPLEX_UNIT_DIP, 14);
-
+        setId(R.id.illustrative_text);
 
     }
 }

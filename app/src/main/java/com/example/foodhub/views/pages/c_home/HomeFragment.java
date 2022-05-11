@@ -53,7 +53,7 @@ public class HomeFragment extends Fragment {
         tv_fragment_home_view.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                replaceFragment(new SearchResturantFragment(),R.id.fram_home_fragment);
+                replaceFragment(new SearchFragment(),R.id.fram_home_fragment);
 
             }
         });

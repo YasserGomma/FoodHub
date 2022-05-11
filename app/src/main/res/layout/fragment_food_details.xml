@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginHorizontal="20dp"
+    android:layout_marginTop="20dp"
+    tools:context=".views.pages.c_home.Home">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_food_details_background"
+        android:layout_width="match_parent"
+        android:layout_height="240dp"
+        app:cardCornerRadius="25dp">
+
+        <ImageView
+            android:id="@+id/iv_food_details_background"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:src="@drawable/resturent_background_1" />
+    </androidx.cardview.widget.CardView>
+
+    <com.example.foodhub.views.widgets.PageTitleText
+        android:id="@+id/tv_food_details_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/card_food_details_background"
+        android:layout_marginVertical="10dp"
+        android:text="Ground Beef Tacos"
+        app:pt_text_size="31" />
+
+    <com.example.foodhub.views.components.ReviewFiled
+        android:id="@+id/review_food_details"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_food_details_title" />
+
+    <RelativeLayout
+        android:id="@+id/add_delete_food_details"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/review_food_details"
+        android:layout_marginTop="10dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <com.example.foodhub.views.widgets.IllustrativeText
+                android:id="@+id/dollerS"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="$"
+                android:textColor="@color/black" />
+
+            <com.example.foodhub.views.widgets.PageTitleText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="9.5"
+                app:pt_text_size="31" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true">
+
+            <com.example.foodhub.views.components.AddDeletItem
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <com.example.foodhub.views.widgets.DescriptionPageText
+        android:id="@+id/tv_food_details_description"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/add_delete_food_details"
+        android:layout_marginTop="10dp"
+        android:text="Brown the beef better. Lean ground beef – Ilike to use 85% lean angus. Garlic – use freshchopped. Spices – chili powder, cumin, onion powder"
+        android:textSize="15dp" />
+
+    <com.example.foodhub.views.widgets.PageTitleText
+        android:id="@+id/addstitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Choice of Add On"
+        android:layout_below="@id/tv_food_details_description"
+        android:layout_marginTop="20dp"
+        app:pt_text_size="18"
+        />
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/addstitle"
+        android:layout_above="@+id/btn_food_details_add"
+        android:layout_marginVertical="20dp"
+        >
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_food_details_rv"
+            android:clipToPadding="false"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scrollbars="none"
+            android:overScrollMode="never"
+
+            />
+    </ScrollView>
+
+
+    <com.example.foodhub.views.widgets.MainButton
+        android:id="@+id/btn_food_details_add"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="30dp"
+        android:layout_marginHorizontal="70dp"
+        android:text="Add to cart"
+        />
+
+</RelativeLayout>

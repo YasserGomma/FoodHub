@@ -8,6 +8,7 @@
         <entry key="..\:/android/ODC/app/src/main/res/drawable-v24/ll_bg.xml" value="0.1405" />
         <entry key="..\:/android/ODC/app/src/main/res/drawable-v24/onboarding_indicator_inactive.xml" value="0.1" />
         <entry key="..\:/android/ODC/app/src/main/res/drawable-v24/tv_bg.xml" value="0.1525" />
+        <entry key="..\:/android/ODC/app/src/main/res/drawable/btn1_bg.xml" value="0.1215" />
         <entry key="..\:/android/ODC/app/src/main/res/drawable/btn_bg.xml" value="0.193" />
         <entry key="..\:/android/ODC/app/src/main/res/drawable/btn_bg_1.xml" value="0.159" />
         <entry key="..\:/android/ODC/app/src/main/res/drawable/btn_bg_2.xml" value="0.1665" />
@@ -23,6 +24,7 @@
         <entry key="..\:/android/ODC/app/src/main/res/drawable/tv_footer_bg.xml" value="0.1425" />
         <entry key="..\:/android/ODC/app/src/main/res/drawable/welcome_lineargradient.xml" value="0.1" />
         <entry key="..\:/android/ODC/app/src/main/res/font/font.xml" value="0.27589743589743587" />
+        <entry key="..\:/android/ODC/app/src/main/res/layout/activity_food_details.xml" value="0.264" />
         <entry key="..\:/android/ODC/app/src/main/res/layout/activity_home.xml" value="0.21621621621621623" />
         <entry key="..\:/android/ODC/app/src/main/res/layout/activity_login.xml" value="0.2603092783505155" />
         <entry key="..\:/android/ODC/app/src/main/res/layout/activity_main.xml" value="0.25" />
@@ -40,8 +42,10 @@
         <entry key="..\:/android/ODC/app/src/main/res/layout/food_item.xml" value="1.0" />
         <entry key="..\:/android/ODC/app/src/main/res/layout/footer.xml" value="0.4" />
         <entry key="..\:/android/ODC/app/src/main/res/layout/footer_home.xml" value="0.21621621621621623" />
+        <entry key="..\:/android/ODC/app/src/main/res/layout/fragment_food_details.xml" value="0.21621621621621623" />
         <entry key="..\:/android/ODC/app/src/main/res/layout/fragment_hom.xml" value="0.264" />
         <entry key="..\:/android/ODC/app/src/main/res/layout/fragment_onbording.xml" value="0.1" />
+        <entry key="..\:/android/ODC/app/src/main/res/layout/fragment_search.xml" value="0.21621621621621623" />
         <entry key="..\:/android/ODC/app/src/main/res/layout/fragment_search_resturant.xml" value="0.21621621621621623" />
         <entry key="..\:/android/ODC/app/src/main/res/layout/fragment_view_pager.xml" value="0.4" />
         <entry key="..\:/android/ODC/app/src/main/res/layout/header.xml" value="0.21621621621621623" />
@@ -51,6 +55,7 @@
         <entry key="..\:/android/ODC/app/src/main/res/layout/home_search_header.xml" value="0.536" />
         <entry key="..\:/android/ODC/app/src/main/res/layout/include_social_buttons.xml" value="0.21621621621621623" />
         <entry key="..\:/android/ODC/app/src/main/res/layout/include_toggle_search.xml" value="0.152" />
+        <entry key="..\:/android/ODC/app/src/main/res/layout/item_adds.xml" value="0.2153153153153153" />
         <entry key="..\:/android/ODC/app/src/main/res/layout/item_container_onboarding.xml" value="0.1" />
         <entry key="..\:/android/ODC/app/src/main/res/layout/item_food.xml" value="0.8800000000000001" />
         <entry key="..\:/android/ODC/app/src/main/res/layout/item_popular_item.xml" value="0.21621621621621623" />

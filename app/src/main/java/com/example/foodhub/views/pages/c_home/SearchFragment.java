@@ -21,19 +21,15 @@ import com.example.foodhub.views.helpers.SizeUtilities;
 
 import java.util.ArrayList;
 
-public class SearchResturantFragment extends Fragment {
+
+public class SearchFragment extends Fragment {
 
     View rootView;
-    public SearchResturantFragment() {
+
+    public SearchFragment() {
         // Required empty public constructor
     }
 
-
-    public static SearchResturantFragment newInstance(String param1, String param2) {
-        SearchResturantFragment fragment = new SearchResturantFragment();
-
-        return fragment;
-    }
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -44,28 +40,27 @@ public class SearchResturantFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        rootView = inflater.inflate(R.layout.fragment_search_resturant, container, false);
-        TextView t1=rootView.findViewById(R.id.toggle_t1);
-        TextView t2=rootView.findViewById(R.id.toggle_t2);
+        rootView = inflater.inflate(R.layout.fragment_search, container, false);
+        TextView t1 = rootView.findViewById(R.id.toggle_t1);
+        TextView t2 = rootView.findViewById(R.id.toggle_t2);
         t1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-              formatToggleButtons(t1,t2);
+                formatToggleButtons(t1, t2);
                 configureFood();
             }
         });
         t2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                formatToggleButtons(t2,t1);
+                formatToggleButtons(t2, t1);
                 configureResturant();
             }
         });
         return rootView;
     }
 
-    public void formatToggleButtons(TextView selected, TextView notSelected)
-    {
+    public void formatToggleButtons(TextView selected, TextView notSelected) {
         selected.setBackgroundResource(R.drawable.btn_bg);
         selected.setTextColor(getContext().getColor(R.color.white));
         notSelected.setBackgroundResource(R.drawable.btn_bg_5);
@@ -74,12 +69,13 @@ public class SearchResturantFragment extends Fragment {
         selected.setPadding(paddingSize, paddingSize, paddingSize, paddingSize);
         notSelected.setPadding(paddingSize, paddingSize, paddingSize, paddingSize);
     }
-    public void configureFood(){
+
+    public void configureFood() {
 
         //1. Inflate RecyclerView and  create layout
         RecyclerView recyclerView = (RecyclerView) rootView.findViewById(R.id.rv_fragment_search_r1);
         StaggeredGridLayoutManager layoutManager
-                = new StaggeredGridLayoutManager (2, LinearLayoutManager.VERTICAL);
+                = new StaggeredGridLayoutManager(2, LinearLayoutManager.VERTICAL);
 
         // 2. set layoutManger
         recyclerView.setLayoutManager(layoutManager);
@@ -104,28 +100,29 @@ public class SearchResturantFragment extends Fragment {
         // 5. set item animator to DefaultAnimator
         recyclerView.setItemAnimator(new DefaultItemAnimator());
     }
-    public void configureResturant(){
+
+    public void configureResturant() {
         //1. Inflate RecyclerView and  create layout
         RecyclerView recyclerView = (RecyclerView) rootView.findViewById(R.id.rv_fragment_search_r1);
         StaggeredGridLayoutManager layoutManager
-                = new StaggeredGridLayoutManager (2, LinearLayoutManager.VERTICAL);
+                = new StaggeredGridLayoutManager(2, LinearLayoutManager.VERTICAL);
 
         // 2. set layoutManger
         recyclerView.setLayoutManager(layoutManager);
-        ArrayList<RestaurantSearchItem> restaurantSearchItems= new ArrayList<>();
+        ArrayList<RestaurantSearchItem> restaurantSearchItems = new ArrayList<>();
         ArrayList<String> pop = new ArrayList<>();
         pop.add("Coffe");
-        restaurantSearchItems.add(new RestaurantSearchItem(R.drawable.pizza,4.5f,0,pop,"Pizza Hut","10-15 mins"));
-        restaurantSearchItems.add(new RestaurantSearchItem(R.drawable.starbucks,4.5f,0,pop,"Starbuck","10-15 mins"));
-        restaurantSearchItems.add(new RestaurantSearchItem(R.drawable.kfc,4.5f,0,pop,"KFC","10-15 mins"));
-        restaurantSearchItems.add(new RestaurantSearchItem(R.drawable.burger,4.5f,0,pop,"Burger King","10-15 mins"));
-        restaurantSearchItems.add(new RestaurantSearchItem(R.drawable.jimmy,4.5f,0,pop,"Jimmy John's","10-15 mins"));
-        restaurantSearchItems.add(new RestaurantSearchItem(R.drawable.starbucks,4.5f,0,pop,"Starbuck","10-15 mins"));
-        restaurantSearchItems.add(new RestaurantSearchItem(R.drawable.kfc,4.5f,0,pop,"KFC","10-15 mins"));
-        restaurantSearchItems.add(new RestaurantSearchItem(R.drawable.burger,4.5f,0,pop,"Burger King","10-15 mins"));
-        restaurantSearchItems.add(new RestaurantSearchItem(R.drawable.jimmy,4.5f,0,pop,"Jimmy John's","10-15 mins"));
-        restaurantSearchItems.add(new RestaurantSearchItem(R.drawable.pizza,4.5f,0,pop,"Pizza Hut","10-15 mins"));
-        restaurantSearchItems.add(new RestaurantSearchItem(R.drawable.pizza,4.5f,0,pop,"Pizza Hut","10-15 mins"));
+        restaurantSearchItems.add(new RestaurantSearchItem(R.drawable.pizza, 4.5f, 0, pop, "Pizza Hut", "10-15 mins"));
+        restaurantSearchItems.add(new RestaurantSearchItem(R.drawable.starbucks, 4.5f, 0, pop, "Starbuck", "10-15 mins"));
+        restaurantSearchItems.add(new RestaurantSearchItem(R.drawable.kfc, 4.5f, 0, pop, "KFC", "10-15 mins"));
+        restaurantSearchItems.add(new RestaurantSearchItem(R.drawable.burger, 4.5f, 0, pop, "Burger King", "10-15 mins"));
+        restaurantSearchItems.add(new RestaurantSearchItem(R.drawable.jimmy, 4.5f, 0, pop, "Jimmy John's", "10-15 mins"));
+        restaurantSearchItems.add(new RestaurantSearchItem(R.drawable.starbucks, 4.5f, 0, pop, "Starbuck", "10-15 mins"));
+        restaurantSearchItems.add(new RestaurantSearchItem(R.drawable.kfc, 4.5f, 0, pop, "KFC", "10-15 mins"));
+        restaurantSearchItems.add(new RestaurantSearchItem(R.drawable.burger, 4.5f, 0, pop, "Burger King", "10-15 mins"));
+        restaurantSearchItems.add(new RestaurantSearchItem(R.drawable.jimmy, 4.5f, 0, pop, "Jimmy John's", "10-15 mins"));
+        restaurantSearchItems.add(new RestaurantSearchItem(R.drawable.pizza, 4.5f, 0, pop, "Pizza Hut", "10-15 mins"));
+        restaurantSearchItems.add(new RestaurantSearchItem(R.drawable.pizza, 4.5f, 0, pop, "Pizza Hut", "10-15 mins"));
 
         // 3. create an adapter
         RestaurantSearchAdapter popularItemAdapter = new RestaurantSearchAdapter(restaurantSearchItems);
@@ -135,7 +132,6 @@ public class SearchResturantFragment extends Fragment {
         recyclerView.setItemAnimator(new DefaultItemAnimator());
 
     }
-
 
 
 }
