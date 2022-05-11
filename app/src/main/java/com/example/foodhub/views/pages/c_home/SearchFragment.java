@@ -75,7 +75,7 @@ public class SearchFragment extends Fragment {
         //1. Inflate RecyclerView and  create layout
         RecyclerView recyclerView = (RecyclerView) rootView.findViewById(R.id.rv_fragment_search_r1);
         StaggeredGridLayoutManager layoutManager
-                = new StaggeredGridLayoutManager(2, LinearLayoutManager.HORIZONTAL);
+                = new StaggeredGridLayoutManager(2, LinearLayoutManager.VERTICAL);
 
         // 2. set layoutManger
         recyclerView.setLayoutManager(layoutManager);
