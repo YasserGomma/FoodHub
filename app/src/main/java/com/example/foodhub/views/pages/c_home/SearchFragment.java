@@ -111,7 +111,7 @@ public class SearchFragment extends Fragment {
         recyclerView.setLayoutManager(layoutManager);
         ArrayList<RestaurantSearchItem> restaurantSearchItems = new ArrayList<>();
         ArrayList<String> pop = new ArrayList<>();
-        pop.add("Coffe");
+        pop.add("Coffe ");
         restaurantSearchItems.add(new RestaurantSearchItem(R.drawable.pizza, 4.5f, 0, pop, "Pizza Hut", "10-15 mins"));
         restaurantSearchItems.add(new RestaurantSearchItem(R.drawable.starbucks, 4.5f, 0, pop, "Starbuck", "10-15 mins"));
         restaurantSearchItems.add(new RestaurantSearchItem(R.drawable.kfc, 4.5f, 0, pop, "KFC", "10-15 mins"));
