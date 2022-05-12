@@ -40,8 +40,10 @@ public class FoodDetailsFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+        ((Home)getActivity()).hide_footer();
         View rootView = inflater.inflate(R.layout.fragment_food_details, container, false);
         RecyclerView recyclerView = (RecyclerView) rootView.findViewById(R.id.rv_food_details_rv);
+        recyclerView.setNestedScrollingEnabled(false);
         LinearLayoutManager layoutManager
                 = new LinearLayoutManager(requireContext(), LinearLayoutManager.VERTICAL, false);
 
@@ -66,5 +68,11 @@ public class FoodDetailsFragment extends Fragment {
 
 
         return rootView;
+    }
+
+    @Override
+    public void onViewCreated( View view,  Bundle savedInstanceState) {
+
+
     }
 }

@@ -24,8 +24,7 @@ public class RestaurantSearchAdapter extends RecyclerView.Adapter<RestaurantSear
     @Override
     public RestauranttemViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_resturant_search, null, false);
-        RestauranttemViewHolder resturantItemViewHolder = new RestauranttemViewHolder(v);
-        return resturantItemViewHolder;
+        return new RestauranttemViewHolder(v);
     }
 
 
@@ -51,7 +50,7 @@ public class RestaurantSearchAdapter extends RecyclerView.Adapter<RestaurantSear
         return items.size()-1;
     }
 
-    class RestauranttemViewHolder extends RecyclerView.ViewHolder {
+    static class RestauranttemViewHolder extends RecyclerView.ViewHolder {
 
         ImageView background;
         TextView name, rate, deliveryPrice, deliverytime,invisable;

@@ -24,7 +24,6 @@ public class IllustrativeText extends AppCompatTextView {
         setLayoutParams(params);
         setTypeface(getResources().getFont(R.font.sofiapro_medium));
         setTextSize(TypedValue.COMPLEX_UNIT_DIP, 14);
-        setId(R.id.illustrative_text);
 
     }
 }

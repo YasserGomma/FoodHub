@@ -4,7 +4,9 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.DefaultItemAnimator;
@@ -22,14 +24,20 @@ import com.example.foodhub.views.helpers.SizeUtilities;
 import java.util.ArrayList;
 
 
-public class SearchFragment extends Fragment {
+public class SearchRestuantAndFoodFragment extends Fragment {
 
     View rootView;
 
-    public SearchFragment() {
+    public SearchRestuantAndFoodFragment() {
         // Required empty public constructor
     }
 
+
+    public static SearchRestuantAndFoodFragment newInstance(String param1, String param2) {
+        SearchRestuantAndFoodFragment fragment = new SearchRestuantAndFoodFragment();
+
+        return fragment;
+    }
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -40,9 +48,10 @@ public class SearchFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        rootView = inflater.inflate(R.layout.fragment_search, container, false);
+        rootView = inflater.inflate(R.layout.fragment_search_restuant_and_food, container, false);
         TextView t1 = rootView.findViewById(R.id.toggle_t1);
         TextView t2 = rootView.findViewById(R.id.toggle_t2);
+
         t1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -50,6 +59,8 @@ public class SearchFragment extends Fragment {
                 configureFood();
             }
         });
+
+        //TextView t2 = rootView.findViewById(R.id.toggle_t2);
         t2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -57,7 +68,21 @@ public class SearchFragment extends Fragment {
                 configureResturant();
             }
         });
+
         return rootView;
+    }
+
+    @Override
+    public void onViewCreated(View view, Bundle savedInstanceState) {
+
+        Button t1 = view.findViewById(R.id.btnfragmen_search_filter);
+        t1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Toast.makeText(getContext(), "test", Toast.LENGTH_SHORT).show();
+                configureResturant();
+            }
+        });
     }
 
     public void formatToggleButtons(TextView selected, TextView notSelected) {
@@ -112,7 +137,7 @@ public class SearchFragment extends Fragment {
         ArrayList<RestaurantSearchItem> restaurantSearchItems = new ArrayList<>();
         ArrayList<String> pop = new ArrayList<>();
         pop.add("Coffe ");
-        restaurantSearchItems.add(new RestaurantSearchItem(R. drawable.pizza, 4.5f, 0, pop, "Pizza Hut", "10-15 mins"));
+        restaurantSearchItems.add(new RestaurantSearchItem(R.drawable.pizza, 4.5f, 0, pop, "Pizza Hut", "10-15 mins"));
         restaurantSearchItems.add(new RestaurantSearchItem(R.drawable.starbucks, 4.5f, 0, pop, "Starbuck", "10-15 mins"));
         restaurantSearchItems.add(new RestaurantSearchItem(R.drawable.kfc, 4.5f, 0, pop, "KFC", "10-15 mins"));
         restaurantSearchItems.add(new RestaurantSearchItem(R.drawable.burger, 4.5f, 0, pop, "Burger King", "10-15 mins"));
@@ -132,6 +157,5 @@ public class SearchFragment extends Fragment {
         recyclerView.setItemAnimator(new DefaultItemAnimator());
 
     }
-
 
 }

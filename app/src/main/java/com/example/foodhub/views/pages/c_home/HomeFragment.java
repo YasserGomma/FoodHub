@@ -30,6 +30,12 @@ public class HomeFragment extends Fragment {
         // Required empty public constructor
     }
 
+    @Override
+    public void onResume() {
+        super.onResume();
+        ((Home) getActivity()).show_footer();
+
+    }
 
     public static HomeFragment newInstance(String param1, String param2) {
         HomeFragment fragment = new HomeFragment();
@@ -48,13 +54,11 @@ public class HomeFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.fragment_hom, container, false);
-
-        TextView tv_fragment_home_view=rootView.findViewById(R.id.tv_fragment_home_view);
+        TextView tv_fragment_home_view = rootView.findViewById(R.id.tv_fragment_home_view);
         tv_fragment_home_view.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                replaceFragment(new SearchFragment(),R.id.fram_home_fragment);
-
+                replaceFragment(new SearchRestuantAndFoodFragment(), R.id.fram_home_fragment);
             }
         });
         // 1. get a reference to recyclerView
@@ -132,7 +136,7 @@ public class HomeFragment extends Fragment {
         popularItems.add(new PopularItem("Salmon Salad", "Baked salmon fish", R.drawable.pop_2, 8.5f, 4.5f, 20));
 
         // 3. create an adapter
-        PopularItemAdapter popularItemAdapter = new PopularItemAdapter(popularItems);
+        PopularItemAdapter popularItemAdapter = new PopularItemAdapter(getContext(), getFragmentManager(), popularItems);
         // 4. set adapter
         recyclerView3.setAdapter(popularItemAdapter);
         // 5. set item animator to DefaultAnimator
@@ -140,7 +144,8 @@ public class HomeFragment extends Fragment {
 
         return rootView;
     }
-    public  void replaceFragment(Fragment fragment, int frameId) {
+
+    public void replaceFragment(Fragment fragment, int frameId) {
         String backStateName = fragment.getClass().getName();
         FragmentManager manager = getParentFragmentManager();
         boolean fragmentPopped = manager.popBackStackImmediate(backStateName, 0);
@@ -152,5 +157,6 @@ public class HomeFragment extends Fragment {
             ft.commit();
         }
     }
+
 
 }
