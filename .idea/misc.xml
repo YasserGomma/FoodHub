@@ -43,15 +43,16 @@
         <entry key="..\:/android/ODC/app/src/main/res/layout/footer.xml" value="0.4" />
         <entry key="..\:/android/ODC/app/src/main/res/layout/footer_home.xml" value="0.21621621621621623" />
         <entry key="..\:/android/ODC/app/src/main/res/layout/fragment_food_details.xml" value="0.264" />
+        <entry key="..\:/android/ODC/app/src/main/res/layout/fragment_food_filter.xml" value="0.176" />
         <entry key="..\:/android/ODC/app/src/main/res/layout/fragment_hom.xml" value="0.264" />
         <entry key="..\:/android/ODC/app/src/main/res/layout/fragment_onbording.xml" value="0.1" />
         <entry key="..\:/android/ODC/app/src/main/res/layout/fragment_search.xml" value="0.21621621621621623" />
-        <entry key="..\:/android/ODC/app/src/main/res/layout/fragment_search_restuant_and_food.xml" value="0.21621621621621623" />
+        <entry key="..\:/android/ODC/app/src/main/res/layout/fragment_search_restuant_and_food.xml" value="0.44181818181818183" />
         <entry key="..\:/android/ODC/app/src/main/res/layout/fragment_search_resturant.xml" value="0.21621621621621623" />
         <entry key="..\:/android/ODC/app/src/main/res/layout/fragment_view_pager.xml" value="0.4" />
         <entry key="..\:/android/ODC/app/src/main/res/layout/header.xml" value="0.21621621621621623" />
         <entry key="..\:/android/ODC/app/src/main/res/layout/header_back.xml" value="0.1" />
-        <entry key="..\:/android/ODC/app/src/main/res/layout/header_home.xml" value="0.21621621621621623" />
+        <entry key="..\:/android/ODC/app/src/main/res/layout/header_home.xml" value="0.7232142857142857" />
         <entry key="..\:/android/ODC/app/src/main/res/layout/header_home_search.xml" value="0.21621621621621623" />
         <entry key="..\:/android/ODC/app/src/main/res/layout/home_header.xml" value="0.21621621621621623" />
         <entry key="..\:/android/ODC/app/src/main/res/layout/home_search_header.xml" value="0.536" />

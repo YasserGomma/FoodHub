@@ -6,9 +6,10 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 import androidx.recyclerview.widget.DefaultItemAnimator;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -75,16 +76,26 @@ public class SearchRestuantAndFoodFragment extends Fragment {
     @Override
     public void onViewCreated(View view, Bundle savedInstanceState) {
 
-        Button t1 = view.findViewById(R.id.btnfragmen_search_filter);
+        Button t1 = view.findViewById(R.id.btnfragment_home_filter);
         t1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(getContext(), "test", Toast.LENGTH_SHORT).show();
-                configureResturant();
+                replaceFragment(new FoodFilterFragment(), R.id.fram_home_fragment);
             }
         });
     }
-
+    public void replaceFragment(Fragment fragment, int frameId) {
+        String backStateName = fragment.getClass().getName();
+        FragmentManager manager = getParentFragmentManager();
+        boolean fragmentPopped = manager.popBackStackImmediate(backStateName, 0);
+        if (!fragmentPopped && manager.findFragmentByTag(backStateName) == null) { //fragment not in back stack, create it.
+            FragmentTransaction ft = manager.beginTransaction();
+            ft.replace(frameId, fragment, backStateName);
+            ft.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE);
+            ft.addToBackStack(backStateName);
+            ft.commit();
+        }
+    }
     public void formatToggleButtons(TextView selected, TextView notSelected) {
         selected.setBackgroundResource(R.drawable.btn_bg);
         selected.setTextColor(getContext().getColor(R.color.white));

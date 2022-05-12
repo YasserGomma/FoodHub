@@ -9,7 +9,9 @@
     <item name="adds_name" type="id"/>
     <item name="adds_pic" type="id"/>
     <item name="adds_btn" type="id"/>
-
+    <item name="header_btn" type="id"/>
+    <item name="header_txt" type="id"/>
+    <item name="header_img" type="id"/>
 
 
 </resources>

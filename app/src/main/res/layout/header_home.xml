@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/back_header"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
@@ -15,7 +16,7 @@
         android:background="@drawable/btn_bg_4"
         android:clickable="true"
         android:drawableTop="@drawable/menu"
-        android:paddingTop="12dp" />
+        android:paddingTop="15dp" />
 
     <LinearLayout
         android:layout_width="wrap_content"
@@ -61,12 +62,16 @@
             />
     </LinearLayout>
 
-    <ImageView
+    <com.makeramen.roundedimageview.RoundedImageView
         android:id="@+id/iv_home_header_photo"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
         android:layout_alignParentRight="true"
+        android:layout_marginRight="10dp"
         android:layout_marginTop="20dp"
-        android:src="@drawable/person" />
+        android:background="@drawable/btn_bg_4"
+        android:scaleType="centerCrop"
+        android:src="@drawable/bussiness_man"
+        app:riv_corner_radius="15dp" />
 
 </RelativeLayout>
