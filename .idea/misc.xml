@@ -20,6 +20,8 @@
         <entry key="..\:/android/ODC/app/src/main/res/drawable/et_bg.xml" value="0.1425" />
         <entry key="..\:/android/ODC/app/src/main/res/drawable/et_bg_1.xml" value="0.1505" />
         <entry key="..\:/android/ODC/app/src/main/res/drawable/et_bg_2.xml" value="0.1425" />
+        <entry key="..\:/android/ODC/app/src/main/res/drawable/et_bg_3.xml" value="0.1445" />
+        <entry key="..\:/android/ODC/app/src/main/res/drawable/et_bg_4.xml" value="0.1445" />
         <entry key="..\:/android/ODC/app/src/main/res/drawable/exit_from_left.xml" value="0.1445" />
         <entry key="..\:/android/ODC/app/src/main/res/drawable/exit_from_right.xml" value="0.1445" />
         <entry key="..\:/android/ODC/app/src/main/res/drawable/ic_launcher_foreground.xml" value="0.1" />
@@ -29,11 +31,14 @@
         <entry key="..\:/android/ODC/app/src/main/res/drawable/tv_footer_bg.xml" value="0.1425" />
         <entry key="..\:/android/ODC/app/src/main/res/drawable/welcome_lineargradient.xml" value="0.1" />
         <entry key="..\:/android/ODC/app/src/main/res/font/font.xml" value="0.27589743589743587" />
+        <entry key="..\:/android/ODC/app/src/main/res/layout/activity_add_new_card.xml" value="0.176" />
+        <entry key="..\:/android/ODC/app/src/main/res/layout/activity_card.xml" value="0.21621621621621623" />
         <entry key="..\:/android/ODC/app/src/main/res/layout/activity_food_details.xml" value="0.264" />
         <entry key="..\:/android/ODC/app/src/main/res/layout/activity_home.xml" value="0.21621621621621623" />
         <entry key="..\:/android/ODC/app/src/main/res/layout/activity_login.xml" value="0.2603092783505155" />
         <entry key="..\:/android/ODC/app/src/main/res/layout/activity_main.xml" value="0.25" />
         <entry key="..\:/android/ODC/app/src/main/res/layout/activity_on_bording_screen.xml" value="0.264" />
+        <entry key="..\:/android/ODC/app/src/main/res/layout/activity_payment.xml" value="0.176" />
         <entry key="..\:/android/ODC/app/src/main/res/layout/activity_phone_registration.xml" value="0.21467391304347827" />
         <entry key="..\:/android/ODC/app/src/main/res/layout/activity_profile.xml" value="0.2" />
         <entry key="..\:/android/ODC/app/src/main/res/layout/activity_resset_password.xml" value="0.21467391304347827" />
@@ -54,6 +59,7 @@
         <entry key="..\:/android/ODC/app/src/main/res/layout/fragment_hom.xml" value="0.264" />
         <entry key="..\:/android/ODC/app/src/main/res/layout/fragment_home.xml" value="0.264" />
         <entry key="..\:/android/ODC/app/src/main/res/layout/fragment_onbording.xml" value="0.1" />
+        <entry key="..\:/android/ODC/app/src/main/res/layout/fragment_payment.xml" value="0.21621621621621623" />
         <entry key="..\:/android/ODC/app/src/main/res/layout/fragment_search.xml" value="0.21621621621621623" />
         <entry key="..\:/android/ODC/app/src/main/res/layout/fragment_search_restuant_and_food.xml" value="0.2" />
         <entry key="..\:/android/ODC/app/src/main/res/layout/fragment_search_resturant.xml" value="0.21621621621621623" />

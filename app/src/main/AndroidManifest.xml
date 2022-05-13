@@ -15,8 +15,12 @@
         android:screenOrientation="portrait"
         android:supportsRtl="true"
         android:theme="@style/Theme.FoodHub"
-        android:windowSoftInputMode="stateUnchanged|adjustResize"
+        android:windowSoftInputMode="adjustPan|adjustResize"
         tools:replace="android:appComponentFactory">
+        <activity
+            android:name=".views.pages.c_home.CardActivity"
+            android:exported="false" />
+
         <activity
             android:name=".views.pages.a_intro.onBoardingScreen"
             android:exported="false" />

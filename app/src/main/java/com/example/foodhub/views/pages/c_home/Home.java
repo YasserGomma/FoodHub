@@ -1,5 +1,6 @@
 package com.example.foodhub.views.pages.c_home;
 
+import android.content.Context;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
@@ -16,10 +17,12 @@ import com.google.android.material.navigation.NavigationView;
 
 public class Home extends BaseActivity {
 
+    public static Context context;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
+        context=Home.context;
         ImageView cart = findViewById(R.id.iv_footer_icon_3);
         cart.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -67,10 +70,13 @@ public class Home extends BaseActivity {
         switch (id)
         {
             case R.id.profile:
-                go_screen(Home.this,Profile.class);
+                go_screen(Home.this, Profile.class);
+                break;
+            case R.id.payment:
+                go_screen(Home.this, CardActivity.class);
                 break;
             default:
-                break;
+
         }
     }
 
