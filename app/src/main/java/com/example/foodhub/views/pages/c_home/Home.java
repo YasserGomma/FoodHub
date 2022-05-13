@@ -75,6 +75,9 @@ public class Home extends BaseActivity {
             case R.id.payment:
                 go_screen(Home.this, CardActivity.class);
                 break;
+            case R.id.orders:
+                go_screen(Home.this, HistoryAndUpcoming.class);
+                break;
             default:
 
         }

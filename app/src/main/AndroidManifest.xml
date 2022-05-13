@@ -18,9 +18,14 @@
         android:windowSoftInputMode="adjustPan|adjustResize"
         tools:replace="android:appComponentFactory">
         <activity
+            android:name=".views.pages.c_home.HistoryAndUpcoming"
+            android:exported="false" />
+        <activity
+            android:name=".History"
+            android:exported="false" />
+        <activity
             android:name=".views.pages.c_home.CardActivity"
             android:exported="false" />
-
         <activity
             android:name=".views.pages.a_intro.onBoardingScreen"
             android:exported="false" />

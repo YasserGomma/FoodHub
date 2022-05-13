@@ -19,6 +19,7 @@ public class CardActivity extends AppCompatActivity {
         setContentView(R.layout.activity_card);
         CreditCardView card=findViewById(R.id.card);
         card.setFlipOnEdit(true);
+        card.setFlipOnClick(true);
 
         InputField add_card_name=findViewById(R.id.add_card_name);
         EditText name=add_card_name.findViewById(R.id.input_field_edit_text);

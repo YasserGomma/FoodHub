@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="5dp"
+        android:layout_marginBottom="10dp"
+        app:cardCornerRadius="12dp"
+
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="5dp">
+
+            <com.makeramen.roundedimageview.RoundedImageView
+                android:id="@+id/iv_item_history_pic"
+                android:layout_width="65dp"
+                android:layout_height="65dp"
+                android:layout_marginLeft="10dp"
+                android:padding="5dp"
+                android:src="@drawable/pizza"
+                app:riv_corner_radius="15dp" />
+
+            <com.example.foodhub.views.widgets.DescriptionPageText
+                android:id="@+id/iv_item_history_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_toRightOf="@id/iv_item_history_pic"
+                android:text="20 Jun, 10:30" />
+
+            <com.example.foodhub.views.widgets.DescriptionPageText
+                android:id="@+id/iv_item_history_items"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@id/iv_item_history_date"
+                android:text="3 Items" />
+
+            <com.example.foodhub.views.widgets.PageTitleText
+                android:id="@+id/iv_item_history_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/iv_item_history_date"
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@id/iv_item_history_pic"
+                android:text="Pizza Hut"
+                app:pt_text_size="15" />
+
+            <TextView
+                android:id="@+id/iv_item_history_statue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/iv_item_history_name"
+                android:layout_marginHorizontal="10dp"
+                android:layout_toRightOf="@id/iv_item_history_pic"
+                android:fontFamily="@font/sofiapro_reguler"
+                android:text="Order Delivered"
+                android:textColor="#4EE476"
+                android:textSize="12dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="20dp"
+                android:text="$15.50"
+                android:textColor="@color/primary_color"
+                android:textSize="16dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/iv_item_history_pic"
+                android:layout_marginVertical="10dp">
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btn_item_history_rate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/btn_bg_1"
+                    android:text="rate"
+                    android:textColor="@color/primary_color" />
+
+                <com.example.foodhub.views.widgets.MainButton
+                    android:id="@+id/btn_item_history_reorder"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="10dp"
+                    android:layout_weight="1"
+                    android:text="Re-Order"
+
+                    />
+            </LinearLayout>
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+
+</RelativeLayout>
