@@ -8,21 +8,21 @@ public class PopularItem {
     int nummberOfPeople;
     int image;
 
+    public PopularItem(String name, String description, int image, float price, float rate, int nummberOfPeople) {
+        this.name = name;
+        Description = description;
+        this.price = price;
+        this.rate = rate;
+        this.nummberOfPeople = nummberOfPeople;
+        this.image = image;
+    }
+
     public int getImage() {
         return image;
     }
 
     public void setImage(int image) {
         this.image = image;
-    }
-
-    public PopularItem(String name, String description, int image,float price, float rate, int nummberOfPeople) {
-        this.name = name;
-        Description = description;
-        this.price = price;
-        this.rate = rate;
-        this.nummberOfPeople = nummberOfPeople;
-        this.image=image;
     }
 
     public String getName() {

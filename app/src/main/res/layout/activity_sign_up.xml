@@ -51,8 +51,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 app:if_hint="Enter your password"
-                app:if_password="1"
-                app:if_label="Password" />
+                app:if_label="Password"
+                app:if_password="1" />
             <!-- Sign up  Button-->
             <com.example.foodhub.views.widgets.MainButton
                 android:id="@+id/btn_signup_signup"

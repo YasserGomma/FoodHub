@@ -43,8 +43,8 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_marginTop="40dp"
-                android:paddingHorizontal="10dp"
-                android:gravity="center">
+                android:gravity="center"
+                android:paddingHorizontal="10dp">
 
                 <com.example.foodhub.views.widgets.MainEditText
                     android:id="@+id/et_verificationpage_verification_1"

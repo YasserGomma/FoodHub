@@ -12,20 +12,22 @@ import com.example.foodhub.views.helpers.SizeUtilities;
 
 public class TwoTexts extends LinearLayout {
     Context context;
-    public TwoTexts(Context context,  AttributeSet attrs) {
+
+    public TwoTexts(Context context, AttributeSet attrs) {
         super(context, attrs);
-        this.context=context;
+        this.context = context;
         TypedArray array = context.obtainStyledAttributes(attrs, R.styleable.TwoTexts);
         String text1 = array.getString(R.styleable.TwoTexts_tt_text_1);
         String text2 = array.getString(R.styleable.TwoTexts_tt_text_2);
-        int text1_color=array.getResourceId(R.styleable.TwoTexts_tt_text_1_color,0);
-        int text2_color=array.getResourceId(R.styleable.TwoTexts_tt_text_2_color,0);
+        int text1_color = array.getResourceId(R.styleable.TwoTexts_tt_text_1_color, 0);
+        int text2_color = array.getResourceId(R.styleable.TwoTexts_tt_text_2_color, 0);
         setOrientation(HORIZONTAL);
         setLayoutParams(new LayoutParams(LayoutParams.MATCH_PARENT, LayoutParams.WRAP_CONTENT));
-        buildComponent(text1,text2,text1_color,text2_color);
+        buildComponent(text1, text2, text1_color, text2_color);
 
     }
-    void buildComponent(String t1, String t2,int c1,int c2) {
+
+    void buildComponent(String t1, String t2, int c1, int c2) {
 
 
         TextView tv = new TextView(context);

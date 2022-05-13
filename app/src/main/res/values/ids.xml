@@ -1,17 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <item name="two_texts_clickable_text" type="id"/>
-    <item name="input_field_edit_text" type="id"/>
-    <item name="review_field_review" type="id"/>
-    <item name="review_field_people" type="id"/>
-    <item name="illustrative_text" type="id"/>
-    <item name="adds_price" type="id"/>
-    <item name="adds_name" type="id"/>
-    <item name="adds_pic" type="id"/>
-    <item name="adds_btn" type="id"/>
-    <item name="header_btn" type="id"/>
-    <item name="header_txt" type="id"/>
-    <item name="header_img" type="id"/>
+    <item name="two_texts_clickable_text" type="id" />
+    <item name="input_field_edit_text" type="id" />
+    <item name="review_field_review" type="id" />
+    <item name="review_field_people" type="id" />
+    <item name="illustrative_text" type="id" />
+    <item name="adds_price" type="id" />
+    <item name="adds_name" type="id" />
+    <item name="adds_pic" type="id" />
+    <item name="adds_btn" type="id" />
+    <item name="header_btn" type="id" />
+    <item name="header_txt" type="id" />
+    <item name="header_img" type="id" />
+    <item name="btn_add_item" type="id" />
+    <item name="btn_delete_item" type="id" />
+    <item name="tv_item_price" type="id" />
 
-
+    <item name="price_title" type="id" />
+    <item name="price_price" type="id" />
+    <item name="price_urrency" type="id" />
+    <item name="price_total_items" type="id" />
 </resources>

@@ -5,22 +5,24 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_marginHorizontal="20dp"
-    android:orientation="vertical"
     android:layout_marginTop="20dp"
+    android:orientation="vertical"
     tools:context=".views.pages.c_home.Home">
+
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_weight="1"
+        android:layout_height="wrap_content"
         android:layout_marginBottom="20dp"
-        android:clipToPadding="false"
+        android:layout_weight="1"
         android:clipToOutline="false"
-        android:scrollbars="none"
-        android:layout_height="wrap_content">
+        android:clipToPadding="false"
+        android:scrollbars="none">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical">
+
             <androidx.cardview.widget.CardView
                 android:id="@+id/card_food_details_background"
                 android:layout_width="match_parent"
@@ -34,6 +36,7 @@
                     android:scaleType="centerCrop"
                     android:src="@drawable/pop_1" />
             </androidx.cardview.widget.CardView>
+
             <com.example.foodhub.views.widgets.PageTitleText
                 android:id="@+id/tv_food_details_title"
                 android:layout_width="wrap_content"
@@ -41,6 +44,7 @@
                 android:layout_marginVertical="10dp"
                 android:text="Salmon Salad"
                 app:pt_text_size="31" />
+
             <com.example.foodhub.views.components.ReviewFiled
                 android:id="@+id/review_food_details"
                 android:layout_width="match_parent"
@@ -107,10 +111,10 @@
                 />
 
 
-
         </LinearLayout>
 
     </ScrollView>
+
     <com.example.foodhub.views.widgets.MainButton
 
         android:id="@+id/btn_food_details_add"

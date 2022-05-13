@@ -20,7 +20,6 @@ import java.util.ArrayList;
 public class FoodDetailsFragment extends Fragment {
 
 
-
     public FoodDetailsFragment() {
         // Required empty public constructor
     }
@@ -40,9 +39,9 @@ public class FoodDetailsFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        ((Home)getActivity()).hide_footer();
+        ((Home) getActivity()).hide_footer();
         View rootView = inflater.inflate(R.layout.fragment_food_details, container, false);
-        RecyclerView recyclerView = (RecyclerView) rootView.findViewById(R.id.rv_food_details_rv);
+        RecyclerView recyclerView = rootView.findViewById(R.id.rv_food_details_rv);
         recyclerView.setNestedScrollingEnabled(false);
         LinearLayoutManager layoutManager
                 = new LinearLayoutManager(requireContext(), LinearLayoutManager.VERTICAL, false);
@@ -71,7 +70,7 @@ public class FoodDetailsFragment extends Fragment {
     }
 
     @Override
-    public void onViewCreated( View view,  Bundle savedInstanceState) {
+    public void onViewCreated(View view, Bundle savedInstanceState) {
 
 
     }

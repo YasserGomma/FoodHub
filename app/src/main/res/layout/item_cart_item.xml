@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <com.makeramen.roundedimageview.RoundedImageView
+        android:id="@+id/iv_card_item_image"
+        android:layout_width="120dp"
+        android:layout_height="95dp"
+        android:src="@drawable/resturent_background_1"
+        app:riv_corner_radius="25dp" />
+
+    <com.example.foodhub.views.widgets.PageTitleText
+        android:id="@+id/tv_card_item_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_toRightOf="@id/iv_card_item_image"
+        android:text="Red n hot pizza"
+        app:pt_text_size="18" />
+
+    <ImageView
+        android:id="@+id/iv_card_item_close"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp"
+        android:padding="10dp"
+        android:src="@drawable/close" />
+
+    <com.example.foodhub.views.widgets.DescriptionPageText
+        android:id="@+id/tv_card_item_description"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_card_item_name"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@id/iv_card_item_image"
+        android:text="Spicy chicken, beef" />
+
+    <com.example.foodhub.views.widgets.PageTitleText
+        android:id="@+id/tv_card_item_dollers"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_card_item_description"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="30dp"
+        android:layout_toRightOf="@+id/iv_card_item_image"
+        android:text="$"
+        android:textColor="@color/black"
+        app:pt_text_size="10" />
+
+    <com.example.foodhub.views.widgets.PageTitleText
+        android:id="@+id/tv_card_item_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/tv_card_item_description"
+        android:layout_toRightOf="@+id/tv_card_item_dollers"
+        android:text="5.5"
+        app:pt_text_size="19" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/iv_card_item_close"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="30dp"
+        android:layout_marginRight="10dp">
+
+        <com.example.foodhub.views.components.AddDeletItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            />
+    </LinearLayout>
+
+
+</RelativeLayout>

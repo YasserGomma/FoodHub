@@ -73,7 +73,7 @@ public class BaseActivity extends AppCompatActivity {
         return et.getText().toString();
     }
 
-    public  void replaceFragmen(Fragment fragment, int frameId) {
+    public void replaceFragment(Fragment fragment, int frameId) {
         String backStateName = fragment.getClass().getName();
         FragmentManager manager = getSupportFragmentManager();
         boolean fragmentPopped = manager.popBackStackImmediate(backStateName, 0);

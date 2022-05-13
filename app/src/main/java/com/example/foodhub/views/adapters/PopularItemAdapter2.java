@@ -32,7 +32,7 @@ public class PopularItemAdapter2 extends RecyclerView.Adapter<PopularItemAdapter
     public void onBindViewHolder(PopularItemViewHolder holder, int position) {
 
         PopularItem item = items.get(position);
-        if(position>0) {
+        if (position > 0) {
             holder.iv.setImageResource(item.getImage());
             holder.name.setText(item.getName());
             holder.people.setText("( " + item.getNummberOfPeople() + " )");
@@ -40,25 +40,24 @@ public class PopularItemAdapter2 extends RecyclerView.Adapter<PopularItemAdapter
             holder.description.setText(item.getDescription());
             holder.price.setText(item.getPrice() + "");
 
-        }
-        else
-        {
-           holder.cardView.setVisibility(View.GONE);
-           holder.invisable.setText("Found 10 results");
+        } else {
+            holder.cardView.setVisibility(View.GONE);
+            holder.invisable.setText("Found 10 results");
         }
 
     }
 
     @Override
     public int getItemCount() {
-        return items.size()-1;
+        return items.size() - 1;
     }
 
     class PopularItemViewHolder extends RecyclerView.ViewHolder {
 
         ImageView iv;
-        TextView name, description, price, rate, people,invisable;
+        TextView name, description, price, rate, people, invisable;
         CardView cardView;
+
         public PopularItemViewHolder(View itemView) {
             super(itemView);
             iv = itemView.findViewById(R.id.iv_popular_background);
@@ -67,8 +66,8 @@ public class PopularItemAdapter2 extends RecyclerView.Adapter<PopularItemAdapter
             price = itemView.findViewById(R.id.tv_popular_price);
             rate = itemView.findViewById(R.id.tv_popular_rate);
             people = itemView.findViewById(R.id.tv_restaurant_num_people);
-            invisable=itemView.findViewById(R.id.tv_popular_invisable);
-            cardView=itemView.findViewById(R.id.card);
+            invisable = itemView.findViewById(R.id.tv_popular_invisable);
+            cardView = itemView.findViewById(R.id.card);
         }
     }
 }

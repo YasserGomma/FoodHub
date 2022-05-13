@@ -27,12 +27,12 @@ public class InputField extends LinearLayout {
         TypedArray array = context.obtainStyledAttributes(attrs, R.styleable.InputField);
         String label = array.getString(R.styleable.InputField_if_label);
         String hint = array.getString(R.styleable.InputField_if_hint);
-        int pass = array.getInt(R.styleable.InputField_if_password,0);
+        int pass = array.getInt(R.styleable.InputField_if_password, 0);
 
-        buildComponent(label, hint,pass);
+        buildComponent(label, hint, pass);
     }
 
-    void buildComponent(String label, String hint,int pass) {
+    void buildComponent(String label, String hint, int pass) {
 
 
         TextView tv = new TextView(context);
@@ -73,7 +73,7 @@ public class InputField extends LinearLayout {
         et.setId(R.id.input_field_edit_text);
         et.setMaxLines(1);
         et.setMovementMethod(LinkMovementMethod.getInstance());
-        if(pass==1)
+        if (pass == 1)
             et.setInputType(InputType.TYPE_CLASS_TEXT | InputType.TYPE_TEXT_VARIATION_PASSWORD);
         InputField.this.addView(tv);
         InputField.this.addView(et);

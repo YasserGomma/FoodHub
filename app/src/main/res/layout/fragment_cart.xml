@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginHorizontal="20dp"
+    android:layout_marginTop="5dp"
+
+    tools:context=".views.pages.c_home.CartFragment">
+
+    <com.example.foodhub.views.components.HeaderBar
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:hb_img="@drawable/footer_icon_3"
+        app:hb_text="Cart" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_cart_r1"
+        android:layout_below="@id/header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/cart_item_l1"
+        android:clipToPadding="false"
+        android:layout_marginTop="20dp" />
+
+    <LinearLayout
+        android:id="@+id/cart_item_l1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/cart_item_l2"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/ll_bg"
+        android:padding="5dp">
+
+        <EditText
+            android:id="@+id/toggle_t1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_weight="1"
+            android:background="#00000000"
+            android:gravity="center"
+            android:hint="Promo Code"
+            android:paddingVertical="5dp"
+            android:textColor="@color/primary_color"
+            app:text_size="18"
+
+            />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginHorizontal="10dp" />
+
+        <com.example.foodhub.views.widgets.IllustrativeText
+            android:id="@+id/toggle_t2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:background="@drawable/btn_bg"
+            android:gravity="center"
+            android:maxHeight="200dp"
+            android:padding="10dp"
+            android:text="Apply"
+            android:textColor="@color/white"
+
+            />
+
+    </LinearLayout>
+
+
+    <!--Prices-->
+
+    <LinearLayout
+        android:id="@+id/cart_item_l2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/btn_cart_checkout"
+        android:orientation="vertical"
+
+        >
+
+        <com.example.foodhub.views.components.CartPricesField
+            android:id="@+id/cart_subtotal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            app:cp_currency="USD"
+            app:cp_price="$52.50"
+            app:cp_title="Subtotal"
+            app:cp_total_visable="0"
+
+            />
+
+        <com.example.foodhub.views.components.CartPricesField
+            android:id="@+id/cart_tax"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/cart_subtotal"
+            app:cp_currency="USD"
+            app:cp_price="$5.25"
+            app:cp_title="Tax and Fees"
+            app:cp_total_visable="0"
+
+            />
+
+        <com.example.foodhub.views.components.CartPricesField
+            android:id="@+id/cart_delivery"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/cart_tax"
+            app:cp_currency="USD"
+            app:cp_price="$1.33"
+            app:cp_title="Delivery"
+            app:cp_total_visable="0"
+
+            />
+
+        <com.example.foodhub.views.components.CartPricesField
+            android:id="@+id/cart_total"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/cart_delivery"
+            app:cp_currency="USD"
+            app:cp_price="$59.08"
+            app:cp_title="Total"
+            app:cp_total="(3 items)"
+            app:cp_total_visable="1"
+
+            />
+    </LinearLayout>
+
+
+    <com.example.foodhub.views.widgets.MainButton
+        android:id="@+id/btn_cart_checkout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginHorizontal="60dp"
+        android:layout_marginBottom="20dp"
+        android:text="checkout"
+
+        />
+
+
+</RelativeLayout>

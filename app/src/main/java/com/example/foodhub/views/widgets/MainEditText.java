@@ -23,7 +23,7 @@ public class MainEditText extends AppCompatEditText {
         super(context, attrs);
         this.context = context;
         TypedArray array = context.obtainStyledAttributes(attrs, R.styleable.MainEditText);
-        int size = array.getInt(R.styleable.MainEditText_text_size,28);
+        int size = array.getInt(R.styleable.MainEditText_text_size, 28);
         setBackground(getDrawableForEditText(10, Color.parseColor("#D0D2D1"), 1));
         setTypeface(getResources().getFont(R.font.sofiapro_medium));
         setTextSize(TypedValue.COMPLEX_UNIT_DIP, size);

@@ -14,7 +14,8 @@ import com.example.foodhub.views.components.TwoTexts;
 import com.example.foodhub.views.pages.parents.BaseActivity;
 
 public class SignUp extends BaseActivity {
-    public static String mail="";
+    public static String mail = "";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -24,26 +25,24 @@ public class SignUp extends BaseActivity {
         Button signup;
         email = findViewById(R.id.signup_email);
         email_et = email.findViewById(R.id.input_field_edit_text);
-        signup=findViewById(R.id.btn_signup_signup);
+        signup = findViewById(R.id.btn_signup_signup);
         signup.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-               if(Verify()) {
+                if (Verify()) {
 
-                   mail=email_et.getText().toString();
-                   Log.e("mail","mail");
-                   go_screen(SignUp.this, VerificationPage.class);
-               }
-               else
-               {
-                   Toast.makeText(getApplicationContext(),
-                           "Please enter right data",
-                           Toast.LENGTH_SHORT).show();
-               }
+                    mail = email_et.getText().toString();
+                    Log.e("mail", "mail");
+                    go_screen(SignUp.this, VerificationPage.class);
+                } else {
+                    Toast.makeText(getApplicationContext(),
+                            "Please enter right data",
+                            Toast.LENGTH_SHORT).show();
+                }
             }
         });
-        TwoTexts t=findViewById(R.id.signup_login);
-        TextView tv=t.findViewById(R.id.two_texts_clickable_text);
+        TwoTexts t = findViewById(R.id.signup_login);
+        TextView tv = t.findViewById(R.id.two_texts_clickable_text);
         tv.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -51,8 +50,8 @@ public class SignUp extends BaseActivity {
             }
         });
     }
-    public boolean Verify()
-    {
+
+    public boolean Verify() {
         return true;
     }
 }

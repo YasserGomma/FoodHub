@@ -53,19 +53,19 @@
     </RelativeLayout>
 
     <RelativeLayout
-        android:layout_marginTop="-50dp"
         android:id="@+id/food_filter_l2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/food_filter_l1"
         android:layout_marginHorizontal="26dp"
-        android:layout_marginLeft="20dp">
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="-50dp">
 
         <com.example.foodhub.views.widgets.IllustrativeText
             android:id="@+id/tv_food_filter_sort"
-            android:layout_marginTop="10dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
             android:text="Sort by :  "
             android:textColor="@color/black" />
 
@@ -76,8 +76,8 @@
             android:layout_marginTop="10dp"
 
             android:layout_toRightOf="@id/tv_food_filter_sort"
-            android:text="Populer"
             android:gravity="center"
+            android:text="Populer"
             android:textColor="@color/primary_color" />
 
         <Spinner
@@ -85,9 +85,9 @@
             android:layout_width="16dp"
             android:layout_height="16dp"
             android:layout_marginLeft="20dp"
-            android:gravity="center"
             android:layout_marginTop="12dp"
             android:layout_toRightOf="@id/tv_food_filter_popular"
+            android:gravity="center"
             android:scrollbarSize="100dp" />
 
 
@@ -95,11 +95,11 @@
             android:id="@+id/btn_fragment_home_filter"
             android:layout_width="40dp"
             android:layout_height="40dp"
-            android:paddingTop="10dp"
             android:layout_alignParentRight="true"
             android:layout_marginRight="2dp"
             android:background="@drawable/btn_bg_4"
             android:drawableTop="@drawable/filter"
+            android:paddingTop="10dp"
 
             />
 
@@ -108,9 +108,9 @@
             android:id="@+id/rv_food_filter"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginRight="-20dp"
             android:layout_below="@id/spinner_food_filter"
             android:layout_marginTop="25dp"
+            android:layout_marginRight="-20dp"
             android:clipToPadding="false" />
     </RelativeLayout>
 

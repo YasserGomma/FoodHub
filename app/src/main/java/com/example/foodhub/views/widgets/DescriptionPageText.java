@@ -11,8 +11,9 @@ import androidx.appcompat.widget.AppCompatTextView;
 
 import com.example.foodhub.R;
 
-public class DescriptionPageText  extends AppCompatTextView {
+public class DescriptionPageText extends AppCompatTextView {
     Context context;
+
     public DescriptionPageText(@NonNull Context context, @Nullable AttributeSet attrs) {
         super(context, attrs);
         this.context = context;

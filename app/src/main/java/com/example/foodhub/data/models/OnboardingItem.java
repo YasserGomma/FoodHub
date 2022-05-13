@@ -6,6 +6,7 @@ public class OnboardingItem {
     private int image;
     private String title;
     private String description;
+
     public int getImage() {
         return image;
     }

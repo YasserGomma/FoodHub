@@ -55,7 +55,7 @@
         <!--Include toggle buttons-->
         <include
             android:id="@+id/toggle"
-            layout="@layout/toggle"
+            layout="@layout/include_toggle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@id/layout_fragment_search_l1"

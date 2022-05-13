@@ -84,6 +84,7 @@ public class SearchRestuantAndFoodFragment extends Fragment {
             }
         });
     }
+
     public void replaceFragment(Fragment fragment, int frameId) {
         String backStateName = fragment.getClass().getName();
         FragmentManager manager = getParentFragmentManager();
@@ -96,6 +97,7 @@ public class SearchRestuantAndFoodFragment extends Fragment {
             ft.commit();
         }
     }
+
     public void formatToggleButtons(TextView selected, TextView notSelected) {
         selected.setBackgroundResource(R.drawable.btn_bg);
         selected.setTextColor(getContext().getColor(R.color.white));
@@ -109,7 +111,7 @@ public class SearchRestuantAndFoodFragment extends Fragment {
     public void configureFood() {
 
         //1. Inflate RecyclerView and  create layout
-        RecyclerView recyclerView = (RecyclerView) rootView.findViewById(R.id.rv_fragment_search_r1);
+        RecyclerView recyclerView = rootView.findViewById(R.id.rv_fragment_search_r1);
         StaggeredGridLayoutManager layoutManager
                 = new StaggeredGridLayoutManager(2, LinearLayoutManager.VERTICAL);
 
@@ -139,7 +141,7 @@ public class SearchRestuantAndFoodFragment extends Fragment {
 
     public void configureResturant() {
         //1. Inflate RecyclerView and  create layout
-        RecyclerView recyclerView = (RecyclerView) rootView.findViewById(R.id.rv_fragment_search_r1);
+        RecyclerView recyclerView = rootView.findViewById(R.id.rv_fragment_search_r1);
         StaggeredGridLayoutManager layoutManager
                 = new StaggeredGridLayoutManager(2, LinearLayoutManager.VERTICAL);
 

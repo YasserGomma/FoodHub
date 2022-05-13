@@ -34,9 +34,9 @@ public class RestaurantProfileAdapter extends RecyclerView.Adapter<RestaurantPro
         RestaurantProfileItem item = resturants.get(position);
         holder.background.setImageResource(item.getImage());
         holder.name.setText(item.getName());
-        holder.rate.setText(item.getRate()+"");
-        holder.deliveryPrice.setText(item.getDeliveryPrice()+" $");
-        holder.numberOfPeople.setText("( "+item.getNumberOfPeople()+" )");
+        holder.rate.setText(item.getRate() + "");
+        holder.deliveryPrice.setText(item.getDeliveryPrice() + " $");
+        holder.numberOfPeople.setText("( " + item.getNumberOfPeople() + " )");
         holder.deliverytime.setText(item.getDeliverytime());
 
     }

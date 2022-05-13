@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="@drawable/ll_bg"
     android:layout_marginHorizontal="10dp"
+    android:background="@drawable/ll_bg"
     android:padding="5dp">
 
     <com.example.foodhub.views.widgets.IllustrativeText
@@ -30,9 +29,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_weight="1"
+        android:background="@drawable/btn_bg_1"
         android:gravity="center"
         android:padding="10dp"
-        android:background="@drawable/btn_bg_1"
         android:text="Resturent"
         android:textColor="@color/primary_color"
 

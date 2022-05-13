@@ -18,7 +18,7 @@ public class PhoneRegistration extends BaseActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_phone_registration);
-        Button btn_phone_registration_send=findViewById(R.id.btn_phone_registration_send);
+        Button btn_phone_registration_send = findViewById(R.id.btn_phone_registration_send);
         btn_phone_registration_send.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -34,7 +34,7 @@ public class PhoneRegistration extends BaseActivity {
                         .show();
             }
         });
-        EditText et_phone_registration_phone=findViewById(R.id.et_phone_registration_phone);
+        EditText et_phone_registration_phone = findViewById(R.id.et_phone_registration_phone);
         et_phone_registration_phone.addTextChangedListener(new PhoneNumberFormattingTextWatcher("US"));
 
         findViewById(R.id.btn_back_header_back).setOnClickListener(new View.OnClickListener() {

@@ -3,6 +3,8 @@ package com.example.foodhub.data.models;
 public class AddsItem {
     int image;
     String name;
+    float price;
+
     public AddsItem() {
 
     }
@@ -12,9 +14,6 @@ public class AddsItem {
         this.name = name;
         this.price = price;
     }
-
-    float price;
-
 
     public String getName() {
         return name;

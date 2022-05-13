@@ -12,11 +12,12 @@ import com.example.foodhub.R;
 
 public class PageTitleText extends AppCompatTextView {
     Context context;
+
     public PageTitleText(Context context, AttributeSet attrs) {
         super(context, attrs);
         this.context = context;
         TypedArray array = context.obtainStyledAttributes(attrs, R.styleable.PageTitleText);
-        int size = array.getInt(R.styleable.PageTitleText_pt_text_size,40);
+        int size = array.getInt(R.styleable.PageTitleText_pt_text_size, 40);
         LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT);
         setLayoutParams(params);
         setTypeface(getResources().getFont(R.font.sofiapro_medium));

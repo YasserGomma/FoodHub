@@ -6,9 +6,18 @@ public class RestaurantSearchItem {
     int image;
     float rate;
     int deliveryPrice;
-    String  deliverytime;
+    String deliverytime;
     ArrayList<String> popularItems;
     String name;
+
+    public RestaurantSearchItem(int image, float rate, int deliveryPrice, ArrayList<String> popularItems, String name, String deliverytime) {
+        this.image = image;
+        this.rate = rate;
+        this.deliveryPrice = deliveryPrice;
+        this.popularItems = popularItems;
+        this.name = name;
+        this.deliverytime = deliverytime;
+    }
 
     public int getImage() {
         return image;
@@ -50,21 +59,11 @@ public class RestaurantSearchItem {
         this.name = name;
     }
 
-
     public String getDeliverytime() {
         return deliverytime;
     }
 
     public void setDeliverytime(String deliverytime) {
         this.deliverytime = deliverytime;
-    }
-
-    public RestaurantSearchItem(int image, float rate, int deliveryPrice, ArrayList<String> popularItems, String name, String  deliverytime) {
-        this.image = image;
-        this.rate = rate;
-        this.deliveryPrice = deliveryPrice;
-        this.popularItems = popularItems;
-        this.name = name;
-        this.deliverytime=deliverytime;
     }
 }

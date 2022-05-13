@@ -1,36 +1,48 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <declare-styleable name="InputField">
-        <attr name="if_label" format="string"/>
-        <attr name="if_hint" format="string"/>
-        <attr name="if_password" format="integer"/>
+        <attr name="if_label" format="string" />
+        <attr name="if_hint" format="string" />
+        <attr name="if_password" format="integer" />
     </declare-styleable>
     <declare-styleable name="TwoTexts">
-        <attr name="tt_text_1" format="string"/>
-        <attr name="tt_text_2" format="string"/>
-        <attr name="tt_text_1_color" format="reference|color"/>
-        <attr name="tt_text_2_color" format="reference|color"/>
+        <attr name="tt_text_1" format="string" />
+        <attr name="tt_text_2" format="string" />
+        <attr name="tt_text_1_color" format="reference|color" />
+        <attr name="tt_text_2_color" format="reference|color" />
     </declare-styleable>
     <declare-styleable name="TwoBigTexts">
-        <attr name="tbt_text_1" format="string"/>
-        <attr name="tbt_text_2" format="string"/>
-        <attr name="tbt_text_1_color" format="reference|color"/>
-        <attr name="tbt_text_2_color" format="reference|color"/>
+        <attr name="tbt_text_1" format="string" />
+        <attr name="tbt_text_2" format="string" />
+        <attr name="tbt_text_1_color" format="reference|color" />
+        <attr name="tbt_text_2_color" format="reference|color" />
     </declare-styleable>
     <declare-styleable name="MainEditText">
-        <attr name="text_size" format="integer"/>
-    </declare-styleable>\
+        <attr name="text_size" format="integer" />
+    </declare-styleable>
+    \
     <declare-styleable name="MainButton">
-        <attr name="bg_color" format="reference|color"/>
-        <attr name="text_color" format="reference|color"/>
+        <attr name="bg_color" format="reference|color" />
+        <attr name="text_color" format="reference|color" />
     </declare-styleable>
     <declare-styleable name="PageTitleText">
-        <attr name="pt_text_size" format="reference|integer"/>
+        <attr name="pt_text_size" format="reference|integer" />
     </declare-styleable>
     <declare-styleable name="HeaderBar">
-        <attr name="hb_img" format="reference|color"/>
-        <attr name="hb_img_visable" format="integer"/>
-        <attr name="hb_text" format="string"/>
+        <attr name="hb_img" format="reference|color" />
+        <attr name="hb_img_visable" format="integer" />
+        <attr name="hb_text" format="string" />
     </declare-styleable>
+
+    <declare-styleable name="CartPricesField">
+        <attr name="cp_total_visable" format="integer" />
+        <attr name="cp_title" format="string" />
+        <attr name="cp_currency" format="string" />
+        <attr name="cp_total" format="string" />
+        <attr name="cp_price" format="string" />
+
+
+    </declare-styleable>
+
 
 </resources>

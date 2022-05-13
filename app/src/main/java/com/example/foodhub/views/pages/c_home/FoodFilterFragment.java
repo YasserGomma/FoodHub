@@ -45,7 +45,7 @@ public class FoodFilterFragment extends Fragment {
         ((Home) getActivity()).hide_footer();
 
         View rootView = inflater.inflate(R.layout.fragment_food_filter, container, false);
-        Button btn=rootView.findViewById(R.id.btn_fragment_home_filter);
+        Button btn = rootView.findViewById(R.id.btn_fragment_home_filter);
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -53,7 +53,7 @@ public class FoodFilterFragment extends Fragment {
 
             }
         });
-        RecyclerView recyclerView3 = (RecyclerView) rootView.findViewById(R.id.rv_food_filter);
+        RecyclerView recyclerView3 = rootView.findViewById(R.id.rv_food_filter);
         LinearLayoutManager layoutManager3
                 = new LinearLayoutManager(requireContext(), LinearLayoutManager.VERTICAL, false);
 
@@ -77,6 +77,7 @@ public class FoodFilterFragment extends Fragment {
 
         return rootView;
     }
+
     public void replaceFragment(Fragment fragment, int frameId) {
         String backStateName = fragment.getClass().getName();
         FragmentManager manager = getParentFragmentManager();
@@ -85,6 +86,7 @@ public class FoodFilterFragment extends Fragment {
             FragmentTransaction ft = manager.beginTransaction();
             ft.replace(frameId, fragment, backStateName);
             ft.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE);
+
             ft.addToBackStack(backStateName);
             ft.commit();
         }

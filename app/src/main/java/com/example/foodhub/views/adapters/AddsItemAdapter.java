@@ -40,7 +40,6 @@ public class AddsItemAdapter extends RecyclerView.Adapter<AddsItemAdapter.AddsIt
     class AddsItemViewHolder extends RecyclerView.ViewHolder {
 
 
-
         public AddsItemViewHolder(View itemView) {
             super(itemView);
 

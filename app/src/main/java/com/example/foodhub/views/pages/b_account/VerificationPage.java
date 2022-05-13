@@ -14,9 +14,9 @@ import com.example.foodhub.views.components.TwoTexts;
 import com.example.foodhub.views.pages.parents.BaseActivity;
 
 public class VerificationPage extends BaseActivity {
-    private String code = "";
     EditText et_verificationpage_verification_1, et_verificationpage_verification_2, et_verificationpage_verification_3, et_verificationpage_verification_4;
     TextView mail;
+    private String code = "";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,8 +28,8 @@ public class VerificationPage extends BaseActivity {
         et_verificationpage_verification_3 = findViewById(R.id.et_verificationpage_verification_3);
         et_verificationpage_verification_4 = findViewById(R.id.et_verificationpage_verification_4);
 
-        mail=findViewById(R.id.tv_verificationpage_email);
-        mail.setText("Please type the verification code sent to "+SignUp.mail);
+        mail = findViewById(R.id.tv_verificationpage_email);
+        mail.setText("Please type the verification code sent to " + SignUp.mail);
 
         et_verificationpage_verification_1.addTextChangedListener(new TextWatcher() {
             @Override
@@ -123,8 +123,8 @@ public class VerificationPage extends BaseActivity {
                 VerificationPage.super.onBackPressed();
             }
         });
-        TwoTexts t=findViewById(R.id.tv_verificationpage_resend);
-        TextView tv=t.findViewById(R.id.two_texts_clickable_text);
+        TwoTexts t = findViewById(R.id.tv_verificationpage_resend);
+        TextView tv = t.findViewById(R.id.two_texts_clickable_text);
         tv.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

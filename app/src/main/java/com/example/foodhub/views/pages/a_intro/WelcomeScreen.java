@@ -18,10 +18,10 @@ public class WelcomeScreen extends BaseActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_welcome_screen);
-        RelativeLayout parent = (RelativeLayout) this.findViewById( R.id.activity_welcome_screen);
-        Button skip,start;
-        skip=findViewById(R.id.btn_welcome_skip);
-        start=findViewById(R.id.btn_welcome_start);
+        RelativeLayout parent = this.findViewById(R.id.activity_welcome_screen);
+        Button skip, start;
+        skip = findViewById(R.id.btn_welcome_skip);
+        start = findViewById(R.id.btn_welcome_start);
 
 
         skip.setOnClickListener(new View.OnClickListener() {
@@ -34,23 +34,19 @@ public class WelcomeScreen extends BaseActivity {
         start.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                go_screen(WelcomeScreen.this,onBordingScreen.class);
+                go_screen(WelcomeScreen.this, onBoardingScreen.class);
             }
         });
 
 
-        TwoTexts t=findViewById(R.id.two);
-        TextView tv=t.findViewById(R.id.two_texts_clickable_text);
+        TwoTexts t = findViewById(R.id.two);
+        TextView tv = t.findViewById(R.id.two_texts_clickable_text);
         tv.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 go_screen(WelcomeScreen.this, Login.class);
             }
         });
-
-
-
-
 
 
     }

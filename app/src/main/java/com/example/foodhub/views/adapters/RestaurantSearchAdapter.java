@@ -31,15 +31,13 @@ public class RestaurantSearchAdapter extends RecyclerView.Adapter<RestaurantSear
     @Override
     public void onBindViewHolder(RestauranttemViewHolder holder, int position) {
 
-        if(position>0) {
+        if (position > 0) {
             RestaurantSearchItem item = items.get(position);
             holder.background.setImageResource(item.getImage());
             holder.name.setText(item.getName());
-            holder.deliveryPrice.setText(item.getDeliveryPrice()>0?item.getDeliveryPrice() +" $":"Free");
+            holder.deliveryPrice.setText(item.getDeliveryPrice() > 0 ? item.getDeliveryPrice() + " $" : "Free");
             holder.deliverytime.setText(item.getDeliverytime());
-        }
-        else
-        {
+        } else {
             holder.cardView.setVisibility(View.GONE);
             holder.invisable.setText("Found 10 results");
         }
@@ -47,13 +45,13 @@ public class RestaurantSearchAdapter extends RecyclerView.Adapter<RestaurantSear
 
     @Override
     public int getItemCount() {
-        return items.size()-1;
+        return items.size() - 1;
     }
 
     static class RestauranttemViewHolder extends RecyclerView.ViewHolder {
 
         ImageView background;
-        TextView name, rate, deliveryPrice, deliverytime,invisable;
+        TextView name, rate, deliveryPrice, deliverytime, invisable;
         CardView cardView;
 
         public RestauranttemViewHolder(View itemView) {
@@ -62,8 +60,8 @@ public class RestaurantSearchAdapter extends RecyclerView.Adapter<RestaurantSear
             name = itemView.findViewById(R.id.tv_restaurant_search_name);
             deliveryPrice = itemView.findViewById(R.id.tv_restaurant_search_delivery_price);
             deliverytime = itemView.findViewById(R.id.tv_restaurant_search_delivery_time);
-            invisable=itemView.findViewById(R.id.tv_restaurant_search_invisable);
-            cardView=itemView.findViewById(R.id.search_restaurant_card);
+            invisable = itemView.findViewById(R.id.tv_restaurant_search_invisable);
+            cardView = itemView.findViewById(R.id.search_restaurant_card);
         }
     }
 }

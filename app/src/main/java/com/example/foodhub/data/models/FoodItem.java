@@ -1,8 +1,13 @@
 package com.example.foodhub.data.models;
 
 public class FoodItem {
-     int image;
-     String name;
+    int image;
+    String name;
+
+    public FoodItem(String name, int image) {
+        this.image = image;
+        this.name = name;
+    }
 
     public String getName() {
         return name;
@@ -18,10 +23,5 @@ public class FoodItem {
 
     public void setImage(int image) {
         this.image = image;
-    }
-
-    public FoodItem(String name, int image) {
-        this.image = image;
-        this.name=name;
     }
 }

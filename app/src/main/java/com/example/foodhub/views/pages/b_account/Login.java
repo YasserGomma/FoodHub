@@ -24,7 +24,7 @@ public class Login extends BaseActivity {
         InputField email, password;
         TwoTexts signup;
         EditText email_et, password_et;
-        Button back,login;
+        Button back, login;
         TextView forget;
 
         email = findViewById(R.id.login_email);
@@ -34,25 +34,21 @@ public class Login extends BaseActivity {
         password_et = password.findViewById(R.id.input_field_edit_text);
 
 
-
-
-        login=findViewById(R.id.btn_login_login);
+        login = findViewById(R.id.btn_login_login);
         login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 mail = email_et.getText().toString();
                 pass = password_et.getText().toString();
-                if(mail.length()>0&&pass.length()>0) {
-                    if (checkLogin(mail,pass)) {
+                if (mail.length() > 0 && pass.length() > 0) {
+                    if (checkLogin(mail, pass)) {
                         go_screen(Login.this, Home.class);
                     } else {
                         Toast.makeText(getApplicationContext(),
                                 "Invalid Login",
                                 Toast.LENGTH_SHORT).show();
                     }
-                }
-                else
-                {
+                } else {
                     Toast.makeText(getApplicationContext(),
                             "Please enter your email and password",
                             Toast.LENGTH_SHORT).show();
@@ -70,15 +66,15 @@ public class Login extends BaseActivity {
             }
         });
 
-        forget=findViewById(R.id.tv_login_forget);
+        forget = findViewById(R.id.tv_login_forget);
         forget.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                go_screen(Login.this,RessetPassword.class);
+                go_screen(Login.this, ResetPassword.class);
             }
         });
-        TwoTexts t=findViewById(R.id.login_sign_up);
-        TextView tv=t.findViewById(R.id.two_texts_clickable_text);
+        TwoTexts t = findViewById(R.id.login_sign_up);
+        TextView tv = t.findViewById(R.id.two_texts_clickable_text);
         tv.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -90,8 +86,6 @@ public class Login extends BaseActivity {
     }
 
     boolean checkLogin(String email, String password) {
-        if (email.equals("yasser@odc.com") && password.equals("12345"))
-            return true;
-        return false;
+        return email.equals("yasser@odc.com") && password.equals("12345");
     }
 }

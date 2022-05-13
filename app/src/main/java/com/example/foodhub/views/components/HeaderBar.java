@@ -21,29 +21,28 @@ public class HeaderBar extends LinearLayout {
 
     public HeaderBar(Context context, @Nullable AttributeSet attrs) {
         super(context, attrs);
-        this.context=context;
-        setLayoutParams(new LayoutParams(LayoutParams.MATCH_PARENT,LayoutParams.WRAP_CONTENT));
+        this.context = context;
+        setLayoutParams(new LayoutParams(LayoutParams.MATCH_PARENT, LayoutParams.WRAP_CONTENT));
         TypedArray array = context.obtainStyledAttributes(attrs, R.styleable.HeaderBar);
         String txt = array.getString(R.styleable.HeaderBar_hb_text);
-         int img = array.getResourceId(R.styleable.HeaderBar_hb_img,R.drawable.bussiness_man);
-        int visable = array.getInt(R.styleable.HeaderBar_hb_img_visable,1);
+        int img = array.getResourceId(R.styleable.HeaderBar_hb_img, R.drawable.bussiness_man);
+        int visable = array.getInt(R.styleable.HeaderBar_hb_img_visable, 1);
 
-        buildComponent(txt,img,visable);
+        buildComponent(txt, img, visable);
     }
 
-    void buildComponent( String  txt,int img_profile,int visable) {
+    void buildComponent(String txt, int img_profile, int visable) {
         RelativeLayout layout = new RelativeLayout(context);
-        layout.setLayoutParams(new LayoutParams(LayoutParams.MATCH_PARENT,LayoutParams.WRAP_CONTENT));
+        layout.setLayoutParams(new LayoutParams(LayoutParams.MATCH_PARENT, LayoutParams.WRAP_CONTENT));
 
         RelativeLayout.LayoutParams btnparams = new RelativeLayout.LayoutParams(SizeUtilities.Dp2Px(context, 38), SizeUtilities.Dp2Px(context, 38));
         AppCompatButton back_btn = new AppCompatButton(context);
-        btnparams.setMargins(SizeUtilities.Dp2Px(context, 1),SizeUtilities.Dp2Px(context, 2),SizeUtilities.Dp2Px(context, 2),SizeUtilities.Dp2Px(context, 2));
+        btnparams.setMargins(SizeUtilities.Dp2Px(context, 1), SizeUtilities.Dp2Px(context, 2), SizeUtilities.Dp2Px(context, 2), SizeUtilities.Dp2Px(context, 2));
         back_btn.setBackgroundDrawable(context.getDrawable(R.drawable.btn_bg_4));
-        back_btn.setCompoundDrawablesWithIntrinsicBounds(null,context.getDrawable(R.drawable.back),null,null);
+        back_btn.setCompoundDrawablesWithIntrinsicBounds(null, context.getDrawable(R.drawable.back), null, null);
         back_btn.setLayoutParams(btnparams);
-        back_btn.setPadding(0,SizeUtilities.Dp2Px(context, 13),0,0);
+        back_btn.setPadding(0, SizeUtilities.Dp2Px(context, 13), 0, 0);
         back_btn.setId(R.id.header_btn);
-
 
 
         RelativeLayout.LayoutParams tvparams = new RelativeLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT);
@@ -62,12 +61,14 @@ public class HeaderBar extends LinearLayout {
 
         RelativeLayout.LayoutParams rbparams = new RelativeLayout.LayoutParams(SizeUtilities.Dp2Px(context, 38), SizeUtilities.Dp2Px(context, 38));
         rbparams.addRule(RelativeLayout.ALIGN_PARENT_RIGHT);
-        rbparams.setMargins(0,0,SizeUtilities.Dp2Px(context, 10),SizeUtilities.Dp2Px(context, 3));
+        rbparams.setMargins(0, SizeUtilities.Dp2Px(context, 5), SizeUtilities.Dp2Px(context, 10), SizeUtilities.Dp2Px(context, 3));
         CardView view = new CardView(context);
         view.setLayoutParams(rbparams);
         view.setRadius(10);
+        view.setPadding(SizeUtilities.Dp2Px(context, 3),0,0,0);
 
-        rbparams = new RelativeLayout.LayoutParams(SizeUtilities.Dp2Px(context, 36), SizeUtilities.Dp2Px(context, 36));
+        rbparams = new RelativeLayout.LayoutParams(SizeUtilities.Dp2Px(context, 30), SizeUtilities.Dp2Px(context, 30));
+        rbparams.setMargins( SizeUtilities.Dp2Px(context, 5),SizeUtilities.Dp2Px(context, 5),0,0);
         RoundedImageView img = new RoundedImageView(context);
         img.setLayoutParams(rbparams);
         img.setId(R.id.header_img);
@@ -75,7 +76,7 @@ public class HeaderBar extends LinearLayout {
         img.setBackgroundResource(img_profile);
         view.addView(img);
 
-        if (visable==0)
+        if (visable == 0)
             view.setVisibility(GONE);
         layout.addView(back_btn);
         layout.addView(tv);

@@ -23,11 +23,12 @@ public class PopularItemAdapter extends RecyclerView.Adapter<PopularItemAdapter.
     ArrayList<PopularItem> items = new ArrayList<>();
     FragmentManager fragmentManager;
     Context context;
-    public PopularItemAdapter(Context context,FragmentManager fragmentManager,ArrayList<PopularItem> items) {
+
+    public PopularItemAdapter(Context context, FragmentManager fragmentManager, ArrayList<PopularItem> items) {
 
         this.items = items;
-        this.context=context;
-        this.fragmentManager=fragmentManager;
+        this.context = context;
+        this.fragmentManager = fragmentManager;
 
     }
 
@@ -45,7 +46,7 @@ public class PopularItemAdapter extends RecyclerView.Adapter<PopularItemAdapter.
         PopularItem item = items.get(position);
         holder.iv.setImageResource(item.getImage());
         holder.name.setText(item.getName());
-        holder.people.setText("( "+item.getNummberOfPeople() + " )");
+        holder.people.setText("( " + item.getNummberOfPeople() + " )");
         holder.rate.setText(item.getRate() + "");
         holder.description.setText(item.getDescription());
         holder.price.setText(item.getPrice() + "");
@@ -53,7 +54,7 @@ public class PopularItemAdapter extends RecyclerView.Adapter<PopularItemAdapter.
             @Override
             public void onClick(View view) {
 
-                replaceFragmen(new FoodDetailsFragment(),R.id.fram_home_fragment);
+                replaceFragmen(new FoodDetailsFragment(), R.id.fram_home_fragment);
 
 
             }
@@ -64,6 +65,19 @@ public class PopularItemAdapter extends RecyclerView.Adapter<PopularItemAdapter.
     @Override
     public int getItemCount() {
         return items.size();
+    }
+
+    public void replaceFragmen(Fragment fragment, int frameId) {
+        String backStateName = fragment.getClass().getName();
+        FragmentManager manager = fragmentManager;
+        boolean fragmentPopped = manager.popBackStackImmediate(backStateName, 0);
+        if (!fragmentPopped && manager.findFragmentByTag(backStateName) == null) { //fragment not in back stack, create it.
+            FragmentTransaction ft = manager.beginTransaction();
+            ft.replace(frameId, fragment, backStateName);
+            ft.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE);
+            ft.addToBackStack(backStateName);
+            ft.commit();
+        }
     }
 
     class PopularItemViewHolder extends RecyclerView.ViewHolder {
@@ -80,22 +94,9 @@ public class PopularItemAdapter extends RecyclerView.Adapter<PopularItemAdapter.
             price = itemView.findViewById(R.id.tv_popular_price);
             rate = itemView.findViewById(R.id.tv_popular_rate);
             people = itemView.findViewById(R.id.tv_restaurant_num_people);
-            layout=itemView.findViewById(R.id.item_popular_layout);
+            layout = itemView.findViewById(R.id.item_popular_layout);
         }
     }
-    public  void replaceFragmen(Fragment fragment, int frameId) {
-        String backStateName = fragment.getClass().getName();
-        FragmentManager manager = fragmentManager;
-        boolean fragmentPopped = manager.popBackStackImmediate(backStateName, 0);
-        if (!fragmentPopped && manager.findFragmentByTag(backStateName) == null) { //fragment not in back stack, create it.
-            FragmentTransaction ft = manager.beginTransaction();
-            ft.replace(frameId, fragment, backStateName);
-            ft.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE);
-            ft.addToBackStack(backStateName);
-            ft.commit();
-        }
-    }
-
 
 
 }

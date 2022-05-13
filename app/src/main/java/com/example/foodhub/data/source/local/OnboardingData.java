@@ -6,7 +6,7 @@ import com.example.foodhub.data.models.OnboardingItem;
 import java.util.ArrayList;
 
 public class OnboardingData {
-    public static ArrayList<OnboardingItem> Items (){
+    public static ArrayList<OnboardingItem> Items() {
         ArrayList<OnboardingItem> onboardingItemList = new ArrayList<>();
         OnboardingItem itemPlayOnline1 = new OnboardingItem();
         itemPlayOnline1.setTitle("Browse your menu\nand order directly");
@@ -30,7 +30,6 @@ public class OnboardingData {
         return onboardingItemList;
 
     }
-
 
 
 }

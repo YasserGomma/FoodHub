@@ -12,11 +12,16 @@
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
+        android:screenOrientation="portrait"
         android:supportsRtl="true"
         android:theme="@style/Theme.FoodHub"
+        android:windowSoftInputMode="stateUnchanged|adjustResize"
         tools:replace="android:appComponentFactory">
         <activity
-            android:name=".views.pages.a_intro.onBordingScreen"
+            android:name=".views.pages.b_account.Profile"
+            android:exported="false" />
+        <activity
+            android:name=".views.pages.a_intro.onBoardingScreen"
             android:exported="false" />
         <activity
             android:name=".views.pages.b_account.VerificationPage"
@@ -28,7 +33,7 @@
             android:name=".views.pages.b_account.Login"
             android:exported="false" />
         <activity
-            android:name=".views.pages.b_account.RessetPassword"
+            android:name=".views.pages.b_account.ResetPassword"
             android:exported="false" />
         <activity
             android:name=".views.pages.b_account.PhoneRegistration"

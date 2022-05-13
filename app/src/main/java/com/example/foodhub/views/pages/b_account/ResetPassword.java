@@ -6,7 +6,7 @@ import android.view.View;
 import com.example.foodhub.R;
 import com.example.foodhub.views.pages.parents.BaseActivity;
 
-public class RessetPassword extends BaseActivity {
+public class ResetPassword extends BaseActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -16,7 +16,7 @@ public class RessetPassword extends BaseActivity {
             @Override
             public void onClick(View view) {
                 finish();
-                RessetPassword.super.onBackPressed();
+                ResetPassword.super.onBackPressed();
             }
         });
     }

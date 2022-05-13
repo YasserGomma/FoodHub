@@ -31,18 +31,18 @@ public class HomeFragment extends Fragment {
         // Required empty public constructor
     }
 
-    @Override
-    public void onResume() {
-        super.onResume();
-        ((Home) getActivity()).show_footer();
-
-    }
-
     public static HomeFragment newInstance(String param1, String param2) {
         HomeFragment fragment = new HomeFragment();
         Bundle args = new Bundle();
 
         return fragment;
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        ((Home) getActivity()).show_footer();
+
     }
 
     @Override
@@ -54,7 +54,7 @@ public class HomeFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View rootView = inflater.inflate(R.layout.fragment_hom, container, false);
+        View rootView = inflater.inflate(R.layout.fragment_home, container, false);
         TextView tv_fragment_home_view = rootView.findViewById(R.id.tv_fragment_home_view);
         tv_fragment_home_view.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -63,7 +63,7 @@ public class HomeFragment extends Fragment {
             }
         });
 
-        Button btn=rootView.findViewById(R.id.btnfragment_home_filter);
+        Button btn = rootView.findViewById(R.id.btnfragment_home_filter);
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -72,7 +72,7 @@ public class HomeFragment extends Fragment {
             }
         });
         // 1. get a reference to recyclerView
-        RecyclerView recyclerView = (RecyclerView) rootView.findViewById(R.id.rv_fragment_home_r1);
+        RecyclerView recyclerView = rootView.findViewById(R.id.rv_fragment_home_r1);
 
         // 2. set layoutManger
         recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
@@ -108,7 +108,7 @@ public class HomeFragment extends Fragment {
 
         //---------------------------------------------------
         // 1. get a reference to recyclerView
-        RecyclerView recyclerView2 = (RecyclerView) rootView.findViewById(R.id.rv_fragment_home_r2);
+        RecyclerView recyclerView2 = rootView.findViewById(R.id.rv_fragment_home_r2);
         LinearLayoutManager layoutManager2
                 = new LinearLayoutManager(requireContext(), LinearLayoutManager.HORIZONTAL, false);
 
@@ -130,7 +130,7 @@ public class HomeFragment extends Fragment {
 
         //---------------------------------------------------
         // 1. get a reference to recyclerView
-        RecyclerView recyclerView3 = (RecyclerView) rootView.findViewById(R.id.rv_fragment_home_r3);
+        RecyclerView recyclerView3 = rootView.findViewById(R.id.rv_fragment_home_r3);
         LinearLayoutManager layoutManager3
                 = new LinearLayoutManager(requireContext(), LinearLayoutManager.HORIZONTAL, false);
 
