@@ -2,6 +2,7 @@ plugins {
     id 'com.android.application'
 }
 
+
 android {
     compileSdk 31
 
@@ -65,5 +66,8 @@ dependencies {
     implementation "androidx.navigation:navigation-compose:$nav_version"
 
     implementation 'com.makeramen:roundedimageview:2.3.0'
+
+    implementation 'com.google.android.material:material:1.6.0'
+
 
 }

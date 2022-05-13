@@ -27,12 +27,14 @@ public class InputField extends LinearLayout {
         TypedArray array = context.obtainStyledAttributes(attrs, R.styleable.InputField);
         String label = array.getString(R.styleable.InputField_if_label);
         String hint = array.getString(R.styleable.InputField_if_hint);
+        String text = array.getString(R.styleable.InputField_if_text);
+
         int pass = array.getInt(R.styleable.InputField_if_password, 0);
 
-        buildComponent(label, hint, pass);
+        buildComponent(label, hint, pass,text);
     }
 
-    void buildComponent(String label, String hint, int pass) {
+    void buildComponent(String label, String hint, int pass,String text) {
 
 
         TextView tv = new TextView(context);
@@ -59,6 +61,7 @@ public class InputField extends LinearLayout {
         et.setPadding(paddingSize, paddingSize, paddingSize, paddingSize);
         et.setMaxLines(1);
         et.setHint(hint);
+        et.setText(text);
         et.setOnFocusChangeListener(new View.OnFocusChangeListener() {
             @Override
             public void onFocusChange(View view, boolean isFocused) {

@@ -42,6 +42,15 @@ public class HomeFragment extends Fragment {
     public void onResume() {
         super.onResume();
         ((Home) getActivity()).show_footer();
+        ((Home) getActivity()).show_header();
+    }
+
+
+
+    @Override
+    public void onPause() {
+        super.onPause();
+        ((Home) getActivity()).hide_header();
 
     }
 
@@ -154,6 +163,7 @@ public class HomeFragment extends Fragment {
 
         return rootView;
     }
+
 
     public void replaceFragment(Fragment fragment, int frameId) {
         String backStateName = fragment.getClass().getName();

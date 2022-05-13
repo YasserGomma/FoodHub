@@ -1,8 +1,8 @@
 package com.example.foodhub.views.pages.b_account;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.os.Bundle;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.foodhub.R;
 

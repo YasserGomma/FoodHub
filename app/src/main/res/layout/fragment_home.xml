@@ -14,15 +14,11 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="26dp">
 
-        <include
-            android:id="@+id/header"
-            layout="@layout/header_home" />
 
         <TextView
             android:id="@+id/tv_fragment_home_title"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@id/header"
             android:fontFamily="@font/sofiapro_bold"
             android:text="What would you like to order"
             android:textColor="@color/black"
@@ -130,5 +126,6 @@
             android:clipToPadding="false"
             android:orientation="horizontal" />
     </RelativeLayout>
+
 
 </ScrollView>

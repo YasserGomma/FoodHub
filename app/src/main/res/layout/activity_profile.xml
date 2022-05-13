@@ -1,9 +1,85 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/profile_background"
+    android:layout_marginHorizontal="20dp"
     tools:context=".views.pages.b_account.Profile">
+
+    <include
+        android:id="@+id/header"
+        layout="@layout/header_back" />
+
+    <com.makeramen.roundedimageview.RoundedImageView
+        android:id="@+id/iv_profile_pic"
+        android:layout_width="140dp"
+        android:layout_height="140dp"
+        android:layout_marginTop="40dp"
+        android:layout_below="@id/header"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/profile_pic_bg"
+        android:padding="10dp"
+        android:outlineSpotShadowColor="@color/primary_color"
+        android:src="@drawable/profile_pic"
+        app:riv_corner_radius="100dp" />
+    <com.makeramen.roundedimageview.RoundedImageView
+        android:id="@+id/iv_profile_change"
+        android:layout_width="35dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="-40dp"
+        android:clickable="true"
+        android:layout_toRightOf="@+id/iv_profile_pic"
+        android:layout_below="@id/iv_profile_pic"
+        app:riv_corner_radius="100dp"
+        android:layout_marginLeft="-50dp"
+        android:background="@drawable/profile_pic_bg"
+        android:src="@drawable/cam"
+        />
+    <com.example.foodhub.views.widgets.PageTitleText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/iv_profile_pic"
+        android:text="Eljad Eendaz"
+        app:pt_text_size="20"
+        android:gravity="center"
+        android:layout_marginTop="20dp"
+        android:id="@+id/tv_profile_name"
+        />
+    <com.example.foodhub.views.widgets.DescriptionPageText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Edit Profile"
+        android:layout_below="@id/tv_profile_name"
+        android:gravity="center"
+        android:layout_marginTop="10dp"
+        android:id="@+id/tv_profile_edit"
+        />
+    <com.example.foodhub.views.components.InputField
+        android:id="@+id/if_profile_full_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:if_label="Full name"
+        android:layout_below="@id/tv_profile_edit"
+        app:if_text="Eljad Eendaz"
+        />
+    <com.example.foodhub.views.components.InputField
+        android:id="@+id/if_profile_mail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:if_label="Email"
+        android:layout_below="@id/if_profile_full_name"
+        app:if_text="prelookstudio@gmail.com"
+        />
+    <com.example.foodhub.views.components.InputField
+        android:id="@+id/if_profile_phone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:if_label="Phone Number"
+        android:layout_below="@id/if_profile_mail"
+        app:if_text="+1 (783) 0986 8786"
+        />
+
 
 </RelativeLayout>

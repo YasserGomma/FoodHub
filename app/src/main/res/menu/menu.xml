@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+<item android:id="@+id/orders"
+    android:title="My Orders"
+    android:icon="@drawable/document"
+    />
+    <item android:id="@+id/profile"
+        android:title="My Profile"
+        android:icon="@drawable/profile"
+        />
+    <item android:id="@+id/delivery"
+        android:title="Delivery Address"
+        android:icon="@drawable/location"
+        />
+    <item android:id="@+id/payment"
+        android:title="Payment Methods"
+        android:icon="@drawable/wallet"
+        />
+    <item android:id="@+id/contact"
+        android:title="Contact Us"
+        android:icon="@drawable/message"
+        />
+    <item android:id="@+id/settings"
+        android:title="Settings"
+        android:icon="@drawable/setting"
+        />
+
+    <item android:id="@+id/help"
+        android:title="Helps and FAQs"
+        android:icon="@drawable/helps"
+        />
+</menu>

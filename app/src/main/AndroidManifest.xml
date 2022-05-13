@@ -18,9 +18,6 @@
         android:windowSoftInputMode="stateUnchanged|adjustResize"
         tools:replace="android:appComponentFactory">
         <activity
-            android:name=".views.pages.b_account.Profile"
-            android:exported="false" />
-        <activity
             android:name=".views.pages.a_intro.onBoardingScreen"
             android:exported="false" />
         <activity
@@ -43,6 +40,9 @@
             android:exported="false" />
         <activity
             android:name=".views.pages.a_intro.WelcomeScreen"
+            android:exported="false" />
+        <activity
+            android:name=".views.pages.b_account.Profile"
             android:exported="false" />
         <activity
             android:name=".views.pages.a_intro.Splash"
