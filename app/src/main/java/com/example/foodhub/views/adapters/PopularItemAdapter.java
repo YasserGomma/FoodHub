@@ -13,18 +13,19 @@ import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.bumptech.glide.Glide;
 import com.example.foodhub.R;
-import com.example.foodhub.data.models.PopularItem;
+import com.example.foodhub.data.source.remote.Food;
 import com.example.foodhub.views.pages.c_home.FoodDetailsFragment;
 
 import java.util.ArrayList;
 
 public class PopularItemAdapter extends RecyclerView.Adapter<PopularItemAdapter.PopularItemViewHolder> {
-    ArrayList<PopularItem> items = new ArrayList<>();
+    ArrayList<Food> items = new ArrayList<>();
     FragmentManager fragmentManager;
     Context context;
 
-    public PopularItemAdapter(Context context, FragmentManager fragmentManager, ArrayList<PopularItem> items) {
+    public PopularItemAdapter(Context context, FragmentManager fragmentManager, ArrayList<Food> items) {
 
         this.items = items;
         this.context = context;
@@ -43,13 +44,18 @@ public class PopularItemAdapter extends RecyclerView.Adapter<PopularItemAdapter.
     @Override
     public void onBindViewHolder(PopularItemViewHolder holder, int position) {
 
-        PopularItem item = items.get(position);
-        holder.iv.setImageResource(item.getImage());
-        holder.name.setText(item.getName());
-        holder.people.setText("( " + item.getNummberOfPeople() + " )");
-        holder.rate.setText(item.getRate() + "");
-        holder.description.setText(item.getDescription());
-        holder.price.setText(item.getPrice() + "");
+        Food item = items.get(position);
+        Glide.with(context)
+                .load("https://direct-app.net/food/" + item.pic.toString()) // image url
+                .placeholder(R.drawable.ic_launcher_background) // any placeholder to load at start
+                .error(R.drawable.logo)  // any image in case of error
+                .centerCrop()
+                .into(holder.iv);  // imageview
+        holder.name.setText(item.name);
+        holder.people.setText("( " + item.number_of_ratings + " )");
+        holder.rate.setText(item.rating+"  ");
+        holder.description.setText(item.description);
+        holder.price.setText(item.price);
         holder.layout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

@@ -1,5 +1,6 @@
 package com.example.foodhub.views.adapters;
 
+import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -9,16 +10,19 @@ import android.widget.TextView;
 import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.bumptech.glide.Glide;
 import com.example.foodhub.R;
-import com.example.foodhub.data.models.RestaurantSearchItem;
+import com.example.foodhub.data.source.remote.RestaurantSearch;
 
 import java.util.ArrayList;
 
 public class RestaurantSearchAdapter extends RecyclerView.Adapter<RestaurantSearchAdapter.RestauranttemViewHolder> {
-    ArrayList<RestaurantSearchItem> items = new ArrayList<>();
+    ArrayList<RestaurantSearch> items = new ArrayList<>();
+    Context context;
 
-    public RestaurantSearchAdapter(ArrayList<RestaurantSearchItem> items) {
+    public RestaurantSearchAdapter(Context context,ArrayList<RestaurantSearch> items) {
         this.items = items;
+        this.context=context;
     }
 
     @Override
@@ -32,20 +36,26 @@ public class RestaurantSearchAdapter extends RecyclerView.Adapter<RestaurantSear
     public void onBindViewHolder(RestauranttemViewHolder holder, int position) {
 
         if (position > 0) {
-            RestaurantSearchItem item = items.get(position);
-            holder.background.setImageResource(item.getImage());
-            holder.name.setText(item.getName());
-            holder.deliveryPrice.setText(item.getDeliveryPrice() > 0 ? item.getDeliveryPrice() + " $" : "Free");
-            holder.deliverytime.setText(item.getDeliverytime());
+            RestaurantSearch item = items.get(position);
+            Glide.with(context)
+                    .load("https://direct-app.net/food/" + item.cover_photo.toString()) // image url
+                    .placeholder(R.drawable.ic_launcher_background) // any placeholder to load at start
+                    .error(R.drawable.logo)  // any image in case of error
+                    .centerCrop()
+                    .into(holder.background);
+            holder.name.setText(item.name);
+            holder.deliveryPrice.setText(item.delivery);
+            holder.deliverytime.setText(item.delivery_time);
+            holder.rate.setText(item.rating);
         } else {
             holder.cardView.setVisibility(View.GONE);
-            holder.invisable.setText("Found 10 results");
+            holder.invisable.setText("Found "+(items.size()-1)+" results");
         }
     }
 
     @Override
     public int getItemCount() {
-        return items.size() - 1;
+        return items.size();
     }
 
     static class RestauranttemViewHolder extends RecyclerView.ViewHolder {
@@ -62,6 +72,7 @@ public class RestaurantSearchAdapter extends RecyclerView.Adapter<RestaurantSear
             deliverytime = itemView.findViewById(R.id.tv_restaurant_search_delivery_time);
             invisable = itemView.findViewById(R.id.tv_restaurant_search_invisable);
             cardView = itemView.findViewById(R.id.search_restaurant_card);
+            rate=itemView.findViewById(R.id.tv_restaurent_search_rate);
         }
     }
 }

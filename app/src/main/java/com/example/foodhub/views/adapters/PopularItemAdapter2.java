@@ -10,7 +10,7 @@ import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.foodhub.R;
-import com.example.foodhub.data.models.PopularItem;
+import com.example.foodhub.data.test_data.PopularItem;
 
 import java.util.ArrayList;
 

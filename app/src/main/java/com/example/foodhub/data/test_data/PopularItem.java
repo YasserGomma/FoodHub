@@ -1,4 +1,4 @@
-package com.example.foodhub.data.models;
+package com.example.foodhub.data.test_data;
 
 public class PopularItem {
     String name;

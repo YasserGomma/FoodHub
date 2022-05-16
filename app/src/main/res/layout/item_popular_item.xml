@@ -2,18 +2,17 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/item_popular_layout"
-    android:layout_width="wrap_content"
+    android:layout_width="250dp"
     android:layout_height="wrap_content">
 
     <androidx.cardview.widget.CardView
         android:id="@+id/card"
         cardUseCompatPadding="true"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginRight="20dp"
-        android:layout_marginBottom="20dp"
+        android:layout_marginBottom="10dp"
         android:clipToPadding="false"
-        android:elevation=".5dp"
         app:cardCornerRadius="15dp"
         app:cardPreventCornerOverlap="false">
 
@@ -21,25 +20,23 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="10dp"
-
             android:orientation="vertical">
             <!--Image Background-->
             <androidx.cardview.widget.CardView
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="10dp"
-                app:cardCornerRadius="15dp"
+                app:cardCornerRadius="10dp"
+                android:elevation="0dp"
                 app:cardPreventCornerOverlap="false">
 
 
                 <ImageView
                     android:id="@+id/iv_popular_background"
-                    android:layout_width="match_parent"
+                    android:layout_width="200dp"
                     android:layout_height="wrap_content"
                     android:scaleType="centerCrop"
-                    android:src="@drawable/pop_1" />
+                    android:src="@drawable/pop_2" />
                 <!--Price-->
-
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -70,6 +67,7 @@
 
                 </LinearLayout>
 
+
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -77,13 +75,56 @@
                     android:layout_marginTop="10dp"
                     android:src="@drawable/heart" />
 
+
             </androidx.cardview.widget.CardView>
 
+            <!--Rate-->
+            <LinearLayout
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/btn_bg_1"
+                android:orientation="horizontal"
+                android:paddingHorizontal="10dp"
+                android:paddingVertical="2dp">
+
+
+                <TextView
+                    android:id="@+id/tv_popular_rate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/sofiapro_semibold"
+                    android:text="5.50"
+                    android:textColor="@color/black"
+                    android:textSize="12dp" />
+
+                <ImageView
+                    android:layout_width="10dp"
+                    android:layout_height="10dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/star" />
+
+                <TextView
+                    android:id="@+id/tv_restaurant_num_people"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="5dp"
+                    android:fontFamily="@font/sofiapro_reguler"
+                    android:text="$"
+                    android:textColor="@color/hint_color"
+                    android:textSize="9dp" />
+
+
+            </LinearLayout>
             <!--Name -->
             <LinearLayout
                 android:layout_width="match_parent"
+
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
+                android:layout_marginBottom="10dp"
+
                 android:orientation="vertical">
 
                 <TextView
@@ -91,6 +132,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/sofiapro_semibold"
+                    android:maxLines="1"
                     android:text="Salmon Salad"
                     android:textColor="@color/black"
                     android:textSize="15dp" />
@@ -100,52 +142,13 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/sofiapro_light"
+                    android:maxLines="2"
                     android:text="Baked salmon fish"
                     android:textColor="#9796A1"
                     android:textSize="12dp" />
 
 
             </LinearLayout>
-
-
-        </LinearLayout>
-        <!--Rate-->
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="10dp"
-            android:layout_marginTop="135dp"
-            android:background="@drawable/btn_bg_1"
-            android:orientation="horizontal"
-            android:paddingHorizontal="10dp"
-            android:paddingVertical="2dp">
-
-
-            <TextView
-                android:id="@+id/tv_popular_rate"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/sofiapro_semibold"
-                android:text="5.50"
-                android:textColor="@color/black"
-                android:textSize="12dp" />
-
-            <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:src="@drawable/star" />
-
-            <TextView
-                android:id="@+id/tv_restaurant_num_people"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="bottom"
-                android:layout_marginLeft="5dp"
-                android:fontFamily="@font/sofiapro_reguler"
-                android:text="$"
-                android:textColor="@color/hint_color"
-                android:textSize="9dp" />
 
 
         </LinearLayout>

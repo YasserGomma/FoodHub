@@ -14,7 +14,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.foodhub.R;
-import com.example.foodhub.data.models.CartItem;
+import com.example.foodhub.data.test_data.CartItem;
 import com.example.foodhub.views.adapters.CartItemAdapter;
 import com.example.foodhub.views.pages.b_account.PaymentFragment;
 

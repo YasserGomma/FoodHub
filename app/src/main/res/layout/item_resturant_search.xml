@@ -1,26 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:layout_width="155dp"
+    android:layout_height="175dp">
 
     <androidx.cardview.widget.CardView
         android:id="@+id/search_restaurant_card"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginRight="20dp"
-        android:layout_marginBottom="20dp"
+        android:layout_height="match_parent"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="10dp"
         android:clipToPadding="false"
         android:elevation=".5dp"
         app:cardCornerRadius="15dp"
         app:cardPreventCornerOverlap="false">
 
         <LinearLayout
+
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@color/white"
             android:orientation="vertical"
-            android:padding="5dp">
+            android:padding="10dp">
 
             <RelativeLayout
                 android:layout_width="match_parent"
@@ -28,46 +29,40 @@
 
                 <androidx.cardview.widget.CardView
                     android:id="@+id/cv_restaurant_search_profilepic"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
                     android:background="@color/white"
                     android:backgroundTint="@color/white"
                     android:elevation=".5dp"
-                    app:cardCornerRadius="12dp"
+                    app:cardCornerRadius="7dp"
                     app:cardPreventCornerOverlap="false">
 
                     <ImageView
                         android:id="@+id/iv_restaurant_search_background"
-                        android:layout_width="wrap_content"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:padding="12dp"
                         android:scaleType="centerCrop"
                         android:src="@drawable/pizza" />
 
-                    <TextView
-                        android:id="@+id/tv_footer_orders"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="right"
-                        android:layout_marginTop="2dp"
-                        android:layout_marginRight="3dp"
-                        android:background="@drawable/tv_footer_bg"
-                        android:fontFamily="@font/sofiapro_light"
-                        android:gravity="center"
-                        android:text="4.5"
-                        android:textColor="@color/white"
-                        android:textSize="10dp" />
                 </androidx.cardview.widget.CardView>
-
-
+                <TextView
+                    android:id="@+id/tv_restaurent_search_rate"
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:background="@drawable/tv_footer_bg"
+                    android:fontFamily="@font/sofiapro_light"
+                    android:gravity="center"
+                    android:layout_marginLeft="5dp"
+                    android:layout_toRightOf="@id/cv_restaurant_search_profilepic"
+                    android:text="4.5"
+                    android:textColor="@color/white"
+                    android:textSize="10dp" />
                 <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
                     android:layout_alignParentRight="true"
                     android:src="@drawable/heart" />
             </RelativeLayout>
-            <!--Image Background-->
-
             <!--Name -->
             <LinearLayout
                 android:layout_width="wrap_content"
@@ -103,6 +98,7 @@
                     android:layout_height="10dp"
                     android:layout_gravity="center"
                     android:layout_marginTop="2dp"
+                    android:layout_marginRight="2dp"
                     android:src="@drawable/delivery" />
 
                 <TextView
@@ -110,7 +106,6 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:layout_marginHorizontal="5dp"
                     android:fontFamily="@font/sofiapro_reguler"
                     android:gravity="center"
                     android:text="free"
@@ -121,8 +116,9 @@
                     android:layout_width="wrap_content"
                     android:layout_height="10dp"
                     android:layout_gravity="center"
-                    android:layout_marginLeft="10dp"
+                    android:layout_marginLeft="5dp"
                     android:layout_marginTop="2dp"
+                    android:layout_marginRight="2dp"
                     android:src="@drawable/clock" />
 
                 <TextView
@@ -130,10 +126,10 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:layout_marginHorizontal="5dp"
                     android:fontFamily="@font/sofiapro_reguler"
-                    android:gravity="center"
+                    android:gravity="left"
                     android:text="10-15 mins"
+                    android:maxLines="1"
                     android:textColor="#5B5B5E"
                     android:textSize="12dp" />
 
@@ -143,8 +139,8 @@
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="15dp"
-                android:layout_marginBottom="10dp">
+                android:layout_marginTop="10dp"
+                >
 
                 <TextView
                     android:id="@+id/tv_restaurant_search_pop1"
@@ -153,8 +149,8 @@
                     android:layout_marginEnd="5dp"
                     android:background="@drawable/tv_bg"
                     android:fontFamily="@font/sofiapro_reguler"
-                    android:padding="5dp"
-                    android:text="Pizza"
+                    android:padding="2dp"
+                    android:text="Burger"
                     android:textAllCaps="true"
                     android:textColor="#515154"
                     android:textSize="12dp" />
@@ -166,8 +162,8 @@
                     android:layout_marginRight="10dp"
                     android:background="@drawable/tv_bg"
                     android:fontFamily="@font/sofiapro_reguler"
-                    android:padding="5dp"
-                    android:text="Fast food"
+                    android:padding="2dp"
+                    android:text="Chicken"
                     android:textAllCaps="true"
                     android:textColor="#515154"
                     android:textSize="12dp" />
@@ -182,7 +178,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="-5dp"
-        android:layout_marginBottom="20dp"
         android:fontFamily="@font/sofiapro_semibold"
         android:textColor="@color/black"
         android:textSize="32dp" />

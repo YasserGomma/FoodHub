@@ -1,5 +1,6 @@
 package com.example.foodhub.views.adapters;
 
+import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -8,16 +9,20 @@ import android.widget.TextView;
 
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.bumptech.glide.Glide;
 import com.example.foodhub.R;
-import com.example.foodhub.data.models.RestaurantProfileItem;
+import com.example.foodhub.data.source.remote.Restaurant;
 
 import java.util.ArrayList;
 
 public class RestaurantProfileAdapter extends RecyclerView.Adapter<RestaurantProfileAdapter.RestauranttemViewHolder> {
-    ArrayList<RestaurantProfileItem> resturants = new ArrayList<>();
+    ArrayList<Restaurant> resturants = new ArrayList<>();
+    Context context;
 
-    public RestaurantProfileAdapter(ArrayList<RestaurantProfileItem> foods) {
-        this.resturants = foods;
+
+    public RestaurantProfileAdapter(Context context, ArrayList<Restaurant> resturants) {
+        this.resturants = resturants;
+        this.context = context;
     }
 
     @Override
@@ -31,13 +36,27 @@ public class RestaurantProfileAdapter extends RecyclerView.Adapter<RestaurantPro
     @Override
     public void onBindViewHolder(RestauranttemViewHolder holder, int position) {
 
-        RestaurantProfileItem item = resturants.get(position);
-        holder.background.setImageResource(item.getImage());
-        holder.name.setText(item.getName());
-        holder.rate.setText(item.getRate() + "");
-        holder.deliveryPrice.setText(item.getDeliveryPrice() + " $");
-        holder.numberOfPeople.setText("( " + item.getNumberOfPeople() + " )");
-        holder.deliverytime.setText(item.getDeliverytime());
+        Restaurant item = resturants.get(position);
+        holder.name.setText(item.name);
+        holder.rate.setText(item.rating);
+        holder.deliveryPrice.setText(item.delivery + " $");
+        holder.numberOfPeople.setText("( " + item.number_of_ratings + " )");
+        holder.deliverytime.setText(item.delivery_time);
+        Glide.with(context)
+                .load("https://direct-app.net/food/" + item.cover_photo.toString()) // image url
+                .placeholder(R.drawable.ic_launcher_background) // any placeholder to load at start
+                .error(R.drawable.logo)  // any image in case of error
+                .centerCrop()
+                .into(holder.background);  // imageview
+        String tags = item.tags;
+        String[] parts = { "Burger","Chicken","Fast Food"};
+        String tag1 = parts[0];
+        String tag2 = parts[1];
+        String tag3 = parts[2];
+        holder.tv_restaurant_pop1.setText(tag1);
+        holder.tv_restaurant_pop2.setText(tag2);
+        holder.tv_restaurant_pop3.setText(tag3);
+
 
     }
 
@@ -49,7 +68,7 @@ public class RestaurantProfileAdapter extends RecyclerView.Adapter<RestaurantPro
     class RestauranttemViewHolder extends RecyclerView.ViewHolder {
 
         ImageView background;
-        TextView name, rate, numberOfPeople, deliveryPrice, deliverytime;
+        TextView name, rate, numberOfPeople, deliveryPrice, deliverytime,tv_restaurant_pop1,tv_restaurant_pop2,tv_restaurant_pop3;
 
 
         public RestauranttemViewHolder(View itemView) {
@@ -60,6 +79,10 @@ public class RestaurantProfileAdapter extends RecyclerView.Adapter<RestaurantPro
             numberOfPeople = itemView.findViewById(R.id.tv_restaurant_num_people);
             deliveryPrice = itemView.findViewById(R.id.tv_restaurant_delivery_price);
             deliverytime = itemView.findViewById(R.id.tv_restaurant_delivery_time);
+            tv_restaurant_pop1=itemView.findViewById(R.id.tv_restaurant_pop1);
+            tv_restaurant_pop2=itemView.findViewById(R.id.tv_restaurant_pop2);
+            tv_restaurant_pop3=itemView.findViewById(R.id.tv_restaurant_pop3);
+
 
         }
     }

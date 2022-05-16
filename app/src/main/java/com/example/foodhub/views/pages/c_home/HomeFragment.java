@@ -15,14 +15,21 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.foodhub.R;
-import com.example.foodhub.data.models.FoodItem;
-import com.example.foodhub.data.models.PopularItem;
-import com.example.foodhub.data.models.RestaurantProfileItem;
+import com.example.foodhub.data.source.remote.Category;
+import com.example.foodhub.data.source.remote.Food;
+import com.example.foodhub.data.source.remote.Restaurant;
+import com.example.foodhub.data.source.remote.Root;
+import com.example.foodhub.interfaces.EndPoints;
 import com.example.foodhub.views.adapters.FoodItemAdapter;
 import com.example.foodhub.views.adapters.PopularItemAdapter;
 import com.example.foodhub.views.adapters.RestaurantProfileAdapter;
+import com.example.foodhub.views.networking.RetrofitCreation;
 
 import java.util.ArrayList;
+
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 
 public class HomeFragment extends Fragment {
 
@@ -34,7 +41,6 @@ public class HomeFragment extends Fragment {
     public static HomeFragment newInstance(String param1, String param2) {
         HomeFragment fragment = new HomeFragment();
         Bundle args = new Bundle();
-
         return fragment;
     }
 
@@ -44,7 +50,6 @@ public class HomeFragment extends Fragment {
         ((Home) getActivity()).show_footer();
         ((Home) getActivity()).show_header();
     }
-
 
 
     @Override
@@ -80,90 +85,49 @@ public class HomeFragment extends Fragment {
 
             }
         });
-        // 1. get a reference to recyclerView
-        RecyclerView recyclerView = rootView.findViewById(R.id.rv_fragment_home_r1);
-
-        // 2. set layoutManger
-        recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
-
-        ArrayList<FoodItem> foodItems = new ArrayList<>();
-        foodItems.add(new FoodItem("Pizza", R.drawable.item));
-        foodItems.add(new FoodItem("Pizza", R.drawable.item));
-        foodItems.add(new FoodItem("Pizza", R.drawable.item));
-        foodItems.add(new FoodItem("Pizza", R.drawable.item));
-        foodItems.add(new FoodItem("Pizza", R.drawable.item));
-        foodItems.add(new FoodItem("Pizza", R.drawable.item));
-        foodItems.add(new FoodItem("Pizza", R.drawable.item));
-        foodItems.add(new FoodItem("Pizza", R.drawable.item));
-        foodItems.add(new FoodItem("Pizza", R.drawable.item));
-        foodItems.add(new FoodItem("Pizza", R.drawable.item));
-        foodItems.add(new FoodItem("Pizza", R.drawable.item));
-        foodItems.add(new FoodItem("Pizza", R.drawable.item));
-        foodItems.add(new FoodItem("Pizza", R.drawable.item));
-        foodItems.add(new FoodItem("Pizza", R.drawable.item));
-        foodItems.add(new FoodItem("Pizza", R.drawable.item));
-        //layout
-        LinearLayoutManager layoutManager
-                = new LinearLayoutManager(requireContext(), LinearLayoutManager.HORIZONTAL, false);
-
-        recyclerView.setLayoutManager(layoutManager);
-        // 3. create an adapter
-        FoodItemAdapter mAdapter = new FoodItemAdapter(foodItems);
-        // 4. set adapter
-        recyclerView.setAdapter(mAdapter);
-        // 5. set item animator to DefaultAnimator
-        recyclerView.setItemAnimator(new DefaultItemAnimator());
-
-
-        //---------------------------------------------------
-        // 1. get a reference to recyclerView
-        RecyclerView recyclerView2 = rootView.findViewById(R.id.rv_fragment_home_r2);
-        LinearLayoutManager layoutManager2
-                = new LinearLayoutManager(requireContext(), LinearLayoutManager.HORIZONTAL, false);
-
-        // 2. set layoutManger
-        recyclerView2.setLayoutManager(layoutManager2);
-        ArrayList<RestaurantProfileItem> restaurantItems = new ArrayList<>();
-        ArrayList<String> pop = new ArrayList<>();
-        pop.add("Coffee");
-        restaurantItems.add(new RestaurantProfileItem(R.drawable.resturent_background, 4.5f, 25, 0, pop, "McDonald’s", "10 - 15 mins"));
-        restaurantItems.add(new RestaurantProfileItem(R.drawable.resturent_background_2, 4f, 20, 2, pop, "Starbucks", "20 - 40 mins"));
-        restaurantItems.add(new RestaurantProfileItem(R.drawable.resturent_background, 4.5f, 25, 0, pop, "McDonald’s", "10 - 15 mins"));
-        restaurantItems.add(new RestaurantProfileItem(R.drawable.resturent_background_2, 4f, 20, 2, pop, "Starbucks", "20 - 40 mins"));
-        // 3. create an adapter
-        RestaurantProfileAdapter restaurantAdapter = new RestaurantProfileAdapter(restaurantItems);
-        // 4. set adapter
-        recyclerView2.setAdapter(restaurantAdapter);
-        // 5. set item animator to DefaultAnimator
-        recyclerView2.setItemAnimator(new DefaultItemAnimator());
-
-        //---------------------------------------------------
-        // 1. get a reference to recyclerView
-        RecyclerView recyclerView3 = rootView.findViewById(R.id.rv_fragment_home_r3);
-        LinearLayoutManager layoutManager3
-                = new LinearLayoutManager(requireContext(), LinearLayoutManager.HORIZONTAL, false);
-
-        // 2. set layoutManger
-        recyclerView3.setLayoutManager(layoutManager3);
-        ArrayList<PopularItem> popularItems = new ArrayList<>();
-
-        popularItems.add(new PopularItem("Salmon Salad", "Baked salmon fish", R.drawable.pop_1, 5.5f, 4.5f, 20));
-        popularItems.add(new PopularItem("Salmon Salad", "Baked salmon fish", R.drawable.pop_2, 8.5f, 4.5f, 20));
-        popularItems.add(new PopularItem("Salmon Salad", "Baked salmon fish", R.drawable.pop_1, 5.5f, 4.5f, 20));
-        popularItems.add(new PopularItem("Salmon Salad", "Baked salmon fish", R.drawable.pop_2, 8.5f, 4.5f, 20));
-        popularItems.add(new PopularItem("Salmon Salad", "Baked salmon fish", R.drawable.pop_1, 5.5f, 4.5f, 20));
-        popularItems.add(new PopularItem("Salmon Salad", "Baked salmon fish", R.drawable.pop_2, 8.5f, 4.5f, 20));
-
-        // 3. create an adapter
-        PopularItemAdapter popularItemAdapter = new PopularItemAdapter(getContext(), getFragmentManager(), popularItems);
-        // 4. set adapter
-        recyclerView3.setAdapter(popularItemAdapter);
-        // 5. set item animator to DefaultAnimator
-        recyclerView3.setItemAnimator(new DefaultItemAnimator());
-
+        setData(rootView);
         return rootView;
     }
 
+    void setData(View rootView) {
+        RecyclerView recyclerView = rootView.findViewById(R.id.rv_fragment_home_r1);
+        RecyclerView recyclerView1 = rootView.findViewById(R.id.rv_fragment_home_r2);
+        RecyclerView recyclerView2 = rootView.findViewById(R.id.rv_fragment_home_r3);
+
+        LinearLayoutManager layoutManager = new LinearLayoutManager(requireContext(), LinearLayoutManager.HORIZONTAL, false);
+        LinearLayoutManager layoutManager1 = new LinearLayoutManager(requireContext(), LinearLayoutManager.HORIZONTAL, false);
+        LinearLayoutManager layoutManager2= new LinearLayoutManager(requireContext(), LinearLayoutManager.HORIZONTAL, false);
+        recyclerView.setLayoutManager(layoutManager);
+        recyclerView1.setLayoutManager(layoutManager1);
+        recyclerView2.setLayoutManager(layoutManager2);
+        EndPoints Api = RetrofitCreation.getInstance();
+        Call<Root> call1 = Api.home("home");
+        final ArrayList<Restaurant>[] arrayList = new ArrayList[]{new ArrayList<>()};
+        final ArrayList<Category>[] arrayList1 = new ArrayList[]{new ArrayList<>()};
+        final ArrayList<Food>[] arrayList2 = new ArrayList[]{new ArrayList<>()};
+        call1.enqueue(new Callback<Root>() {
+            @Override
+            public void onResponse(Call<Root> call, Response<Root> response) {
+                arrayList[0] =response.body().restaurants;
+                arrayList1[0] =response.body().categories;
+                arrayList2[0] =response.body().foods;
+                FoodItemAdapter foodItemAdapter = new FoodItemAdapter(getContext(), arrayList1[0]);
+                recyclerView.setAdapter(foodItemAdapter);
+                recyclerView.setItemAnimator(new DefaultItemAnimator());
+                RestaurantProfileAdapter restaurantProfileAdapter = new RestaurantProfileAdapter(getContext(), arrayList[0]);
+                recyclerView1.setAdapter(restaurantProfileAdapter);
+                recyclerView1.setItemAnimator(new DefaultItemAnimator());
+                PopularItemAdapter popularItemAdapter = new PopularItemAdapter(getContext(), getFragmentManager(), arrayList2[0]);
+                recyclerView2.setAdapter(popularItemAdapter);
+                recyclerView2.setItemAnimator(new DefaultItemAnimator());
+            }
+
+            @Override
+            public void onFailure(Call<Root> call, Throwable t) {
+            }
+        });
+
+    }
 
     public void replaceFragment(Fragment fragment, int frameId) {
         String backStateName = fragment.getClass().getName();
@@ -172,7 +136,7 @@ public class HomeFragment extends Fragment {
         if (!fragmentPopped && manager.findFragmentByTag(backStateName) == null) { //fragment not in back stack, create it.
             FragmentTransaction ft = manager.beginTransaction();
             ft.replace(frameId, fragment, backStateName);
-            ft.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE);
+            ft.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_CLOSE);
             ft.addToBackStack(backStateName);
             ft.commit();
         }

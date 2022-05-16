@@ -11,7 +11,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.foodhub.R;
-import com.example.foodhub.data.models.AddsItem;
+import com.example.foodhub.data.test_data.AddsItem;
 import com.example.foodhub.views.adapters.AddsItemAdapter;
 
 import java.util.ArrayList;

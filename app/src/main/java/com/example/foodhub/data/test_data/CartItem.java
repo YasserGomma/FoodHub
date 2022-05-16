@@ -1,19 +1,23 @@
-package com.example.foodhub.data.models;
+package com.example.foodhub.data.test_data;
 
-public class AddsItem {
+public class CartItem {
     int image;
     String name;
+    String descriotion;
     float price;
 
-    public AddsItem() {
+
+    public CartItem() {
 
     }
 
-    public AddsItem(int image, String name, float price) {
+    public CartItem(int image, String name, String descriotion, float price) {
         this.image = image;
         this.name = name;
         this.price = price;
+        this.descriotion = descriotion;
     }
+
 
     public String getName() {
         return name;
@@ -37,5 +41,13 @@ public class AddsItem {
 
     public void setPrice(float price) {
         this.price = price;
+    }
+
+    public String getDescriotion() {
+        return descriotion;
+    }
+
+    public void setDescriotion(String descriotion) {
+        this.descriotion = descriotion;
     }
 }

@@ -5,6 +5,7 @@
     <supports-screens android:normalScreens="true" />
     <supports-screens android:largeScreens="true" />
     <supports-screens android:xlargeScreens="true" />
+    <uses-permission android:name="android.permission.INTERNET"/>
 
     <application
         android:allowBackup="true"
@@ -19,9 +20,6 @@
         tools:replace="android:appComponentFactory">
         <activity
             android:name=".views.pages.c_home.HistoryAndUpcoming"
-            android:exported="false" />
-        <activity
-            android:name=".History"
             android:exported="false" />
         <activity
             android:name=".views.pages.c_home.CardActivity"

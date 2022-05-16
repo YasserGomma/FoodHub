@@ -7,7 +7,7 @@ import android.view.ViewGroup;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.foodhub.R;
-import com.example.foodhub.data.models.HistoryItem;
+import com.example.foodhub.data.test_data.HistoryItem;
 
 import java.util.ArrayList;
 

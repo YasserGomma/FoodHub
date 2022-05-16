@@ -1,18 +1,20 @@
-package com.example.foodhub.data.models;
+package com.example.foodhub.data.test_data;
 
 import java.util.ArrayList;
 
-public class RestaurantSearchItem {
+public class RestaurantProfileItem {
     int image;
     float rate;
+    int numberOfPeople;
     int deliveryPrice;
     String deliverytime;
     ArrayList<String> popularItems;
     String name;
 
-    public RestaurantSearchItem(int image, float rate, int deliveryPrice, ArrayList<String> popularItems, String name, String deliverytime) {
+    public RestaurantProfileItem(int image, float rate, int numberOfPeople, int deliveryPrice, ArrayList<String> popularItems, String name, String deliverytime) {
         this.image = image;
         this.rate = rate;
+        this.numberOfPeople = numberOfPeople;
         this.deliveryPrice = deliveryPrice;
         this.popularItems = popularItems;
         this.name = name;
@@ -33,6 +35,14 @@ public class RestaurantSearchItem {
 
     public void setRate(int rate) {
         this.rate = rate;
+    }
+
+    public int getNumberOfPeople() {
+        return numberOfPeople;
+    }
+
+    public void setNumberOfPeople(int numberOfPeople) {
+        this.numberOfPeople = numberOfPeople;
     }
 
     public int getDeliveryPrice() {

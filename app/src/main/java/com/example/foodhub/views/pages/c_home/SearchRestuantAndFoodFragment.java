@@ -16,13 +16,19 @@ import androidx.recyclerview.widget.RecyclerView;
 import androidx.recyclerview.widget.StaggeredGridLayoutManager;
 
 import com.example.foodhub.R;
-import com.example.foodhub.data.models.PopularItem;
-import com.example.foodhub.data.models.RestaurantSearchItem;
+import com.example.foodhub.data.source.remote.RestaurantSearch;
+import com.example.foodhub.data.test_data.PopularItem;
+import com.example.foodhub.interfaces.EndPoints;
 import com.example.foodhub.views.adapters.PopularItemAdapter2;
 import com.example.foodhub.views.adapters.RestaurantSearchAdapter;
 import com.example.foodhub.views.helpers.SizeUtilities;
+import com.example.foodhub.views.networking.RetrofitCreation;
 
 import java.util.ArrayList;
+
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 
 
 public class SearchRestuantAndFoodFragment extends Fragment {
@@ -66,7 +72,7 @@ public class SearchRestuantAndFoodFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 formatToggleButtons(t2, t1);
-                configureResturant();
+                configureRestaurant();
             }
         });
 
@@ -139,35 +145,34 @@ public class SearchRestuantAndFoodFragment extends Fragment {
         recyclerView.setItemAnimator(new DefaultItemAnimator());
     }
 
-    public void configureResturant() {
-        //1. Inflate RecyclerView and  create layout
+    public void configureRestaurant() {
         RecyclerView recyclerView = rootView.findViewById(R.id.rv_fragment_search_r1);
         StaggeredGridLayoutManager layoutManager
                 = new StaggeredGridLayoutManager(2, LinearLayoutManager.VERTICAL);
-
-        // 2. set layoutManger
         recyclerView.setLayoutManager(layoutManager);
-        ArrayList<RestaurantSearchItem> restaurantSearchItems = new ArrayList<>();
-        ArrayList<String> pop = new ArrayList<>();
-        pop.add("Coffe ");
-        restaurantSearchItems.add(new RestaurantSearchItem(R.drawable.pizza, 4.5f, 0, pop, "Pizza Hut", "10-15 mins"));
-        restaurantSearchItems.add(new RestaurantSearchItem(R.drawable.starbucks, 4.5f, 0, pop, "Starbuck", "10-15 mins"));
-        restaurantSearchItems.add(new RestaurantSearchItem(R.drawable.kfc, 4.5f, 0, pop, "KFC", "10-15 mins"));
-        restaurantSearchItems.add(new RestaurantSearchItem(R.drawable.burger, 4.5f, 0, pop, "Burger King", "10-15 mins"));
-        restaurantSearchItems.add(new RestaurantSearchItem(R.drawable.jimmy, 4.5f, 0, pop, "Jimmy John's", "10-15 mins"));
-        restaurantSearchItems.add(new RestaurantSearchItem(R.drawable.starbucks, 4.5f, 0, pop, "Starbuck", "10-15 mins"));
-        restaurantSearchItems.add(new RestaurantSearchItem(R.drawable.kfc, 4.5f, 0, pop, "KFC", "10-15 mins"));
-        restaurantSearchItems.add(new RestaurantSearchItem(R.drawable.burger, 4.5f, 0, pop, "Burger King", "10-15 mins"));
-        restaurantSearchItems.add(new RestaurantSearchItem(R.drawable.jimmy, 4.5f, 0, pop, "Jimmy John's", "10-15 mins"));
-        restaurantSearchItems.add(new RestaurantSearchItem(R.drawable.pizza, 4.5f, 0, pop, "Pizza Hut", "10-15 mins"));
-        restaurantSearchItems.add(new RestaurantSearchItem(R.drawable.pizza, 4.5f, 0, pop, "Pizza Hut", "10-15 mins"));
+        ArrayList<RestaurantSearch> restaurantSearchItems = new ArrayList<>();
 
-        // 3. create an adapter
-        RestaurantSearchAdapter popularItemAdapter = new RestaurantSearchAdapter(restaurantSearchItems);
-        // 4. set adapter
-        recyclerView.setAdapter(popularItemAdapter);
-        // 5. set item animator to DefaultAnimator
-        recyclerView.setItemAnimator(new DefaultItemAnimator());
+
+        EndPoints Api = RetrofitCreation.getInstance();
+        Call<ArrayList<RestaurantSearch>> call1 = Api.restaurantSearch("search_restaurant", "c");
+        call1.enqueue(new Callback<ArrayList<RestaurantSearch>>() {
+            @Override
+            public void onResponse(Call<ArrayList<RestaurantSearch>> call, Response<ArrayList<RestaurantSearch>> response) {
+                for (int i = 0; i < response.body().size(); i++) {
+                    restaurantSearchItems.add(response.body().get(i));
+                    if (i == 0)
+                        restaurantSearchItems.add(response.body().get(i));
+                }
+                RestaurantSearchAdapter popularItemAdapter = new RestaurantSearchAdapter(getContext(), restaurantSearchItems);
+                recyclerView.setAdapter(popularItemAdapter);
+                recyclerView.setItemAnimator(new DefaultItemAnimator());
+            }
+
+            @Override
+            public void onFailure(Call<ArrayList<RestaurantSearch>> call, Throwable t) {
+
+            }
+        });
 
     }
 
