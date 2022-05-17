@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginHorizontal="10dp"
+    tools:context=".views.pages.c_home.RestaurantDetailsFragment">
+
+
+    <com.makeramen.roundedimageview.RoundedImageView
+        android:id="@+id/iv_restaurant_details_background"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scaleType="centerCrop"
+        android:src="@drawable/restaurent_background_1"
+        app:riv_corner_radius="20dp" />
+
+    <include
+        android:id="@+id/header"
+        layout="@layout/header_back" />
+
+    <com.makeramen.roundedimageview.RoundedImageView
+        android:id="@+id/iv_restaurant_details_profile_pic"
+        android:layout_width="140dp"
+        android:layout_height="140dp"
+        android:layout_below="@id/iv_restaurant_details_background"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="-110dp"
+        android:background="@drawable/profile_pic_bg"
+        android:outlineSpotShadowColor="@color/primary_color"
+        android:padding="10dp"
+        android:src="@drawable/pizza3"
+        app:riv_corner_radius="100dp" />
+
+    <com.makeramen.roundedimageview.RoundedImageView
+        android:id="@+id/iv_restaurant_details_verified"
+        android:layout_width="35dp"
+        android:layout_height="40dp"
+        android:layout_below="@id/iv_restaurant_details_profile_pic"
+        android:layout_marginLeft="-50dp"
+        android:layout_marginTop="-40dp"
+        android:layout_toRightOf="@+id/iv_restaurant_details_profile_pic"
+        android:background="@drawable/profile_pic_bg"
+        android:clickable="true"
+        android:padding="8dp"
+        android:src="@drawable/verfied1"
+        app:riv_corner_radius="100dp" />
+
+    <com.example.foodhub.views.widgets.PageTitleText
+        android:id="@+id/tv_restaurant_details_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/iv_restaurant_details_profile_pic"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:text="Pizza Hut"
+        app:pt_text_size="20" />
+
+    <com.example.foodhub.views.widgets.DescriptionPageText
+        android:id="@+id/tv_restaurant_details_address"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_restaurant_details_name"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="5dp"
+        android:text="4102 Pretty View Lanenda" />
+    <!--Foods types -->
+    <LinearLayout
+        android:id="@+id/restaurant_l1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_restaurant_details_address"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp">
+
+        <TextView
+            android:id="@+id/tv_restaurant_pop1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
+            android:background="@drawable/tv_bg"
+            android:fontFamily="@font/sofiapro_reguler"
+            android:padding="5dp"
+            android:text="Burger "
+            android:textAllCaps="true"
+            android:textColor="#515154"
+            android:textSize="14dp" />
+
+        <TextView
+            android:id="@+id/tv_restaurant_pop2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
+            android:background="@drawable/tv_bg"
+            android:fontFamily="@font/sofiapro_reguler"
+            android:padding="5dp"
+            android:text="Chicken"
+            android:textAllCaps="true"
+            android:textColor="#515154"
+            android:textSize="14dp" />
+
+        <TextView
+            android:id="@+id/tv_restaurant_pop3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
+            android:background="@drawable/tv_bg"
+            android:fontFamily="@font/sofiapro_reguler"
+            android:padding="5dp"
+            android:text="Fast Food"
+            android:textAllCaps="true"
+            android:textColor="#515154"
+            android:textSize="14dp" />
+    </LinearLayout>
+    <!--Extra info -->
+    <LinearLayout
+        android:id="@+id/restaurant_l2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/restaurant_l1"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp">
+
+        <ImageView
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="2dp"
+            android:src="@drawable/delivery" />
+
+        <TextView
+            android:id="@+id/tv_restaurant_delivery_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginHorizontal="5dp"
+            android:fontFamily="@font/sofiapro_reguler"
+            android:gravity="center"
+            android:text="free delivery"
+            android:textColor="#5B5B5E"
+            android:textSize="16dp" />
+
+        <ImageView
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="2dp"
+            android:src="@drawable/clock" />
+
+        <TextView
+            android:id="@+id/tv_restaurant_delivery_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginHorizontal="5dp"
+            android:fontFamily="@font/sofiapro_reguler"
+            android:gravity="center"
+            android:text="10-15 mins"
+            android:textColor="#5B5B5E"
+            android:textSize="16dp" />
+
+
+    </LinearLayout>
+
+    <com.example.foodhub.views.components.ReviewFiled
+        android:id="@+id/restaurant_details_review"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/restaurant_l2"
+        android:layout_alignStart="@id/restaurant_l2"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="15dp"
+
+        />
+
+    <TextView
+        android:id="@+id/fe_items"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/restaurant_details_review"
+        android:layout_marginTop="33dp"
+        android:fontFamily="@font/sofiapro_reguler"
+        android:text="Featured restaurants"
+        android:textColor="@color/black"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/tv_restaurant_details_num_of_items"
+        android:layout_width="16dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/restaurant_details_review"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="40dp"
+        android:layout_toRightOf="@id/fe_items"
+        android:background="@drawable/tv_footer_bg"
+        android:fontFamily="@font/sofiapro_light"
+        android:gravity="center"
+        android:text="0"
+        android:textColor="@color/white"
+        android:textSize="10dp" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_Restaurant_Details_r1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/fe_items"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal" />
+</RelativeLayout>

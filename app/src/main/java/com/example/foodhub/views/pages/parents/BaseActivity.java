@@ -21,7 +21,7 @@ import com.example.foodhub.interfaces.CallBack;
  * all methods i almost use frequently in the project to prevent the repetition of
  * code snippets.
  */
-public  class BaseActivity extends AppCompatActivity {
+public class BaseActivity extends AppCompatActivity {
 
     /**
      * Navigation between two screens

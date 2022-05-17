@@ -14,10 +14,12 @@
     <item name="header_img" type="id" />
     <item name="btn_add_item" type="id" />
     <item name="btn_delete_item" type="id" />
-    <item name="tv_item_price" type="id" />
+    <item name="tv_item_cnt" type="id" />
+    <item name="tv_item_number" type="id" />
+
 
     <item name="price_title" type="id" />
     <item name="price_price" type="id" />
-    <item name="price_urrency" type="id" />
+    <item name="price_currency" type="id" />
     <item name="price_total_items" type="id" />
 </resources>

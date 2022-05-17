@@ -21,7 +21,7 @@ public class FoodItemAdapter extends RecyclerView.Adapter<FoodItemAdapter.FoodIt
 
     public FoodItemAdapter(Context context, ArrayList<Category> categories) {
         this.categories = categories;
-        this.context=context;
+        this.context = context;
     }
 
     @Override
@@ -37,7 +37,7 @@ public class FoodItemAdapter extends RecyclerView.Adapter<FoodItemAdapter.FoodIt
         Category c = categories.get(position);
         holder.tv.setText(c.cat_name);
         Glide.with(context)
-                .load("https://direct-app.net/food/" + c.cat_pic.toString()) // image url
+                .load("https://direct-app.net/food/" + c.cat_pic) // image url
                 .placeholder(R.drawable.ic_launcher_background) // any placeholder to load at start
                 .error(R.drawable.logo)  // any image in case of error
                 .centerCrop()

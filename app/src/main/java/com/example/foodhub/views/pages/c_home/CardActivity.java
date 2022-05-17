@@ -17,12 +17,12 @@ public class CardActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_card);
-        CreditCardView card=findViewById(R.id.card);
+        CreditCardView card = findViewById(R.id.card);
         card.setFlipOnEdit(true);
         card.setFlipOnClick(true);
 
-        InputField add_card_name=findViewById(R.id.add_card_name);
-        EditText name=add_card_name.findViewById(R.id.input_field_edit_text);
+        InputField add_card_name = findViewById(R.id.add_card_name);
+        EditText name = add_card_name.findViewById(R.id.input_field_edit_text);
         name.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
@@ -39,8 +39,8 @@ public class CardActivity extends AppCompatActivity {
 
             }
         });
-        InputField add_card_number=findViewById(R.id.add_card_number);
-        EditText number=add_card_number.findViewById(R.id.input_field_edit_text);
+        InputField add_card_number = findViewById(R.id.add_card_number);
+        EditText number = add_card_number.findViewById(R.id.input_field_edit_text);
         number.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
@@ -57,8 +57,8 @@ public class CardActivity extends AppCompatActivity {
 
             }
         });
-        InputField add_card_cvv=findViewById(R.id.add_card_cvv);
-        EditText cvv=add_card_cvv.findViewById(R.id.input_field_edit_text);
+        InputField add_card_cvv = findViewById(R.id.add_card_cvv);
+        EditText cvv = add_card_cvv.findViewById(R.id.input_field_edit_text);
         cvv.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
@@ -74,8 +74,8 @@ public class CardActivity extends AppCompatActivity {
 
             }
         });
-        InputField add_card_exp=findViewById(R.id.add_card_exp);
-        EditText exp=add_card_exp.findViewById(R.id.input_field_edit_text);
+        InputField add_card_exp = findViewById(R.id.add_card_exp);
+        EditText exp = add_card_exp.findViewById(R.id.input_field_edit_text);
         exp.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {

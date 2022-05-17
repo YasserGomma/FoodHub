@@ -27,9 +27,11 @@ public class ReviewFiled extends LinearLayout {
         LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT);
         params.setMarginEnd(SizeUtilities.Dp2Px(context, 8));
 
+        LinearLayout.LayoutParams params1 = new LinearLayout.LayoutParams(SizeUtilities.Dp2Px(context, 13), SizeUtilities.Dp2Px(context, 13));
+        params1.setMargins(0, SizeUtilities.Dp2Px(context, 5), SizeUtilities.Dp2Px(context, 8), 0);
         ImageView img = new ImageView(context);
         img.setBackgroundResource(R.drawable.star);
-        img.setLayoutParams(new LayoutParams(params));
+        img.setLayoutParams(params1);
 
         // params.setMargins(0,SizeUtilities.Dp2Px(context, 2),0,0);
 

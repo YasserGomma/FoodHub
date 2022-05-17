@@ -1,5 +1,6 @@
 package com.example.foodhub.views.adapters;
 
+import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -9,16 +10,20 @@ import android.widget.TextView;
 import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.bumptech.glide.Glide;
 import com.example.foodhub.R;
-import com.example.foodhub.data.test_data.PopularItem;
+import com.example.foodhub.data.source.remote.FoodSearch;
 
 import java.util.ArrayList;
 
 public class PopularItemAdapter2 extends RecyclerView.Adapter<PopularItemAdapter2.PopularItemViewHolder> {
-    ArrayList<PopularItem> items = new ArrayList<>();
+    ArrayList<FoodSearch> items = new ArrayList<>();
+    Context context;
 
-    public PopularItemAdapter2(ArrayList<PopularItem> items) {
+    public PopularItemAdapter2(Context context, ArrayList<FoodSearch> items) {
+
         this.items = items;
+        this.context = context;
     }
 
     @Override
@@ -31,25 +36,30 @@ public class PopularItemAdapter2 extends RecyclerView.Adapter<PopularItemAdapter
     @Override
     public void onBindViewHolder(PopularItemViewHolder holder, int position) {
 
-        PopularItem item = items.get(position);
+        FoodSearch item = items.get(position);
         if (position > 0) {
-            holder.iv.setImageResource(item.getImage());
-            holder.name.setText(item.getName());
-            holder.people.setText("( " + item.getNummberOfPeople() + " )");
-            holder.rate.setText(item.getRate() + "");
-            holder.description.setText(item.getDescription());
-            holder.price.setText(item.getPrice() + "");
+            Glide.with(context)
+                    .load("https://direct-app.net/food/" + item.pic) // image url
+                    .placeholder(R.drawable.ic_launcher_background) // any placeholder to load at start
+                    .error(R.drawable.logo)  // any image in case of error
+                    .centerCrop()
+                    .into(holder.iv);
+            holder.name.setText(item.name);
+            holder.people.setText(item.number_of_ratings);
+            holder.rate.setText(item.rating);
+            holder.description.setText(item.description);
+            holder.price.setText(item.price);
 
         } else {
             holder.cardView.setVisibility(View.GONE);
-            holder.invisable.setText("Found 10 results");
+            holder.invisable.setText("Found " + (items.size() - 1) + " results");
         }
 
     }
 
     @Override
     public int getItemCount() {
-        return items.size() - 1;
+        return items.size();
     }
 
     class PopularItemViewHolder extends RecyclerView.ViewHolder {

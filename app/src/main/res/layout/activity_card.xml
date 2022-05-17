@@ -4,34 +4,34 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:scrollbars="none"
     android:layout_marginHorizontal="20dp"
+    android:scrollbars="none"
     tools:context=".views.pages.c_home.CardActivity">
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        >
+        android:layout_height="match_parent">
+
         <com.example.foodhub.views.components.HeaderBar
+            android:id="@+id/header_history"
             android:layout_width="match_parent"
-            android:id="@+id/header"
-            app:hb_img_visable="0"
-            app:hb_text="Scan Card"
             android:layout_height="wrap_content"
-            />
+            app:hb_img_visable="0"
+            app:hb_text="Scan Card" />
+
         <com.maxpilotto.creditcardview.CreditCardView
-            android:layout_below="@id/header"
             android:id="@+id/card"
             android:layout_width="400dp"
             android:layout_height="200dp"
+            android:layout_below="@id/header_history"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="20dp"
             app:cardCvv="5135"
             app:cardExpiry="0212"
-            android:layout_centerInParent="true"
+            app:cardExpiryLabel="Expiry"
             app:cardHolder="Arlene Mccoy"
-            android:layout_marginTop="20dp"
-            app:cardNumber="45614568923521"
             app:cardHolderLabel="Holder"
-            app:cardExpiryLabel="Expiry"/>
+            app:cardNumber="45614568923521" />
 
         <com.example.foodhub.views.components.InputField
             android:id="@+id/add_card_name"
@@ -41,6 +41,7 @@
             android:layout_marginTop="20dp"
             app:if_label="Name"
             app:if_text="Arlene Mccoy" />
+
         <com.example.foodhub.views.components.InputField
             android:id="@+id/add_card_number"
             android:layout_width="match_parent"
@@ -49,52 +50,54 @@
             android:layout_marginTop="20dp"
             app:if_label="Card Number"
             app:if_text="4561 456892 3521" />
+
         <LinearLayout
+            android:id="@+id/add_card_l1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/add_card_l1"
-            android:layout_below="@id/add_card_number"
-            >
+            android:layout_below="@id/add_card_number">
+
             <com.example.foodhub.views.components.InputField
                 android:id="@+id/add_card_exp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
-                app:if_label="Expires"
-                android:layout_weight="1"
                 android:layout_marginRight="10dp"
+                android:layout_weight="1"
+                app:if_label="Expires"
                 app:if_text="02/12" />
+
             <com.example.foodhub.views.components.InputField
                 android:id="@+id/add_card_cvv"
                 android:layout_width="match_parent"
-                android:layout_marginLeft="10dp"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/add_card_name"
+                android:layout_marginLeft="10dp"
                 android:layout_marginTop="20dp"
-                app:if_label="CVV"
                 android:layout_weight="1"
+                app:if_label="CVV"
                 app:if_text="5135" />
         </LinearLayout>
+
         <CheckBox
             android:id="@+id/add_card_checkbox"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@id/add_card_l1"
             android:layout_marginTop="10dp"
+            android:fontFamily="@font/sofiapro_reguler"
             android:paddingLeft="5dp"
             android:text="Securely save card and details"
-            android:fontFamily="@font/sofiapro_reguler"
-            android:textSize="16dp"
             android:textColor="@color/hint_color"
-            />
+            android:textSize="16dp" />
+
         <com.example.foodhub.views.widgets.MainButton
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginHorizontal="65dp"
             android:layout_below="@id/add_card_checkbox"
-            android:text="save"
+            android:layout_marginHorizontal="65dp"
             android:layout_marginBottom="30dp"
-            />
+            android:text="save" />
 
     </RelativeLayout>
 

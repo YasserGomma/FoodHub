@@ -46,27 +46,27 @@ public class FoodFilterFragment extends Fragment {
 
             }
         });
-       // RecyclerView recyclerView3 = rootView.findViewById(R.id.rv_food_filter);
-       // LinearLayoutManager layoutManager3
-       //         = new LinearLayoutManager(requireContext(), LinearLayoutManager.VERTICAL, false);
+        // RecyclerView recyclerView3 = rootView.findViewById(R.id.rv_food_filter);
+        // LinearLayoutManager layoutManager3
+        //         = new LinearLayoutManager(requireContext(), LinearLayoutManager.VERTICAL, false);
 //
-       // // 2. set layoutManger
-       // recyclerView3.setLayoutManager(layoutManager3);
-       // ArrayList<PopularItem> popularItems = new ArrayList<>();
+        // // 2. set layoutManger
+        // recyclerView3.setLayoutManager(layoutManager3);
+        // ArrayList<PopularItem> popularItems = new ArrayList<>();
 //
-       // popularItems.add(new PopularItem("Salmon Salad", "Baked salmon fish", R.drawable.pop_1, 5.5f, 4.5f, 20));
-       // popularItems.add(new PopularItem("Salmon Salad", "Baked salmon fish", R.drawable.pop_2, 8.5f, 4.5f, 20));
-       // popularItems.add(new PopularItem("Salmon Salad", "Baked salmon fish", R.drawable.pop_1, 5.5f, 4.5f, 20));
-       // popularItems.add(new PopularItem("Salmon Salad", "Baked salmon fish", R.drawable.pop_2, 8.5f, 4.5f, 20));
-       // popularItems.add(new PopularItem("Salmon Salad", "Baked salmon fish", R.drawable.pop_1, 5.5f, 4.5f, 20));
-       // popularItems.add(new PopularItem("Salmon Salad", "Baked salmon fish", R.drawable.pop_2, 8.5f, 4.5f, 20));
+        // popularItems.add(new PopularItem("Salmon Salad", "Baked salmon fish", R.drawable.pop_1, 5.5f, 4.5f, 20));
+        // popularItems.add(new PopularItem("Salmon Salad", "Baked salmon fish", R.drawable.pop_2, 8.5f, 4.5f, 20));
+        // popularItems.add(new PopularItem("Salmon Salad", "Baked salmon fish", R.drawable.pop_1, 5.5f, 4.5f, 20));
+        // popularItems.add(new PopularItem("Salmon Salad", "Baked salmon fish", R.drawable.pop_2, 8.5f, 4.5f, 20));
+        // popularItems.add(new PopularItem("Salmon Salad", "Baked salmon fish", R.drawable.pop_1, 5.5f, 4.5f, 20));
+        // popularItems.add(new PopularItem("Salmon Salad", "Baked salmon fish", R.drawable.pop_2, 8.5f, 4.5f, 20));
 //
-       // // 3. create an adapter
-       // PopularItemAdapter popularItemAdapter = new PopularItemAdapter(getContext(), getFragmentManager(), popularItems);
-       // // 4. set adapter
-       // recyclerView3.setAdapter(popularItemAdapter);
-       // // 5. set item animator to DefaultAnimator
-       // recyclerView3.setItemAnimator(new DefaultItemAnimator());
+        // // 3. create an adapter
+        // PopularItemAdapter popularItemAdapter = new PopularItemAdapter(getContext(), getFragmentManager(), popularItems);
+        // // 4. set adapter
+        // recyclerView3.setAdapter(popularItemAdapter);
+        // // 5. set item animator to DefaultAnimator
+        // recyclerView3.setItemAnimator(new DefaultItemAnimator());
 
         return rootView;
     }

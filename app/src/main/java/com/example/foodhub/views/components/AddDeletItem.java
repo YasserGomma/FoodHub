@@ -34,19 +34,19 @@ public class AddDeletItem extends LinearLayout {
         ImageView btn_add = new ImageView(context);
         btn_add.setLayoutParams(params);
         btn_add.setBackgroundResource(R.drawable.btn_add);
-        btn_delete.setPadding(SizeUtilities.Dp2Px(context, 3), SizeUtilities.Dp2Px(context, 3), SizeUtilities.Dp2Px(context, 3), SizeUtilities.Dp2Px(context, 3));
-        btn_delete.setId(R.id.btn_delete_item);
+        btn_add.setPadding(SizeUtilities.Dp2Px(context, 3), SizeUtilities.Dp2Px(context, 3), SizeUtilities.Dp2Px(context, 3), SizeUtilities.Dp2Px(context, 3));
+        btn_add.setId(R.id.btn_add_item);
         btn_add.setClickable(true);
 
         params = new LinearLayout.LayoutParams(LayoutParams.WRAP_CONTENT, LayoutParams.WRAP_CONTENT);
         params.setMargins(SizeUtilities.Dp2Px(context, 10), 0, SizeUtilities.Dp2Px(context, 10), 0);
         TextView tv = new TextView(context);
-        tv.setText("02");
+        tv.setText("0");
         tv.setTypeface(getResources().getFont(R.font.sofiapro_semibold));
         tv.setTextColor(context.getColor(R.color.black));
         tv.setTextSize(TypedValue.COMPLEX_UNIT_DIP, 16);
         tv.setLayoutParams(params);
-        tv.setId(R.id.tv_item_price);
+        tv.setId(R.id.tv_item_number);
         //
         this.addView(btn_delete);
         this.addView(tv);

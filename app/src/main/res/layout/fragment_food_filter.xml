@@ -6,7 +6,7 @@
     tools:context=".views.pages.c_home.FoodFilterFragment">
 
     <include
-        android:id="@id/header"
+        android:id="@id/header_history"
         layout="@layout/header_back" />
 
     <RelativeLayout

@@ -44,7 +44,7 @@ public class CartFragment extends Fragment {
                              Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.fragment_cart, container, false);
 
-        Button btn=rootView.findViewById(R.id.btn_cart_checkout);
+        Button btn = rootView.findViewById(R.id.btn_cart_checkout);
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -79,6 +79,7 @@ public class CartFragment extends Fragment {
 
         return rootView;
     }
+
     public void replaceFragment(Fragment fragment, int frameId) {
         String backStateName = fragment.getClass().getName();
         FragmentManager manager = getParentFragmentManager();

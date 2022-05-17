@@ -67,6 +67,7 @@
                         android:textColor="@color/black" />
 
                     <com.example.foodhub.views.widgets.PageTitleText
+                        android:id="@+id/tv_food_details_price"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="5.5"
@@ -79,6 +80,7 @@
                     android:layout_alignParentRight="true">
 
                     <com.example.foodhub.views.components.AddDeletItem
+                        android:id="@+id/food_details_add_delete"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
 
@@ -87,6 +89,7 @@
             </RelativeLayout>
 
             <com.example.foodhub.views.widgets.DescriptionPageText
+                android:id="@+id/tv_food_details_description"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"

@@ -5,6 +5,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.fragment.app.Fragment;
@@ -15,14 +16,17 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.recyclerview.widget.StaggeredGridLayoutManager;
 
+import com.bumptech.glide.Glide;
 import com.example.foodhub.R;
+import com.example.foodhub.data.source.remote.FoodSearch;
 import com.example.foodhub.data.source.remote.RestaurantSearch;
-import com.example.foodhub.data.test_data.PopularItem;
 import com.example.foodhub.interfaces.EndPoints;
 import com.example.foodhub.views.adapters.PopularItemAdapter2;
 import com.example.foodhub.views.adapters.RestaurantSearchAdapter;
+import com.example.foodhub.views.components.HeaderBar;
 import com.example.foodhub.views.helpers.SizeUtilities;
 import com.example.foodhub.views.networking.RetrofitCreation;
+import com.example.foodhub.views.pages.b_account.Login;
 
 import java.util.ArrayList;
 
@@ -56,6 +60,17 @@ public class SearchRestuantAndFoodFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         rootView = inflater.inflate(R.layout.fragment_search_restuant_and_food, container, false);
+
+
+        HeaderBar header = rootView.findViewById(R.id.header_history);
+        ImageView header_iv = header.findViewById(R.id.header_img);
+        Glide.with(getContext())
+                .load("https://direct-app.net/food/" + Login.user.getPic()) // image url
+                .placeholder(R.drawable.ic_launcher_background) // any placeholder to load at start
+                .error(R.drawable.profile_pic)  // any image in case of error
+                .centerCrop()
+                .into(header_iv);
+
         TextView t1 = rootView.findViewById(R.id.toggle_t1);
         TextView t2 = rootView.findViewById(R.id.toggle_t2);
 
@@ -116,33 +131,33 @@ public class SearchRestuantAndFoodFragment extends Fragment {
 
     public void configureFood() {
 
-        //1. Inflate RecyclerView and  create layout
         RecyclerView recyclerView = rootView.findViewById(R.id.rv_fragment_search_r1);
         StaggeredGridLayoutManager layoutManager
                 = new StaggeredGridLayoutManager(2, LinearLayoutManager.VERTICAL);
-
-        // 2. set layoutManger
         recyclerView.setLayoutManager(layoutManager);
-        ArrayList<PopularItem> popularItems = new ArrayList<>();
-        popularItems.add(new PopularItem("Salmon Salad", "Baked salmon fish", R.drawable.pop_1, 5.5f, 4.5f, 20));
-        popularItems.add(new PopularItem("Salmon Salad", "Baked salmon fish", R.drawable.pop_1, 5.5f, 4.5f, 20));
-        popularItems.add(new PopularItem("Salmon Salad", "Baked salmon fish", R.drawable.pop_2, 8.5f, 4.5f, 20));
-        popularItems.add(new PopularItem("Salmon Salad", "Baked salmon fish", R.drawable.pop_1, 5.5f, 4.5f, 20));
-        popularItems.add(new PopularItem("Salmon Salad", "Baked salmon fish", R.drawable.pop_2, 8.5f, 4.5f, 20));
-        popularItems.add(new PopularItem("Salmon Salad", "Baked salmon fish", R.drawable.pop_1, 5.5f, 4.5f, 20));
-        popularItems.add(new PopularItem("Salmon Salad", "Baked salmon fish", R.drawable.pop_2, 8.5f, 4.5f, 20));
-        popularItems.add(new PopularItem("Salmon Salad", "Baked salmon fish", R.drawable.pop_1, 5.5f, 4.5f, 20));
-        popularItems.add(new PopularItem("Salmon Salad", "Baked salmon fish", R.drawable.pop_2, 8.5f, 4.5f, 20));
-        popularItems.add(new PopularItem("Salmon Salad", "Baked salmon fish", R.drawable.pop_1, 5.5f, 4.5f, 20));
-        popularItems.add(new PopularItem("Salmon Salad", "Baked salmon fish", R.drawable.pop_2, 8.5f, 4.5f, 20));
-        popularItems.add(new PopularItem("Salmon Salad", "Baked salmon fish", R.drawable.pop_1, 5.5f, 4.5f, 20));
+        ArrayList<FoodSearch> foodSearches = new ArrayList<>();
 
-        // 3. create an adapter
-        PopularItemAdapter2 popularItemAdapter = new PopularItemAdapter2(popularItems);
-        // 4. set adapter
-        recyclerView.setAdapter(popularItemAdapter);
-        // 5. set item animator to DefaultAnimator
-        recyclerView.setItemAnimator(new DefaultItemAnimator());
+        EndPoints Api = RetrofitCreation.getInstance();
+        Call<ArrayList<FoodSearch>> call1 = Api.foodSearch("search_food", "f");
+        call1.enqueue(new Callback<ArrayList<FoodSearch>>() {
+            @Override
+            public void onResponse(Call<ArrayList<FoodSearch>> call, Response<ArrayList<FoodSearch>> response) {
+                for (int i = 0; i < response.body().size(); i++) {
+                    foodSearches.add(response.body().get(i));
+                    if (i == 0)
+                        foodSearches.add(response.body().get(i));
+                }
+                PopularItemAdapter2 popularItemAdapter = new PopularItemAdapter2(getContext(), foodSearches);
+                recyclerView.setAdapter(popularItemAdapter);
+                recyclerView.setItemAnimator(new DefaultItemAnimator());
+            }
+
+            @Override
+            public void onFailure(Call<ArrayList<FoodSearch>> call, Throwable t) {
+
+            }
+        });
+
     }
 
     public void configureRestaurant() {

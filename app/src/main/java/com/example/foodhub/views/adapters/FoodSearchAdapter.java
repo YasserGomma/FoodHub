@@ -8,6 +8,7 @@ import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
+import androidx.cardview.widget.CardView;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
@@ -15,45 +16,43 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
 import com.example.foodhub.R;
-import com.example.foodhub.data.source.remote.Food;
+import com.example.foodhub.data.source.remote.FoodSearch;
 import com.example.foodhub.views.pages.c_home.FoodDetailsFragment;
 
 import java.util.ArrayList;
 
-public class PopularItemAdapter extends RecyclerView.Adapter<PopularItemAdapter.PopularItemViewHolder> {
-    ArrayList<Food> items = new ArrayList<>();
-    FragmentManager fragmentManager;
+public class FoodSearchAdapter extends RecyclerView.Adapter<FoodSearchAdapter.FoodSearchViewHolder> {
+    ArrayList<FoodSearch> items = new ArrayList<>();
     Context context;
+    FragmentManager fragmentManager;
 
-    public PopularItemAdapter(Context context, FragmentManager fragmentManager, ArrayList<Food> items) {
+    public FoodSearchAdapter(Context context, FragmentManager fragmentManager, ArrayList<FoodSearch> items) {
 
         this.items = items;
-        this.context = context;
         this.fragmentManager = fragmentManager;
-
+        this.context = context;
     }
 
-
     @Override
-    public PopularItemViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+    public FoodSearchViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_popular_item, null, false);
-        PopularItemViewHolder PopularItemViewHolder = new PopularItemViewHolder(v);
-        return PopularItemViewHolder;
+        FoodSearchViewHolder foodSearchViewHolder = new FoodSearchViewHolder(v);
+        return foodSearchViewHolder;
     }
 
     @Override
-    public void onBindViewHolder(PopularItemViewHolder holder, int position) {
+    public void onBindViewHolder(FoodSearchViewHolder holder, int position) {
 
-        Food item = items.get(position);
+        FoodSearch item = items.get(position);
         Glide.with(context)
                 .load("https://direct-app.net/food/" + item.pic) // image url
                 .placeholder(R.drawable.ic_launcher_background) // any placeholder to load at start
                 .error(R.drawable.logo)  // any image in case of error
                 .centerCrop()
-                .into(holder.iv);  // imageview
+                .into(holder.iv);
         holder.name.setText(item.name);
-        holder.people.setText("( " + item.number_of_ratings + " )");
-        holder.rate.setText(item.rating + "  ");
+        holder.people.setText(item.number_of_ratings);
+        holder.rate.setText(item.rating);
         holder.description.setText(item.description);
         holder.price.setText(item.price);
         holder.layout.setOnClickListener(new View.OnClickListener() {
@@ -65,6 +64,7 @@ public class PopularItemAdapter extends RecyclerView.Adapter<PopularItemAdapter.
 
             }
         });
+
 
     }
 
@@ -86,13 +86,14 @@ public class PopularItemAdapter extends RecyclerView.Adapter<PopularItemAdapter.
         }
     }
 
-    class PopularItemViewHolder extends RecyclerView.ViewHolder {
+    class FoodSearchViewHolder extends RecyclerView.ViewHolder {
 
         ImageView iv;
-        TextView name, description, price, rate, people;
+        TextView name, description, price, rate, people, invisable;
+        CardView cardView;
         RelativeLayout layout;
 
-        public PopularItemViewHolder(View itemView) {
+        public FoodSearchViewHolder(View itemView) {
             super(itemView);
             iv = itemView.findViewById(R.id.iv_popular_background);
             name = itemView.findViewById(R.id.tv_popular_name);
@@ -100,9 +101,10 @@ public class PopularItemAdapter extends RecyclerView.Adapter<PopularItemAdapter.
             price = itemView.findViewById(R.id.tv_popular_price);
             rate = itemView.findViewById(R.id.tv_popular_rate);
             people = itemView.findViewById(R.id.tv_restaurant_num_people);
+            invisable = itemView.findViewById(R.id.tv_popular_invisable);
+            cardView = itemView.findViewById(R.id.card);
             layout = itemView.findViewById(R.id.item_popular_layout);
+
         }
     }
-
-
 }

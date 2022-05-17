@@ -13,7 +13,7 @@
         android:layout_marginTop="10dp">
 
         <com.example.foodhub.views.components.HeaderBar
-            android:id="@+id/header"
+            android:id="@+id/header_history"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:hb_text="Search Food" />
@@ -22,7 +22,7 @@
             android:id="@+id/layout_fragment_search_l1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@id/header"
+            android:layout_below="@id/header_history"
             android:layout_marginTop="10dp"
 
             >
@@ -64,11 +64,11 @@
 
 
         <androidx.recyclerview.widget.RecyclerView
-            android:layout_centerHorizontal="true"
             android:id="@+id/rv_fragment_search_r1"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_below="@id/toggle"
+            android:layout_centerHorizontal="true"
             android:layout_marginTop="20dp"
             android:divider="@null" />
     </RelativeLayout>

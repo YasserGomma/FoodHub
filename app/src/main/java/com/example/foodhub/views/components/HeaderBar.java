@@ -61,14 +61,11 @@ public class HeaderBar extends LinearLayout {
 
         RelativeLayout.LayoutParams rbparams = new RelativeLayout.LayoutParams(SizeUtilities.Dp2Px(context, 38), SizeUtilities.Dp2Px(context, 38));
         rbparams.addRule(RelativeLayout.ALIGN_PARENT_RIGHT);
-        rbparams.setMargins(0, SizeUtilities.Dp2Px(context, 5), SizeUtilities.Dp2Px(context, 10), SizeUtilities.Dp2Px(context, 3));
         CardView view = new CardView(context);
         view.setLayoutParams(rbparams);
         view.setRadius(10);
-        view.setPadding(SizeUtilities.Dp2Px(context, 3),0,0,0);
 
-        rbparams = new RelativeLayout.LayoutParams(SizeUtilities.Dp2Px(context, 30), SizeUtilities.Dp2Px(context, 30));
-        rbparams.setMargins( SizeUtilities.Dp2Px(context, 5),SizeUtilities.Dp2Px(context, 5),0,0);
+        rbparams = new RelativeLayout.LayoutParams(SizeUtilities.Dp2Px(context, 38), SizeUtilities.Dp2Px(context, 38));
         RoundedImageView img = new RoundedImageView(context);
         img.setLayoutParams(rbparams);
         img.setId(R.id.header_img);

@@ -31,10 +31,10 @@ public class InputField extends LinearLayout {
 
         int pass = array.getInt(R.styleable.InputField_if_password, 0);
 
-        buildComponent(label, hint, pass,text);
+        buildComponent(label, hint, pass, text);
     }
 
-    void buildComponent(String label, String hint, int pass,String text) {
+    void buildComponent(String label, String hint, int pass, String text) {
 
 
         TextView tv = new TextView(context);

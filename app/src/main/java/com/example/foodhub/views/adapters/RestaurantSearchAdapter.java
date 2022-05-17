@@ -20,9 +20,9 @@ public class RestaurantSearchAdapter extends RecyclerView.Adapter<RestaurantSear
     ArrayList<RestaurantSearch> items = new ArrayList<>();
     Context context;
 
-    public RestaurantSearchAdapter(Context context,ArrayList<RestaurantSearch> items) {
+    public RestaurantSearchAdapter(Context context, ArrayList<RestaurantSearch> items) {
         this.items = items;
-        this.context=context;
+        this.context = context;
     }
 
     @Override
@@ -38,7 +38,7 @@ public class RestaurantSearchAdapter extends RecyclerView.Adapter<RestaurantSear
         if (position > 0) {
             RestaurantSearch item = items.get(position);
             Glide.with(context)
-                    .load("https://direct-app.net/food/" + item.cover_photo.toString()) // image url
+                    .load("https://direct-app.net/food/" + item.cover_photo) // image url
                     .placeholder(R.drawable.ic_launcher_background) // any placeholder to load at start
                     .error(R.drawable.logo)  // any image in case of error
                     .centerCrop()
@@ -49,7 +49,7 @@ public class RestaurantSearchAdapter extends RecyclerView.Adapter<RestaurantSear
             holder.rate.setText(item.rating);
         } else {
             holder.cardView.setVisibility(View.GONE);
-            holder.invisable.setText("Found "+(items.size()-1)+" results");
+            holder.invisable.setText("Found " + (items.size() - 1) + " results");
         }
     }
 
@@ -72,7 +72,7 @@ public class RestaurantSearchAdapter extends RecyclerView.Adapter<RestaurantSear
             deliverytime = itemView.findViewById(R.id.tv_restaurant_search_delivery_time);
             invisable = itemView.findViewById(R.id.tv_restaurant_search_invisable);
             cardView = itemView.findViewById(R.id.search_restaurant_card);
-            rate=itemView.findViewById(R.id.tv_restaurent_search_rate);
+            rate = itemView.findViewById(R.id.tv_restaurent_search_rate);
         }
     }
 }

@@ -48,7 +48,7 @@ public class CartPricesField extends RelativeLayout {
         tv.setId(R.id.price_title);
 
         RelativeLayout.LayoutParams params2 = new RelativeLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT);
-        params2.addRule(LEFT_OF, R.id.price_urrency);
+        params2.addRule(LEFT_OF, R.id.price_currency);
         params2.setMarginEnd(SizeUtilities.Dp2Px(context, 4));
         TextView tv2 = new TextView(context);
         tv2.setText(price);
@@ -67,7 +67,7 @@ public class CartPricesField extends RelativeLayout {
         tv3.setTextColor(context.getColor(R.color.hint_color));
         tv3.setTextSize(TypedValue.COMPLEX_UNIT_DIP, 14);
         tv3.setLayoutParams(params3);
-        tv3.setId(R.id.price_urrency);
+        tv3.setId(R.id.price_currency);
 
 
         RelativeLayout.LayoutParams params4 = new RelativeLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT);

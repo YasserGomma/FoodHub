@@ -1,23 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_marginHorizontal="20dp"
     android:layout_height="match_parent"
+    android:layout_marginHorizontal="20dp"
     tools:context=".views.pages.c_home.HistoryAndUpcoming">
+
     <com.example.foodhub.views.components.HeaderBar
+        android:id="@+id/header_history"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/header"
-        />
+        android:layout_height="wrap_content" />
+
     <LinearLayout
+        android:id="@+id/history_layout_l1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/header"
-        android:layout_marginTop="20dp"
-        android:id="@+id/history_layout_l1"
-        >
+        android:layout_below="@id/header_history"
+        android:layout_marginTop="20dp">
+
         <com.example.foodhub.views.widgets.IllustrativeText
             android:id="@+id/toggle_histor_t1"
             android:layout_width="match_parent"
@@ -49,12 +49,12 @@
 
             />
     </LinearLayout>
+
     <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_history_r1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/rv_history_r1"
-        android:layout_marginTop="20dp"
         android:layout_below="@id/history_layout_l1"
-        />
+        android:layout_marginTop="20dp" />
 
 </RelativeLayout>

@@ -1,5 +1,8 @@
 package com.example.foodhub.interfaces;
 
+import com.example.foodhub.data.source.remote.FoodDetails;
+import com.example.foodhub.data.source.remote.FoodSearch;
+import com.example.foodhub.data.source.remote.RestaurantDetails;
 import com.example.foodhub.data.source.remote.RestaurantSearch;
 import com.example.foodhub.data.source.remote.Root;
 import com.example.foodhub.data.source.remote.User;
@@ -16,16 +19,31 @@ public interface EndPoints {
 
     @FormUrlEncoded
     @POST("/food/serv.php/")
-    public Call<User> login(@Field("email") String email, @Field("pass") String pass, @Field("type") String type, @Field("method") String method );
+    Call<User> login(@Field("email") String email, @Field("pass") String pass, @Field("type") String type, @Field("method") String method);
+
     @FormUrlEncoded
     @POST("/food/serv.php/")
-    public Call<JsonObject> register(@Field("method") String method, @Field("type") String type, @Field("email") String email, @Field("pass") String pass, @Field("name") String name, @Field("mobile") String mobile);
+    Call<JsonObject> register(@Field("method") String method, @Field("type") String type, @Field("email") String email, @Field("pass") String pass, @Field("name") String name, @Field("mobile") String mobile);
+
     @FormUrlEncoded
     @POST("/food/serv.php/")
-    public Call<Root> home(@Field("method") String method);
+    Call<Root> home(@Field("method") String method);
+
     @FormUrlEncoded
     @POST("/food/serv.php/")
-    public Call<ArrayList<RestaurantSearch>> restaurantSearch(@Field("method") String method,@Field("keyword") String keyword);
+    Call<ArrayList<RestaurantSearch>> restaurantSearch(@Field("method") String method, @Field("keyword") String keyword);
+
+    @FormUrlEncoded
+    @POST("/food/serv.php/")
+    Call<ArrayList<FoodSearch>> foodSearch(@Field("method") String method, @Field("keyword") String keyword);
+
+    @FormUrlEncoded
+    @POST("/food/serv.php/")
+    Call<FoodDetails> foodDetails(@Field("method") String method, @Field("food_id") String food_id);
+
+    @FormUrlEncoded
+    @POST("/food/serv.php/")
+    Call<RestaurantDetails> restaurantDetails(@Field("method") String method, @Field("restaurant_id") String restaurant_id);
 
 
 }

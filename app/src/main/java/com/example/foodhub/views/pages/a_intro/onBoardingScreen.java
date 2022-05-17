@@ -25,7 +25,6 @@ public class onBoardingScreen extends BaseActivity {
     private MaterialButton btnOnboardingAction;
 
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

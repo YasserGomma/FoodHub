@@ -60,10 +60,10 @@
                 android:drawableStart="@drawable/facebook"
                 android:fontFamily="@font/sofiapro_medium"
                 android:gravity="center"
-                android:padding="10dp"
+                android:padding="8dp"
                 android:text="Facebook"
                 android:textColor="#000000"
-                android:textSize="13sp"
+                android:textSize="12dp"
                 app:backgroundTint="@color/white" />
 
             <View
@@ -82,10 +82,10 @@
                 android:drawableStart="@drawable/google"
                 android:fontFamily="@font/sofiapro_reguler"
                 android:gravity="center"
-                android:padding="10dp"
+                android:padding="8dp"
                 android:text="Google"
                 android:textColor="#000000"
-                android:textSize="13sp"
+                android:textSize="12dp"
                 app:backgroundTint="@color/white" />
 
         </LinearLayout>

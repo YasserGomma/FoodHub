@@ -8,10 +8,11 @@ public class HistoryItem {
 
     float price;
     int pic;
-    public HistoryItem()
-    {
+
+    public HistoryItem() {
 
     }
+
     public HistoryItem(String name, String date, String items, String statue, float price, int pic) {
         this.name = name;
         this.date = date;

@@ -96,7 +96,7 @@ public class HomeFragment extends Fragment {
 
         LinearLayoutManager layoutManager = new LinearLayoutManager(requireContext(), LinearLayoutManager.HORIZONTAL, false);
         LinearLayoutManager layoutManager1 = new LinearLayoutManager(requireContext(), LinearLayoutManager.HORIZONTAL, false);
-        LinearLayoutManager layoutManager2= new LinearLayoutManager(requireContext(), LinearLayoutManager.HORIZONTAL, false);
+        LinearLayoutManager layoutManager2 = new LinearLayoutManager(requireContext(), LinearLayoutManager.HORIZONTAL, false);
         recyclerView.setLayoutManager(layoutManager);
         recyclerView1.setLayoutManager(layoutManager1);
         recyclerView2.setLayoutManager(layoutManager2);
@@ -108,13 +108,13 @@ public class HomeFragment extends Fragment {
         call1.enqueue(new Callback<Root>() {
             @Override
             public void onResponse(Call<Root> call, Response<Root> response) {
-                arrayList[0] =response.body().restaurants;
-                arrayList1[0] =response.body().categories;
-                arrayList2[0] =response.body().foods;
+                arrayList[0] = response.body().restaurants;
+                arrayList1[0] = response.body().categories;
+                arrayList2[0] = response.body().foods;
                 FoodItemAdapter foodItemAdapter = new FoodItemAdapter(getContext(), arrayList1[0]);
                 recyclerView.setAdapter(foodItemAdapter);
                 recyclerView.setItemAnimator(new DefaultItemAnimator());
-                RestaurantProfileAdapter restaurantProfileAdapter = new RestaurantProfileAdapter(getContext(), arrayList[0]);
+                RestaurantProfileAdapter restaurantProfileAdapter = new RestaurantProfileAdapter(getContext(), getFragmentManager(), arrayList[0]);
                 recyclerView1.setAdapter(restaurantProfileAdapter);
                 recyclerView1.setItemAnimator(new DefaultItemAnimator());
                 PopularItemAdapter popularItemAdapter = new PopularItemAdapter(getContext(), getFragmentManager(), arrayList2[0]);

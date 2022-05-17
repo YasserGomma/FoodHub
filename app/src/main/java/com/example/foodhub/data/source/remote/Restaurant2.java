@@ -1,6 +1,6 @@
 package com.example.foodhub.data.source.remote;
 
-public class Restaurant {
+public class Restaurant2 {
     public String id;
     public String name;
     public String pic;

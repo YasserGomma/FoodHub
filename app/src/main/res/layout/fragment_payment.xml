@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_marginHorizontal="20dp"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".views.pages.b_account.PaymentFragment">
 
 
@@ -48,78 +48,77 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/tv_payment_title"
+        android:layout_marginLeft="30dp"
         android:layout_marginTop="20dp"
         android:layout_toRightOf="@+id/iv_payment_location"
         android:text="Home"
-        android:layout_marginLeft="30dp"
         app:pt_text_size="20" />
+
     <com.example.foodhub.views.widgets.DescriptionPageText
         android:id="@+id/tv_payment_description"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:maxWidth="215dp"
-        android:text="4140 Parker Rd. Allentown, New Mexico 31134"
         android:layout_below="@id/tv_payment_location"
-        android:layout_toRightOf="@id/iv_payment_location"
         android:layout_marginLeft="30dp"
         android:layout_marginTop="5dp"
-        />
+        android:layout_toRightOf="@id/iv_payment_location"
+        android:maxWidth="215dp"
+        android:text="4140 Parker Rd. Allentown, New Mexico 31134" />
 
     <com.example.foodhub.views.widgets.PageTitleText
+        android:id="@+id/tv_payment_title_1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Payment Method"
-        app:pt_text_size="20"
-        android:id="@+id/tv_payment_title_1"
         android:layout_below="@id/iv_payment_location"
         android:layout_marginTop="30dp"
-        />
+        android:text="Payment Method"
+        app:pt_text_size="20" />
+
     <LinearLayout
+        android:id="@+id/layout_payment_l1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/tv_payment_title_1"
-        android:id="@+id/layout_payment_l1"
-        android:layout_marginTop="20dp"
-        >
+        android:layout_marginTop="20dp">
+
         <com.makeramen.roundedimageview.RoundedImageView
             android:layout_width="46dp"
             android:layout_height="76dp"
-            app:riv_corner_radius="50dp"
             android:background="@drawable/et_bg_3"
             android:padding="10dp"
             android:src="@drawable/plus2"
-            />
-        <com.makeramen.roundedimageview.RoundedImageView
-            android:layout_width="80dp"
-            android:layout_height="76dp"
-            android:layout_weight="1"
-            app:riv_corner_radius="50dp"
-            android:background="@drawable/et_bg_4"
-            android:src="@drawable/mastercard"
-            android:paddingTop="15dp"
-            android:layout_marginLeft="10dp"
-            />
-        <com.makeramen.roundedimageview.RoundedImageView
-            android:layout_width="80dp"
-            android:layout_weight="1"
-            android:layout_height="76dp"
-            android:layout_marginLeft="10dp"
+            app:riv_corner_radius="50dp" />
 
-            app:riv_corner_radius="50dp"
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:layout_width="80dp"
+            android:layout_height="76dp"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/et_bg_4"
+            android:paddingTop="15dp"
+            android:src="@drawable/mastercard"
+            app:riv_corner_radius="50dp" />
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:layout_width="80dp"
+            android:layout_height="76dp"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="1"
+
             android:background="@drawable/et_bg_3"
             android:padding="15dp"
             android:src="@drawable/shape"
-            />
+            app:riv_corner_radius="50dp" />
+
         <com.makeramen.roundedimageview.RoundedImageView
             android:layout_width="80dp"
             android:layout_height="76dp"
-            android:layout_weight="1"
             android:layout_marginLeft="10dp"
-            app:riv_corner_radius="50dp"
+            android:layout_weight="1"
             android:background="@drawable/et_bg_3"
             android:padding="10dp"
             android:src="@drawable/apple"
-            />
+            app:riv_corner_radius="50dp" />
     </LinearLayout>
 
     <com.makeramen.roundedimageview.RoundedImageView
@@ -132,6 +131,7 @@
         android:scaleType="centerCrop"
         android:src="@drawable/card"
         app:riv_corner_radius="20dp" />
+
     <com.example.foodhub.views.components.CartPricesField
         android:id="@+id/payment_total"
         android:layout_width="match_parent"
@@ -140,8 +140,7 @@
         app:cp_currency="USD"
         app:cp_price="$59.08"
         app:cp_title="Total Pay"
-        app:cp_total_visable="0"
-        />
+        app:cp_total_visable="0" />
 
     <com.example.foodhub.views.widgets.MainButton
         android:id="@+id/btn_payment_confirm"
