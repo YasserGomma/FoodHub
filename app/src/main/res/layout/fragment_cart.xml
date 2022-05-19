@@ -10,7 +10,7 @@
     tools:context=".views.pages.c_home.CartFragment">
 
     <com.example.foodhub.views.components.HeaderBar
-        android:id="@+id/header_history"
+        android:id="@+id/header_cart"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:hb_img="@drawable/footer_icon_3"
@@ -21,7 +21,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_above="@id/cart_item_l1"
-        android:layout_below="@id/header_history"
+        android:layout_below="@id/header_cart"
         android:layout_marginTop="20dp"
         android:clipToPadding="false" />
 

@@ -2,6 +2,7 @@ package com.example.foodhub.views.pages.c_home;
 
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -27,7 +28,7 @@ public class HistoryAndUpcoming extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_history_and_upcoming);
-        HeaderBar header = findViewById(R.id.header_history);
+        HeaderBar header = findViewById(R.id.header_cart);
         ImageView header_iv = header.findViewById(R.id.header_img);
         Glide.with(this)
                 .load("https://direct-app.net/food/" + Login.user.getPic()) // image url
@@ -37,6 +38,15 @@ public class HistoryAndUpcoming extends AppCompatActivity {
                 .into(header_iv);
         TextView t1 = findViewById(R.id.toggle_histor_t1);
         TextView t2 = findViewById(R.id.toggle_histor_t2);
+
+        Button header_btn=header.findViewById(R.id.header_btn);
+
+        header_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                HistoryAndUpcoming.super.onBackPressed();
+            }
+        });
 
         t1.setOnClickListener(new View.OnClickListener() {
             @Override

@@ -13,7 +13,7 @@
         android:layout_height="match_parent">
 
         <com.example.foodhub.views.components.HeaderBar
-            android:id="@+id/header_history"
+            android:id="@+id/header_cart"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:hb_img_visable="0"
@@ -23,7 +23,7 @@
             android:id="@+id/card"
             android:layout_width="400dp"
             android:layout_height="200dp"
-            android:layout_below="@id/header_history"
+            android:layout_below="@id/header_cart"
             android:layout_centerInParent="true"
             android:layout_marginTop="20dp"
             app:cardCvv="5135"

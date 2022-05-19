@@ -6,10 +6,10 @@ import com.example.foodhub.data.source.remote.RestaurantDetails;
 import com.example.foodhub.data.source.remote.RestaurantSearch;
 import com.example.foodhub.data.source.remote.Root;
 import com.example.foodhub.data.source.remote.User;
-import com.google.gson.JsonObject;
 
 import java.util.ArrayList;
 
+import okhttp3.RequestBody;
 import retrofit2.Call;
 import retrofit2.http.Field;
 import retrofit2.http.FormUrlEncoded;
@@ -19,11 +19,14 @@ public interface EndPoints {
 
     @FormUrlEncoded
     @POST("/food/serv.php/")
-    Call<User> login(@Field("email") String email, @Field("pass") String pass, @Field("type") String type, @Field("method") String method);
+    Call<User> login(@Field("email") String email, @Field("pass") String pass,
+                     @Field("type") String type, @Field("method") String method);
 
     @FormUrlEncoded
     @POST("/food/serv.php/")
-    Call<JsonObject> register(@Field("method") String method, @Field("type") String type, @Field("email") String email, @Field("pass") String pass, @Field("name") String name, @Field("mobile") String mobile);
+    Call<RequestBody> register(@Field("method") String method, @Field("type") String type,
+                               @Field("email") String email, @Field("pass") String pass,
+                               @Field("name") String name, @Field("mobile") String mobile);
 
     @FormUrlEncoded
     @POST("/food/serv.php/")

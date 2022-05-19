@@ -121,5 +121,12 @@ public class Login extends BaseActivity {
                         Toast.LENGTH_SHORT).show();
             }
         });
+        findViewById(R.id.btn_back_header_back).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                finish();
+                Login.super.onBackPressed();
+            }
+        });
     }
 }

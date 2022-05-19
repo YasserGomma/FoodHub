@@ -66,7 +66,7 @@ public class Home extends BaseActivity {
         });
         // tv_home_header_address
 
-        View header = findViewById(R.id.header_history);
+        View header = findViewById(R.id.header_cart);
         ImageView header_iv = header.findViewById(R.id.iv_home_header_photo);
         Glide.with(Home.this)
                 .load("https://direct-app.net/food/" + Login.user.getPic()) // image url
@@ -136,12 +136,12 @@ public class Home extends BaseActivity {
     }
 
     public void hide_header() {
-        View v = findViewById(R.id.header_history);
+        View v = findViewById(R.id.header_cart);
         v.setVisibility(View.GONE);
     }
 
     public void show_header() {
-        View v = findViewById(R.id.header_history);
+        View v = findViewById(R.id.header_cart);
         v.setVisibility(View.VISIBLE);
     }
 }

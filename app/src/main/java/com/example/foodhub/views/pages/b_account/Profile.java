@@ -1,6 +1,7 @@
 package com.example.foodhub.views.pages.b_account;
 
 import android.os.Bundle;
+import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -42,6 +43,13 @@ public class Profile extends AppCompatActivity {
         EditText et_profile_phone = if_profile_phone.findViewById(R.id.input_field_edit_text);
         et_profile_phone.setText(Login.user.getMobile());
 
+        findViewById(R.id.btn_back_header_back).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                finish();
+                Profile.super.onBackPressed();
+            }
+        });
 
     }
 }

@@ -66,7 +66,7 @@ public class SearchRestuantAndFoodFragment extends Fragment {
         rootView = inflater.inflate(R.layout.fragment_search_restuant_and_food, container, false);
 
 
-        HeaderBar header = rootView.findViewById(R.id.header_history);
+        HeaderBar header = rootView.findViewById(R.id.header_cart);
         ImageView header_iv = header.findViewById(R.id.header_img);
         Glide.with(getContext())
                 .load("https://direct-app.net/food/" + Login.user.getPic()) // image url

@@ -45,9 +45,9 @@ public class HeaderBar extends LinearLayout {
         back_btn.setId(R.id.header_btn);
 
 
+
         RelativeLayout.LayoutParams tvparams = new RelativeLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT);
         tvparams.addRule(RelativeLayout.CENTER_IN_PARENT);
-        //tvparams.addRule(RelativeLayout.RIGHT_OF, R.id.header_btn);
         tvparams.setMargins(SizeUtilities.Dp2Px(context, 18), SizeUtilities.Dp2Px(context, 10), 0, 0);
         TextView tv = new TextView(context);
         tv.setText(txt);

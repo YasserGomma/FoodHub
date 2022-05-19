@@ -16,7 +16,7 @@
         android:layout_height="match_parent">
 
         <include
-            android:id="@+id/header_history"
+            android:id="@+id/header_cart"
             layout="@layout/header_home" />
 
         <FrameLayout
@@ -24,7 +24,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_above="@+id/footer"
-            android:layout_below="@id/header_history"
+            android:layout_below="@id/header_cart"
             android:fitsSystemWindows="true"></FrameLayout>
 
         <include
