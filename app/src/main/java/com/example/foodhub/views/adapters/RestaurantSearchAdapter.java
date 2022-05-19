@@ -47,6 +47,8 @@ public class RestaurantSearchAdapter extends RecyclerView.Adapter<RestaurantSear
             holder.deliveryPrice.setText(item.delivery);
             holder.deliverytime.setText(item.delivery_time);
             holder.rate.setText(item.rating);
+            holder.invisable.setVisibility(View.GONE);
+
         } else {
             holder.cardView.setVisibility(View.GONE);
             holder.invisable.setText("Found " + (items.size() - 1) + " results");

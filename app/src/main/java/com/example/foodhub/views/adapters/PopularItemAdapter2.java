@@ -50,6 +50,7 @@ public class PopularItemAdapter2 extends RecyclerView.Adapter<PopularItemAdapter
             holder.rate.setText(item.rating);
             holder.description.setText(item.description);
             holder.price.setText(item.price);
+            holder.invisable.setVisibility(View.GONE);
 
         } else {
             holder.cardView.setVisibility(View.GONE);
