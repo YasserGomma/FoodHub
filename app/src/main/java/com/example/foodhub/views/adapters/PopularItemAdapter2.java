@@ -37,6 +37,7 @@ public class PopularItemAdapter2 extends RecyclerView.Adapter<PopularItemAdapter
     public void onBindViewHolder(PopularItemViewHolder holder, int position) {
 
         FoodSearch item = items.get(position);
+
         if (position > 0) {
             Glide.with(context)
                     .load("https://direct-app.net/food/" + item.pic) // image url

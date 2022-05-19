@@ -28,6 +28,7 @@
             >
 
             <com.example.foodhub.views.widgets.MainEditText
+                android:id="@+id/search_food_restaurant"
                 android:layout_width="match_parent"
                 android:layout_height="52dp"
                 android:layout_marginRight="80dp"

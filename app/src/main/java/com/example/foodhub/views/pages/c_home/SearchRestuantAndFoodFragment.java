@@ -1,10 +1,13 @@
 package com.example.foodhub.views.pages.c_home;
 
 import android.os.Bundle;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -38,6 +41,7 @@ import retrofit2.Response;
 public class SearchRestuantAndFoodFragment extends Fragment {
 
     View rootView;
+    int flag = 0;
 
     public SearchRestuantAndFoodFragment() {
         // Required empty public constructor
@@ -77,8 +81,8 @@ public class SearchRestuantAndFoodFragment extends Fragment {
         t1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                flag++;
                 formatToggleButtons(t1, t2);
-                configureFood();
             }
         });
 
@@ -86,8 +90,33 @@ public class SearchRestuantAndFoodFragment extends Fragment {
         t2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                flag++;
                 formatToggleButtons(t2, t1);
-                configureRestaurant();
+            }
+        });
+
+
+        EditText search = rootView.findViewById(R.id.search_food_restaurant);
+        search.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+                if (charSequence.length() > 0) {
+                    if (flag % 2 != 1) {
+                        configureFood(charSequence.toString());
+                    } else {
+                        configureRestaurant(charSequence.toString());
+                    }
+                }
+            }
+
+            @Override
+            public void afterTextChanged(Editable editable) {
+
             }
         });
 
@@ -129,7 +158,7 @@ public class SearchRestuantAndFoodFragment extends Fragment {
         notSelected.setPadding(paddingSize, paddingSize, paddingSize, paddingSize);
     }
 
-    public void configureFood() {
+    public void configureFood(String key) {
 
         RecyclerView recyclerView = rootView.findViewById(R.id.rv_fragment_search_r1);
         StaggeredGridLayoutManager layoutManager
@@ -138,7 +167,7 @@ public class SearchRestuantAndFoodFragment extends Fragment {
         ArrayList<FoodSearch> foodSearches = new ArrayList<>();
 
         EndPoints Api = RetrofitCreation.getInstance();
-        Call<ArrayList<FoodSearch>> call1 = Api.foodSearch("search_food", "f");
+        Call<ArrayList<FoodSearch>> call1 = Api.foodSearch("search_food", key);
         call1.enqueue(new Callback<ArrayList<FoodSearch>>() {
             @Override
             public void onResponse(Call<ArrayList<FoodSearch>> call, Response<ArrayList<FoodSearch>> response) {
@@ -147,9 +176,13 @@ public class SearchRestuantAndFoodFragment extends Fragment {
                     if (i == 0)
                         foodSearches.add(response.body().get(i));
                 }
-                PopularItemAdapter2 popularItemAdapter = new PopularItemAdapter2(getContext(), foodSearches);
-                recyclerView.setAdapter(popularItemAdapter);
-                recyclerView.setItemAnimator(new DefaultItemAnimator());
+                if (foodSearches.size() > 0) {
+                    PopularItemAdapter2 popularItemAdapter = new PopularItemAdapter2(getContext(), foodSearches);
+                    recyclerView.setAdapter(popularItemAdapter);
+                    recyclerView.setItemAnimator(new DefaultItemAnimator());
+                    popularItemAdapter.notifyDataSetChanged();
+
+                }
             }
 
             @Override
@@ -160,7 +193,7 @@ public class SearchRestuantAndFoodFragment extends Fragment {
 
     }
 
-    public void configureRestaurant() {
+    public void configureRestaurant(String key) {
         RecyclerView recyclerView = rootView.findViewById(R.id.rv_fragment_search_r1);
         StaggeredGridLayoutManager layoutManager
                 = new StaggeredGridLayoutManager(2, LinearLayoutManager.VERTICAL);
@@ -169,7 +202,7 @@ public class SearchRestuantAndFoodFragment extends Fragment {
 
 
         EndPoints Api = RetrofitCreation.getInstance();
-        Call<ArrayList<RestaurantSearch>> call1 = Api.restaurantSearch("search_restaurant", "c");
+        Call<ArrayList<RestaurantSearch>> call1 = Api.restaurantSearch("search_restaurant", key);
         call1.enqueue(new Callback<ArrayList<RestaurantSearch>>() {
             @Override
             public void onResponse(Call<ArrayList<RestaurantSearch>> call, Response<ArrayList<RestaurantSearch>> response) {
@@ -178,9 +211,13 @@ public class SearchRestuantAndFoodFragment extends Fragment {
                     if (i == 0)
                         restaurantSearchItems.add(response.body().get(i));
                 }
-                RestaurantSearchAdapter popularItemAdapter = new RestaurantSearchAdapter(getContext(), restaurantSearchItems);
-                recyclerView.setAdapter(popularItemAdapter);
-                recyclerView.setItemAnimator(new DefaultItemAnimator());
+                if (restaurantSearchItems.size() > 0) {
+                    RestaurantSearchAdapter popularItemAdapter = new RestaurantSearchAdapter(getContext(), restaurantSearchItems);
+                    recyclerView.setAdapter(popularItemAdapter);
+                    recyclerView.setItemAnimator(new DefaultItemAnimator());
+                    popularItemAdapter.notifyDataSetChanged();
+
+                }
             }
 
             @Override
