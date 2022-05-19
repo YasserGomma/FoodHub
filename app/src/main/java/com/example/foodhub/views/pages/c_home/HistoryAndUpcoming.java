@@ -39,7 +39,7 @@ public class HistoryAndUpcoming extends AppCompatActivity {
         TextView t1 = findViewById(R.id.toggle_histor_t1);
         TextView t2 = findViewById(R.id.toggle_histor_t2);
 
-        Button header_btn=header.findViewById(R.id.header_btn);
+        Button header_btn = header.findViewById(R.id.header_btn);
 
         header_btn.setOnClickListener(new View.OnClickListener() {
             @Override

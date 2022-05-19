@@ -36,12 +36,12 @@ public class PhoneRegistration extends BaseActivity {
                 call1.enqueue(new Callback<RequestBody>() {
                     @Override
                     public void onResponse(Call<RequestBody> call, Response<RequestBody> response) {
-                        Toast.makeText(PhoneRegistration.this,"Check your phone messages",Toast.LENGTH_LONG).show();
+                        Toast.makeText(PhoneRegistration.this, "Check your phone messages", Toast.LENGTH_LONG).show();
                     }
 
                     @Override
                     public void onFailure(Call<RequestBody> call, Throwable t) {
-                        Toast.makeText(PhoneRegistration.this,"Please try again",Toast.LENGTH_LONG).show();
+                        Toast.makeText(PhoneRegistration.this, "Please try again", Toast.LENGTH_LONG).show();
 
                     }
                 });

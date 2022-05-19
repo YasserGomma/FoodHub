@@ -111,6 +111,18 @@ public class SearchRestuantAndFoodFragment extends Fragment {
                     } else {
                         configureRestaurant(charSequence.toString());
                     }
+                } else {
+                    RecyclerView recyclerView = rootView.findViewById(R.id.rv_fragment_search_r1);
+                    StaggeredGridLayoutManager layoutManager
+                            = new StaggeredGridLayoutManager(2, LinearLayoutManager.VERTICAL);
+                    recyclerView.setLayoutManager(layoutManager);
+                    ArrayList<FoodSearch> foodSearches = new ArrayList<>();
+                    PopularItemAdapter2 popularItemAdapter = new PopularItemAdapter2(getContext(), foodSearches);
+                    recyclerView.setAdapter(popularItemAdapter);
+                    recyclerView.setItemAnimator(new DefaultItemAnimator());
+                    popularItemAdapter.notifyDataSetChanged();
+
+
                 }
             }
 

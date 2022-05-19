@@ -13,7 +13,7 @@ import com.example.foodhub.views.components.TwoTexts;
 import com.example.foodhub.views.pages.parents.BaseActivity;
 
 public class SignUp extends BaseActivity {
-    public static String mail = "",name="",pass="";
+    public static String mail = "", name = "", pass = "";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,7 +32,7 @@ public class SignUp extends BaseActivity {
         signup.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if (Verify(name_et.getText().toString(),email_et.getText().toString(),password_et.getText().toString())) {
+                if (Verify(name_et.getText().toString(), email_et.getText().toString(), password_et.getText().toString())) {
                     mail = email_et.getText().toString();
                     name = name_et.getText().toString();
                     pass = password_et.getText().toString();
@@ -62,7 +62,7 @@ public class SignUp extends BaseActivity {
         });
     }
 
-    public boolean Verify(String name,String mail,String pass) {
+    public boolean Verify(String name, String mail, String pass) {
         return name.length() > 0 && pass.length() > 0 && mail.length() > 0;
     }
 }
