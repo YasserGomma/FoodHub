@@ -18,6 +18,7 @@ import com.example.foodhub.data.source.remote.FoodSearch;
 import com.example.foodhub.data.source.remote.RestaurantDetails;
 import com.example.foodhub.interfaces.EndPoints;
 import com.example.foodhub.views.adapters.FoodSearchAdapter;
+import com.example.foodhub.views.adapters.RestaurantProfileAdapter;
 import com.example.foodhub.views.components.ReviewFiled;
 import com.example.foodhub.views.networking.RetrofitCreation;
 
@@ -72,7 +73,7 @@ public class RestaurantDetailsFragment extends Fragment {
 
         ArrayList<FoodSearch> items = new ArrayList<>();
 
-        Call<RestaurantDetails> call = Api.restaurantDetails("restaurant", "2");
+        Call<RestaurantDetails> call = Api.restaurantDetails("restaurant", RestaurantProfileAdapter.restaurant_id_RP_adapter);
         call.enqueue(new Callback<RestaurantDetails>() {
             @Override
             public void onResponse(Call<RestaurantDetails> call, Response<RestaurantDetails> response) {

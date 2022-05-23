@@ -21,6 +21,7 @@ import com.example.foodhub.views.pages.c_home.RestaurantDetailsFragment;
 import java.util.ArrayList;
 
 public class RestaurantProfileAdapter extends RecyclerView.Adapter<RestaurantProfileAdapter.RestauranttemViewHolder> {
+    public static String restaurant_id_RP_adapter = "";
     ArrayList<Restaurant> resturants = new ArrayList<>();
     Context context;
     FragmentManager fragmentManager;
@@ -67,8 +68,8 @@ public class RestaurantProfileAdapter extends RecyclerView.Adapter<RestaurantPro
         holder.layout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
-                replaceFragmen(new RestaurantDetailsFragment(), R.id.fram_home_fragment);
+                restaurant_id_RP_adapter = item.id;
+                replaceFragment(new RestaurantDetailsFragment(), R.id.fram_home_fragment);
 
 
             }
@@ -81,7 +82,7 @@ public class RestaurantProfileAdapter extends RecyclerView.Adapter<RestaurantPro
         return resturants.size();
     }
 
-    public void replaceFragmen(Fragment fragment, int frameId) {
+    public void replaceFragment(Fragment fragment, int frameId) {
         String backStateName = fragment.getClass().getName();
         FragmentManager manager = fragmentManager;
         boolean fragmentPopped = manager.popBackStackImmediate(backStateName, 0);

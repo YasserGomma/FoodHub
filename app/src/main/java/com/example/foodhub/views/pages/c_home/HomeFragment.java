@@ -20,7 +20,7 @@ import com.example.foodhub.data.source.remote.Food;
 import com.example.foodhub.data.source.remote.Restaurant;
 import com.example.foodhub.data.source.remote.Root;
 import com.example.foodhub.interfaces.EndPoints;
-import com.example.foodhub.views.adapters.FoodItemAdapter;
+import com.example.foodhub.views.adapters.CategoryItemAdapter;
 import com.example.foodhub.views.adapters.PopularItemAdapter;
 import com.example.foodhub.views.adapters.RestaurantProfileAdapter;
 import com.example.foodhub.views.networking.RetrofitCreation;
@@ -81,8 +81,7 @@ public class HomeFragment extends Fragment {
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                replaceFragment(new FoodFilterFragment(), R.id.fram_home_fragment);
-
+                // replaceFragment(new FoodFilterFragment(), R.id.fram_home_fragment);
             }
         });
         setData(rootView);
@@ -111,8 +110,8 @@ public class HomeFragment extends Fragment {
                 arrayList[0] = response.body().restaurants;
                 arrayList1[0] = response.body().categories;
                 arrayList2[0] = response.body().foods;
-                FoodItemAdapter foodItemAdapter = new FoodItemAdapter(getContext(), arrayList1[0]);
-                recyclerView.setAdapter(foodItemAdapter);
+                CategoryItemAdapter categoryItemAdapter = new CategoryItemAdapter(getContext(), getFragmentManager(), arrayList1[0]);
+                recyclerView.setAdapter(categoryItemAdapter);
                 recyclerView.setItemAnimator(new DefaultItemAnimator());
                 RestaurantProfileAdapter restaurantProfileAdapter = new RestaurantProfileAdapter(getContext(), getFragmentManager(), arrayList[0]);
                 recyclerView1.setAdapter(restaurantProfileAdapter);

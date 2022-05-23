@@ -21,6 +21,7 @@ import com.example.foodhub.views.pages.c_home.FoodDetailsFragment;
 import java.util.ArrayList;
 
 public class PopularItemAdapter extends RecyclerView.Adapter<PopularItemAdapter.PopularItemViewHolder> {
+    public static String popular_item_id_CI_adapter = "";
     ArrayList<Food> items = new ArrayList<>();
     FragmentManager fragmentManager;
     Context context;
@@ -36,7 +37,7 @@ public class PopularItemAdapter extends RecyclerView.Adapter<PopularItemAdapter.
 
     @Override
     public PopularItemViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_popular_item, null, false);
+        View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_food, null, false);
         PopularItemViewHolder PopularItemViewHolder = new PopularItemViewHolder(v);
         return PopularItemViewHolder;
     }
@@ -59,8 +60,8 @@ public class PopularItemAdapter extends RecyclerView.Adapter<PopularItemAdapter.
         holder.layout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
-                replaceFragmen(new FoodDetailsFragment(), R.id.fram_home_fragment);
+                popular_item_id_CI_adapter = item.id;
+                replaceFragment(new FoodDetailsFragment(), R.id.fram_home_fragment);
 
 
             }
@@ -73,7 +74,7 @@ public class PopularItemAdapter extends RecyclerView.Adapter<PopularItemAdapter.
         return items.size();
     }
 
-    public void replaceFragmen(Fragment fragment, int frameId) {
+    public void replaceFragment(Fragment fragment, int frameId) {
         String backStateName = fragment.getClass().getName();
         FragmentManager manager = fragmentManager;
         boolean fragmentPopped = manager.popBackStackImmediate(backStateName, 0);

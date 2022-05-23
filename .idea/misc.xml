@@ -62,7 +62,7 @@
         <entry key="..\:/android/ODC/app/src/main/res/layout/fragment_home.xml" value="0.264" />
         <entry key="..\:/android/ODC/app/src/main/res/layout/fragment_onbording.xml" value="0.1" />
         <entry key="..\:/android/ODC/app/src/main/res/layout/fragment_payment.xml" value="0.21621621621621623" />
-        <entry key="..\:/android/ODC/app/src/main/res/layout/fragment_restaurant_details.xml" value="4.0" />
+        <entry key="..\:/android/ODC/app/src/main/res/layout/fragment_restaurant_details.xml" value="0.176" />
         <entry key="..\:/android/ODC/app/src/main/res/layout/fragment_search.xml" value="0.21621621621621623" />
         <entry key="..\:/android/ODC/app/src/main/res/layout/fragment_search_restuant_and_food.xml" value="0.2" />
         <entry key="..\:/android/ODC/app/src/main/res/layout/fragment_search_resturant.xml" value="0.21621621621621623" />
@@ -79,6 +79,8 @@
         <entry key="..\:/android/ODC/app/src/main/res/layout/include_toggle_search.xml" value="0.152" />
         <entry key="..\:/android/ODC/app/src/main/res/layout/item_adds.xml" value="0.2153153153153153" />
         <entry key="..\:/android/ODC/app/src/main/res/layout/item_cart_item.xml" value="0.6" />
+        <entry key="..\:/android/ODC/app/src/main/res/layout/item_category.xml" value="0.176" />
+        <entry key="..\:/android/ODC/app/src/main/res/layout/item_category_item.xml" value="0.21621621621621623" />
         <entry key="..\:/android/ODC/app/src/main/res/layout/item_container_onboarding.xml" value="0.1" />
         <entry key="..\:/android/ODC/app/src/main/res/layout/item_food.xml" value="0.8800000000000001" />
         <entry key="..\:/android/ODC/app/src/main/res/layout/item_history_upcoming.xml" value="0.4308510638297872" />

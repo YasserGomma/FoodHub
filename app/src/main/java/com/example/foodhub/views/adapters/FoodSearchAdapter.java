@@ -35,7 +35,7 @@ public class FoodSearchAdapter extends RecyclerView.Adapter<FoodSearchAdapter.Fo
 
     @Override
     public FoodSearchViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_popular_item, null, false);
+        View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_food, null, false);
         FoodSearchViewHolder foodSearchViewHolder = new FoodSearchViewHolder(v);
         return foodSearchViewHolder;
     }
@@ -58,7 +58,7 @@ public class FoodSearchAdapter extends RecyclerView.Adapter<FoodSearchAdapter.Fo
         holder.layout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                PopularItemAdapter.popular_item_id_CI_adapter = item.id;
                 replaceFragmen(new FoodDetailsFragment(), R.id.fram_home_fragment);
 
 

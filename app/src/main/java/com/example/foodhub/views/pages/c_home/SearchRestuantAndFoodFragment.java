@@ -142,7 +142,6 @@ public class SearchRestuantAndFoodFragment extends Fragment {
         t1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                replaceFragment(new FoodFilterFragment(), R.id.fram_home_fragment);
             }
         });
     }
