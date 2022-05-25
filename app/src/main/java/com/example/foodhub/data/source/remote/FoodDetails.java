@@ -10,4 +10,5 @@ public class FoodDetails {
     public String description;
     public String rating;
     public String number_of_ratings;
+
 }

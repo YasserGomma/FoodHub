@@ -16,11 +16,11 @@ import com.example.foodhub.data.source.remote.FoodSearch;
 
 import java.util.ArrayList;
 
-public class PopularItemAdapter2 extends RecyclerView.Adapter<PopularItemAdapter2.PopularItemViewHolder> {
+public class FoodSearchItemAdapter extends RecyclerView.Adapter<FoodSearchItemAdapter.PopularItemViewHolder> {
     ArrayList<FoodSearch> items = new ArrayList<>();
     Context context;
 
-    public PopularItemAdapter2(Context context, ArrayList<FoodSearch> items) {
+    public FoodSearchItemAdapter(Context context, ArrayList<FoodSearch> items) {
 
         this.items = items;
         this.context = context;

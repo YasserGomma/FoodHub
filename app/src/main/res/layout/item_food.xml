@@ -2,19 +2,18 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/item_popular_layout"
-    android:layout_width="250dp"
+    android:layout_width="match_parent"
     android:layout_height="wrap_content">
 
     <androidx.cardview.widget.CardView
         android:id="@+id/card"
-        cardUseCompatPadding="true"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginRight="20dp"
         android:layout_marginBottom="10dp"
         android:clipToPadding="false"
-        app:cardCornerRadius="15dp"
-        app:cardPreventCornerOverlap="false">
+        android:minWidth="200dp"
+        app:cardCornerRadius="15dp">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -23,16 +22,16 @@
             android:orientation="vertical">
             <!--Image Background-->
             <androidx.cardview.widget.CardView
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
+
                 android:layout_height="wrap_content"
                 android:elevation="0dp"
-                app:cardCornerRadius="10dp"
-                app:cardPreventCornerOverlap="false">
+                app:cardCornerRadius="10dp">
 
 
                 <ImageView
                     android:id="@+id/iv_popular_background"
-                    android:layout_width="200dp"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:scaleType="centerCrop"
                     android:src="@drawable/pop_2" />

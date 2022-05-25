@@ -5,7 +5,8 @@
     <supports-screens android:normalScreens="true" />
     <supports-screens android:largeScreens="true" />
     <supports-screens android:xlargeScreens="true" />
-    <uses-permission android:name="android.permission.INTERNET"/>
+
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
@@ -32,22 +33,23 @@
             android:exported="false" />
         <activity
             android:name=".views.pages.c_home.Home"
+            android:noHistory="true"
             android:exported="false" />
         <activity
             android:name=".views.pages.b_account.Login"
-            android:noHistory="true"
-            android:exported="false" />
+            android:exported="false"
+            android:noHistory="true" />
         <activity
             android:name=".views.pages.b_account.ResetPassword"
-            android:noHistory="true"
-            android:exported="false" />
+            android:exported="false"
+            android:noHistory="true" />
         <activity
             android:name=".views.pages.b_account.PhoneRegistration"
             android:exported="false" />
         <activity
             android:name=".views.pages.b_account.SignUp"
-            android:noHistory="true"
-            android:exported="false" />
+            android:exported="false"
+            android:noHistory="true" />
         <activity
             android:name=".views.pages.a_intro.WelcomeScreen"
             android:exported="false" />
@@ -56,8 +58,8 @@
             android:exported="false" />
         <activity
             android:name=".views.pages.a_intro.Splash"
-            android:noHistory="true"
-            android:exported="true">
+            android:exported="true"
+            android:noHistory="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

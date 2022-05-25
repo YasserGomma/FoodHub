@@ -24,7 +24,7 @@ import com.example.foodhub.R;
 import com.example.foodhub.data.source.remote.FoodSearch;
 import com.example.foodhub.data.source.remote.RestaurantSearch;
 import com.example.foodhub.interfaces.EndPoints;
-import com.example.foodhub.views.adapters.PopularItemAdapter2;
+import com.example.foodhub.views.adapters.FoodSearchItemAdapter;
 import com.example.foodhub.views.adapters.RestaurantSearchAdapter;
 import com.example.foodhub.views.components.HeaderBar;
 import com.example.foodhub.views.helpers.SizeUtilities;
@@ -117,7 +117,7 @@ public class SearchRestuantAndFoodFragment extends Fragment {
                             = new StaggeredGridLayoutManager(2, LinearLayoutManager.VERTICAL);
                     recyclerView.setLayoutManager(layoutManager);
                     ArrayList<FoodSearch> foodSearches = new ArrayList<>();
-                    PopularItemAdapter2 popularItemAdapter = new PopularItemAdapter2(getContext(), foodSearches);
+                    FoodSearchItemAdapter popularItemAdapter = new FoodSearchItemAdapter(getContext(), foodSearches);
                     recyclerView.setAdapter(popularItemAdapter);
                     recyclerView.setItemAnimator(new DefaultItemAnimator());
                     popularItemAdapter.notifyDataSetChanged();
@@ -188,7 +188,7 @@ public class SearchRestuantAndFoodFragment extends Fragment {
                         foodSearches.add(response.body().get(i));
                 }
                 if (foodSearches.size() > 0) {
-                    PopularItemAdapter2 popularItemAdapter = new PopularItemAdapter2(getContext(), foodSearches);
+                    FoodSearchItemAdapter popularItemAdapter = new FoodSearchItemAdapter(getContext(), foodSearches);
                     recyclerView.setAdapter(popularItemAdapter);
                     recyclerView.setItemAnimator(new DefaultItemAnimator());
                     popularItemAdapter.notifyDataSetChanged();

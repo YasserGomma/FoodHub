@@ -20,13 +20,13 @@ import com.example.foodhub.views.pages.c_home.FoodDetailsFragment;
 
 import java.util.ArrayList;
 
-public class PopularItemAdapter extends RecyclerView.Adapter<PopularItemAdapter.PopularItemViewHolder> {
+public class FoodItemAdapter extends RecyclerView.Adapter<FoodItemAdapter.PopularItemViewHolder> {
     public static String popular_item_id_CI_adapter = "";
     ArrayList<Food> items = new ArrayList<>();
     FragmentManager fragmentManager;
     Context context;
 
-    public PopularItemAdapter(Context context, FragmentManager fragmentManager, ArrayList<Food> items) {
+    public FoodItemAdapter(Context context, FragmentManager fragmentManager, ArrayList<Food> items) {
 
         this.items = items;
         this.context = context;

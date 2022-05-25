@@ -16,12 +16,14 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.bumptech.glide.Glide;
 import com.example.foodhub.R;
 import com.example.foodhub.data.source.remote.Category;
-import com.example.foodhub.views.pages.c_home.FoodFilterFragment;
+import com.example.foodhub.views.pages.c_home.FoodByCategoryFragment;
 
 import java.util.ArrayList;
 
 public class CategoryItemAdapter extends RecyclerView.Adapter<CategoryItemAdapter.CategoryItemViewHolder> {
     public static String category_id_CI_adapter = "";
+    public static String category_name_CI_adapter = "";
+
     ArrayList<Category> categories = new ArrayList<>();
     Context context;
     FragmentManager fragmentManager;
@@ -55,7 +57,8 @@ public class CategoryItemAdapter extends RecyclerView.Adapter<CategoryItemAdapte
             @Override
             public void onClick(View view) {
                 category_id_CI_adapter = c.id;
-                replaceFragment(new FoodFilterFragment(), R.id.fram_home_fragment);
+                category_name_CI_adapter = c.cat_name;
+                replaceFragment(new FoodByCategoryFragment(), R.id.fram_home_fragment);
             }
         });
     }

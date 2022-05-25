@@ -19,7 +19,7 @@ import com.example.foodhub.data.source.remote.FoodDetails;
 import com.example.foodhub.data.test_data.AddsItem;
 import com.example.foodhub.interfaces.EndPoints;
 import com.example.foodhub.views.adapters.AddsItemAdapter;
-import com.example.foodhub.views.adapters.PopularItemAdapter;
+import com.example.foodhub.views.adapters.FoodItemAdapter;
 import com.example.foodhub.views.components.AddDeletItem;
 import com.example.foodhub.views.components.ReviewFiled;
 import com.example.foodhub.views.networking.RetrofitCreation;
@@ -61,14 +61,14 @@ public class FoodDetailsFragment extends Fragment {
                 = new LinearLayoutManager(requireContext(), LinearLayoutManager.VERTICAL, false);
         recyclerView.setLayoutManager(layoutManager);
         ArrayList<AddsItem> addsItems = new ArrayList<>();
-        addsItems.add(new AddsItem());
-        addsItems.add(new AddsItem());
-        addsItems.add(new AddsItem());
-        addsItems.add(new AddsItem());
-        addsItems.add(new AddsItem());
-        addsItems.add(new AddsItem());
-        addsItems.add(new AddsItem());
-        addsItems.add(new AddsItem());
+        // addsItems.add(new AddsItem());
+        // addsItems.add(new AddsItem());
+        // addsItems.add(new AddsItem());
+        // addsItems.add(new AddsItem());
+        // addsItems.add(new AddsItem());
+        // addsItems.add(new AddsItem());
+        // addsItems.add(new AddsItem());
+        // addsItems.add(new AddsItem());
         AddsItemAdapter addsItemAdapter = new AddsItemAdapter(addsItems);
         recyclerView.setAdapter(addsItemAdapter);
         recyclerView.setItemAnimator(new DefaultItemAnimator());
@@ -83,7 +83,7 @@ public class FoodDetailsFragment extends Fragment {
         TextView review_field_people = reviewFiled.findViewById(R.id.review_field_people);
 
         EndPoints Api = RetrofitCreation.getInstance();
-        Call<FoodDetails> call = Api.foodDetails("food", PopularItemAdapter.popular_item_id_CI_adapter);
+        Call<FoodDetails> call = Api.foodDetails("food", FoodItemAdapter.popular_item_id_CI_adapter);
         call.enqueue(new Callback<FoodDetails>() {
             @Override
             public void onResponse(Call<FoodDetails> call, Response<FoodDetails> response) {

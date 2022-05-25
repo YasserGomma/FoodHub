@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".views.pages.c_home.FoodByCategoryFragment">
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".views.pages.c_home.FoodByCategoryFragment">
+
+        <include
+            android:id="@id/header_cart"
+            layout="@layout/header_back" />
+
+        <RelativeLayout
+            android:id="@+id/food_filter_l1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:src="@drawable/pizza2" />
+
+            <TextView
+                android:id="@+id/tv_food_filter_t1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:fontFamily="@font/sofiapro_bold"
+                android:text="Fast"
+                android:textColor="@color/black"
+                android:textSize="55dp" />
+
+            <TextView
+                android:id="@+id/tv_food_filter_t2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_food_filter_t1"
+                android:fontFamily="@font/sofiapro_bold"
+                android:text="Food"
+                android:textColor="@color/primary_color"
+                android:textSize="70dp" />
+
+            <TextView
+                android:id="@+id/food_filter_t3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_food_filter_t2"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/sofiapro_reguler"
+                android:text="80 type of pizza"
+                android:textSize="19dp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/food_filter_l2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/food_filter_l1"
+            android:layout_marginHorizontal="26dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="-50dp">
+
+            <com.example.foodhub.views.widgets.IllustrativeText
+                android:id="@+id/tv_food_filter_sort"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Sort by :  "
+                android:textColor="@color/black" />
+
+            <com.example.foodhub.views.widgets.IllustrativeText
+                android:id="@+id/tv_food_filter_popular"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+
+                android:layout_toRightOf="@id/tv_food_filter_sort"
+                android:gravity="center"
+                android:text="Populer"
+                android:textColor="@color/primary_color" />
+
+            <Spinner
+                android:id="@+id/spinner_food_filter"
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="12dp"
+                android:layout_toRightOf="@id/tv_food_filter_popular"
+                android:gravity="center"
+                android:scrollbarSize="100dp" />
+
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_fragment_home_filter"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="2dp"
+                android:background="@drawable/btn_bg_4"
+                android:drawableTop="@drawable/filter"
+                android:paddingTop="10dp"
+
+                />
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_food_filter"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/spinner_food_filter"
+                android:layout_marginTop="25dp"
+                android:layout_marginRight="-20dp"
+                android:clipToPadding="false" />
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+</ScrollView>

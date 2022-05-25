@@ -46,6 +46,11 @@ public interface EndPoints {
 
     @FormUrlEncoded
     @POST("/food/serv.php/")
+    Call<ArrayList<FoodDetails>> foodByCategoryId(@Field("method") String method, @Field("cat_id") String cat_id);
+
+
+    @FormUrlEncoded
+    @POST("/food/serv.php/")
     Call<RestaurantDetails> restaurantDetails(@Field("method") String method, @Field("restaurant_id") String restaurant_id);
 
 

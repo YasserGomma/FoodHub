@@ -28,11 +28,7 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
-/**
- * A simple {@link Fragment} subclass.
- * Use the {@link RestaurantDetailsFragment#newInstance} factory method to
- * create an instance of this fragment.
- */
+
 public class RestaurantDetailsFragment extends Fragment {
 
 
@@ -69,6 +65,7 @@ public class RestaurantDetailsFragment extends Fragment {
         ReviewFiled reviewFiled = rootView.findViewById(R.id.restaurant_details_review);
         TextView review_field_review = reviewFiled.findViewById(R.id.review_field_review);
         TextView review_field_people = reviewFiled.findViewById(R.id.review_field_people);
+        TextView tv_restaurant_details_num_of_items = rootView.findViewById(R.id.tv_restaurant_details_num_of_items);
         EndPoints Api = RetrofitCreation.getInstance();
 
         ArrayList<FoodSearch> items = new ArrayList<>();
@@ -101,6 +98,7 @@ public class RestaurantDetailsFragment extends Fragment {
                 FoodSearchAdapter foodSearchAdapter = new FoodSearchAdapter(getContext(), getFragmentManager(), items);
                 recyclerView1.setAdapter(foodSearchAdapter);
                 recyclerView1.setItemAnimator(new DefaultItemAnimator());
+                tv_restaurant_details_num_of_items.setText(items.size() + "");
 
             }
 
