@@ -37,6 +37,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/tv_card_item_name"
         android:layout_marginLeft="10dp"
+        android:maxLines="1"
         android:layout_toRightOf="@id/iv_card_item_image"
         android:text="Spicy chicken, beef" />
 
@@ -46,7 +47,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/tv_card_item_description"
         android:layout_marginLeft="10dp"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="40dp"
         android:layout_toRightOf="@+id/iv_card_item_image"
         android:text="$"
         android:textColor="@color/black"
@@ -57,7 +58,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/tv_card_item_description"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="30dp"
         android:layout_toRightOf="@+id/tv_card_item_dollers"
         android:text="5.5"
         app:pt_text_size="19" />
@@ -65,9 +66,8 @@
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/iv_card_item_close"
+        android:layout_below="@+id/iv_card_item_image"
         android:layout_alignParentRight="true"
-        android:layout_marginTop="30dp"
         android:layout_marginRight="10dp">
 
         <com.example.foodhub.views.components.AddDeletItem

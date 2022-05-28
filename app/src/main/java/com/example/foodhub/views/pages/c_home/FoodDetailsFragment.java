@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -32,7 +33,6 @@ import retrofit2.Response;
 
 
 public class FoodDetailsFragment extends Fragment {
-
 
     public FoodDetailsFragment() {
         // Required empty public constructor
@@ -118,12 +118,16 @@ public class FoodDetailsFragment extends Fragment {
         ImageView delete = addDeletItem.findViewById(R.id.btn_delete_item);
         TextView numOfItems = addDeletItem.findViewById(R.id.tv_item_number);
 
+        ArrayList<String>ids=new ArrayList<>();
+
+
         add.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
                 int cnt = Integer.parseInt(numOfItems.getText().toString());
                 numOfItems.setText((cnt + 1) + "");
+                ids.add(FoodItemAdapter.popular_item_id_CI_adapter);
             }
         });
         delete.setOnClickListener(new View.OnClickListener() {
@@ -131,10 +135,27 @@ public class FoodDetailsFragment extends Fragment {
             public void onClick(View view) {
 
                 int cnt = Integer.parseInt(numOfItems.getText().toString());
-                if (cnt > 0)
+                if (cnt > 0){
                     numOfItems.setText((cnt - 1) + "");
+                    ids.remove(FoodItemAdapter.popular_item_id_CI_adapter);
+                }
                 else
                     Toast.makeText(getContext(), "Can't delete any more", Toast.LENGTH_SHORT).show();
+            }
+        });
+
+        Button btnAdd=view.findViewById(R.id.btn_food_details_add);
+        btnAdd.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                for(String id : ids)
+                {
+                    CartFragment.ids.add(id);
+                    Toast.makeText(getContext(),"Items added successfully",Toast.LENGTH_LONG).show();
+
+                }
+
             }
         });
 

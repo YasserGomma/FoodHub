@@ -14,16 +14,22 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.foodhub.R;
+import com.example.foodhub.data.source.remote.FoodDetails;
 import com.example.foodhub.data.test_data.CartItem;
+import com.example.foodhub.interfaces.EndPoints;
 import com.example.foodhub.views.adapters.CartItemAdapter;
+import com.example.foodhub.views.networking.RetrofitCreation;
 import com.example.foodhub.views.pages.b_account.PaymentFragment;
 
 import java.util.ArrayList;
 
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
+
 
 public class CartFragment extends Fragment {
-
-
+    public static ArrayList<String>ids = new ArrayList<>();
     public CartFragment() {
         // Required empty public constructor
     }
@@ -63,20 +69,40 @@ public class CartFragment extends Fragment {
         // 2. set layoutManger
         recyclerView.setLayoutManager(layoutManager);
         ArrayList<CartItem> cartItems = new ArrayList<>();
-        cartItems.add(new CartItem());
-        cartItems.add(new CartItem());
-        cartItems.add(new CartItem());
-        cartItems.add(new CartItem());
-        cartItems.add(new CartItem());
-        cartItems.add(new CartItem());
+
+        ArrayList<Double>prices=new ArrayList<Double>();
+        EndPoints Api = RetrofitCreation.getInstance();
+        for(String id:ids) {
+            Call<FoodDetails> call = Api.foodDetails("food",id);
+            call.enqueue(new Callback<FoodDetails>() {
+                @Override
+                public void onResponse(Call<FoodDetails> call, Response<FoodDetails> response) {
+                   // Toast.makeText(getContext(),response.body().name,Toast.LENGTH_LONG).show();
+                    CartItem c=new CartItem();
+                    c.name=response.body().name;
+                    c.descriotion=response.body().description;
+                    c.price=response.body().price;
+                    c.image=response.body().pic;
+                    prices.add(Double.parseDouble(c.price));
+                    cartItems.add(c);
+                    // 3. create an adapter
+                    CartItemAdapter cartItemAdapter = new CartItemAdapter(getContext(),cartItems);
+                    // 4. set adapter
+                    recyclerView.setAdapter(cartItemAdapter);
+                    // 5. set item animator to DefaultAnimator
+                    recyclerView.setItemAnimator(new DefaultItemAnimator());
+
+                }
 
 
-        // 3. create an adapter
-        CartItemAdapter cartItemAdapter = new CartItemAdapter(cartItems);
-        // 4. set adapter
-        recyclerView.setAdapter(cartItemAdapter);
-        // 5. set item animator to DefaultAnimator
-        recyclerView.setItemAnimator(new DefaultItemAnimator());
+                @Override
+                public void onFailure(Call<FoodDetails> call, Throwable t) {
+
+                }
+            });
+        }
+
+
 
 
         return rootView;
