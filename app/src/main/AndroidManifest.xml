@@ -33,23 +33,22 @@
             android:exported="false" />
         <activity
             android:name=".views.pages.c_home.Home"
-            android:noHistory="true"
             android:exported="false" />
         <activity
             android:name=".views.pages.b_account.Login"
             android:exported="false"
-            android:noHistory="true" />
+            />
         <activity
             android:name=".views.pages.b_account.ResetPassword"
             android:exported="false"
-            android:noHistory="true" />
+            />
         <activity
             android:name=".views.pages.b_account.PhoneRegistration"
             android:exported="false" />
         <activity
             android:name=".views.pages.b_account.SignUp"
             android:exported="false"
-            android:noHistory="true" />
+           />
         <activity
             android:name=".views.pages.a_intro.WelcomeScreen"
             android:exported="false" />
